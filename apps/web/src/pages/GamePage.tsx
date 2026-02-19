@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import type { Difficulty, Player, Question } from "@tv-trivia/shared";
 import { QuestionCard } from "../components/QuestionCard";
-import { WheelSpinner } from "../components/WheelSpinner";
 import { fetchQuestionBank } from "../lib/api";
 import { decadeShowPresets, getSavedDecade } from "../lib/decades";
 import { getSavedPlayers, savePlayers } from "../lib/players";
@@ -22,10 +21,13 @@ export function GamePage() {
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
   const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
   const [answerRevealed, setAnswerRevealed] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("Spin the wheel to start a turn.");
-  const [wheelRotation, setWheelRotation] = useState(0);
-  const [isSpinning, setIsSpinning] = useState(false);
-  const spinTimeoutRef = useRef<number | null>(null);
+  const [statusMessage, setStatusMessage] = useState(
+    "Select a TV show panel, then draw a question."
+  );
+  const [isSelectingShow, setIsSelectingShow] = useState(false);
+  const [animatedShowIndex, setAnimatedShowIndex] = useState<number | null>(null);
+  const showAnimationIntervalRef = useRef<number | null>(null);
+  const showAnimationTimeoutRef = useRef<number | null>(null);
 
   const showPool = decadeShowPresets[selectedDecade];
   const currentPlayer = players[currentPlayerIndex] ?? players[0];
@@ -40,8 +42,11 @@ export function GamePage() {
 
   useEffect(() => {
     return () => {
-      if (spinTimeoutRef.current) {
-        window.clearTimeout(spinTimeoutRef.current);
+      if (showAnimationIntervalRef.current) {
+        window.clearInterval(showAnimationIntervalRef.current);
+      }
+      if (showAnimationTimeoutRef.current) {
+        window.clearTimeout(showAnimationTimeoutRef.current);
       }
     };
   }, []);
@@ -51,7 +56,7 @@ export function GamePage() {
       const questions = await fetchQuestionBank();
       setQuestionBank(questions);
       if (questions.length > 0) {
-        setStatusMessage(`Loaded ${questions.length} generated questions. Spin to start.`);
+        setStatusMessage(`Loaded ${questions.length} generated questions. Select a show to start.`);
       }
     } catch (error) {
       console.error(error);
@@ -59,50 +64,69 @@ export function GamePage() {
     }
   }
 
-  function spinWheel() {
+  function selectShow(show: string) {
+    if (isSelectingShow) {
+      return;
+    }
+
     if (!currentPlayer) {
       setStatusMessage("Add players in Player Scoreboard before starting.");
       return;
     }
 
-    if (isSpinning) {
+    setSpunShow(show);
+    setActiveQuestion(null);
+    setAnswerRevealed(false);
+    setStatusMessage(`${currentPlayer.name} selected: ${show}. Draw a question.`);
+  }
+
+  function runShowSelectionAnimation() {
+    if (isSelectingShow) {
       return;
     }
 
-    const selectedIndex = Math.floor(Math.random() * showPool.length);
-    const selectedShow = showPool[selectedIndex];
-    const segmentAngle = 360 / showPool.length;
-    const selectedCenterAngle = selectedIndex * segmentAngle + segmentAngle / 2;
-    const currentMod = ((wheelRotation % 360) + 360) % 360;
-    const alignmentDelta = (360 - ((currentMod + selectedCenterAngle) % 360)) % 360;
-    const extraTurns = (5 + Math.floor(Math.random() * 3)) * 360;
-    const nextRotation = wheelRotation + extraTurns + alignmentDelta;
+    if (!currentPlayer) {
+      setStatusMessage("Add players in Player Scoreboard before starting.");
+      return;
+    }
 
-    setIsSpinning(true);
-    setWheelRotation(nextRotation);
-    setSpunShow(null);
+    if (showAnimationIntervalRef.current) {
+      window.clearInterval(showAnimationIntervalRef.current);
+    }
+    if (showAnimationTimeoutRef.current) {
+      window.clearTimeout(showAnimationTimeoutRef.current);
+    }
+
+    const finalIndex = Math.floor(Math.random() * showPool.length);
+    const finalShow = showPool[finalIndex];
+
+    setIsSelectingShow(true);
     setActiveQuestion(null);
     setAnswerRevealed(false);
-    setStatusMessage(`${currentPlayer.name} is spinning the wheel...`);
+    setSpunShow(null);
+    setStatusMessage(`${currentPlayer.name} is selecting a show...`);
 
-    if (spinTimeoutRef.current) {
-      window.clearTimeout(spinTimeoutRef.current);
-    }
-    spinTimeoutRef.current = window.setTimeout(() => {
-      setIsSpinning(false);
-      setSpunShow(selectedShow);
-      setStatusMessage(`${currentPlayer.name} spun: ${selectedShow}. Draw a question.`);
-    }, 2600);
+    let currentIndex = 0;
+    setAnimatedShowIndex(currentIndex);
+    showAnimationIntervalRef.current = window.setInterval(() => {
+      currentIndex = (currentIndex + 1) % showPool.length;
+      setAnimatedShowIndex(currentIndex);
+    }, 120);
+
+    showAnimationTimeoutRef.current = window.setTimeout(() => {
+      if (showAnimationIntervalRef.current) {
+        window.clearInterval(showAnimationIntervalRef.current);
+      }
+      setIsSelectingShow(false);
+      setAnimatedShowIndex(finalIndex);
+      setSpunShow(finalShow);
+      setStatusMessage(`${currentPlayer.name} selected: ${finalShow}. Draw a question.`);
+    }, 5000);
   }
 
   function drawQuestion() {
-    if (isSpinning) {
-      setStatusMessage("Wait for the wheel to stop before drawing a question.");
-      return;
-    }
-
     if (!spunShow) {
-      setStatusMessage("Spin the wheel first, then draw a question.");
+      setStatusMessage("Select a TV show first, then draw a question.");
       return;
     }
 
@@ -171,43 +195,62 @@ export function GamePage() {
         </span>
       </div>
 
-      <WheelSpinner
-        shows={showPool}
-        rotation={wheelRotation}
-        isSpinning={isSpinning}
-        selectedShow={spunShow}
-        onSpin={spinWheel}
-      />
-
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-          Player Scoreboard
+          TV Show Panels
         </p>
-        <p className="mb-4 text-white/85">
-          View full player standings and highlights on the Player Scoreboard page.
-        </p>
-        <Link to="/player-scoreboard" className="btn-secondary">
-          Go to Player Scoreboard
-        </Link>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {showPool.map((show) => {
+            const highlightedShow =
+              animatedShowIndex !== null && showPool[animatedShowIndex]
+                ? showPool[animatedShowIndex]
+                : spunShow;
+            const isSelected = highlightedShow === show;
+            return (
+              <button
+                key={show}
+                type="button"
+                onClick={() => selectShow(show)}
+                disabled={isSelectingShow}
+                className={[
+                  "rounded-xl border px-4 py-4 text-left transition",
+                  isSelected
+                    ? "border-trivia-gold/70 bg-trivia-gold/15"
+                    : "border-white/15 bg-black/25 hover:bg-white/10",
+                ].join(" ")}
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+                  Show
+                </p>
+                <p className="mt-1 font-display text-lg text-trivia-paper">{show}</p>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-          Spin + Draw Flow
+          Select + Draw Flow
         </p>
         <p className="mb-4 text-white/85">{statusMessage}</p>
         <div className="flex flex-wrap gap-2">
           <Link to="/settings" className="btn-secondary">
             Open Settings
           </Link>
-          <button type="button" className="btn-primary" onClick={spinWheel} disabled={isSpinning}>
-            {isSpinning ? "Spinning..." : "Spin wheel"}
-          </button>
+          <button
+            type="button"
+            className="btn-primary"
+            onClick={runShowSelectionAnimation}
+            disabled={isSelectingShow}
+            >
+              {isSelectingShow ? "Selecting..." : "Select show"}
+              </button>
           <button
             type="button"
             className="btn-primary"
             onClick={drawQuestion}
-            disabled={isSpinning || !spunShow}
+            disabled={!spunShow}
           >
             Draw question
           </button>

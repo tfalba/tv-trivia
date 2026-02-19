@@ -1,362 +1,362 @@
 [
   {
-    "id": "cheers-1",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-1",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "What is the name of the bar where Cheers is set?",
-    "answer": "Cheers"
+    "prompt": "What is the name of the paper company in The Office?",
+    "answer": "Dunder Mifflin"
   },
   {
-    "id": "cheers-2",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-2",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "Who is the bartender known for his wit and charm?",
-    "answer": "Sam Malone"
+    "prompt": "Who is the regional manager at the start of The Office?",
+    "answer": "Michael Scott"
   },
   {
-    "id": "cheers-3",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-3",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "Which city is Cheers set in?",
-    "answer": "Boston"
+    "prompt": "Which character is known for saying 'That's what she said'?",
+    "answer": "Michael Scott"
   },
   {
-    "id": "cheers-4",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-4",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "What sport did Sam Malone play professionally?",
-    "answer": "Baseball"
+    "prompt": "What is the name of Jim Halpert's wife?",
+    "answer": "Pam Beesly"
   },
   {
-    "id": "cheers-5",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-5",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "What is the name of the waitress who has an on-again, off-again relationship with Sam?",
-    "answer": "Diane Chambers"
+    "prompt": "Which city is The Office set in?",
+    "answer": "Scranton"
   },
   {
-    "id": "cheers-6",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-6",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "Which character is a know-it-all mailman?",
-    "answer": "Cliff Clavin"
+    "prompt": "Who started the fire in the episode titled 'The Fire'?",
+    "answer": "Ryan Howard"
   },
   {
-    "id": "cheers-7",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-7",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What is the full name of the character 'Norm'?",
-    "answer": "Norm Peterson"
+    "prompt": "What is the name of the company that buys Dunder Mifflin?",
+    "answer": "Sabre"
   },
   {
-    "id": "cheers-8",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-8",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "Who is the bar owner before Sam Malone takes over?",
-    "answer": "Alton Foote"
+    "prompt": "What is Dwight Schrute's cousin's name who appears in the series?",
+    "answer": "Mose Schrute"
   },
   {
-    "id": "cheers-9",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "the-office-9",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "Which character is an accountant and Norm’s best friend?",
-    "answer": "Cliff Clavin"
+    "prompt": "Which character briefly becomes the office receptionist after Pam?",
+    "answer": "Ryan Howard"
   },
   {
-    "id": "the-a-team-10",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-10",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What is the name of the team's leader played by George Peppard?",
-    "answer": "Hannibal"
+    "prompt": "What is the name of the island where Lost is set?",
+    "answer": "The Island"
   },
   {
-    "id": "the-a-team-11",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-11",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What vehicle is iconic to The A-Team?",
-    "answer": "A black van"
+    "prompt": "Who is the leader of the survivors in Lost?",
+    "answer": "Jack Shephard"
   },
   {
-    "id": "the-a-team-12",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-12",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What military branch did The A-Team members serve in?",
-    "answer": "U.S. Army"
+    "prompt": "What is the number sequence that appears frequently in Lost?",
+    "answer": "4 8 15 16 23 42"
   },
   {
-    "id": "the-a-team-13",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-13",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "What is the name of the mechanic and the team's muscle?",
-    "answer": "B.A. Baracus"
+    "prompt": "What is the name of the mysterious group on the island?",
+    "answer": "The Others"
   },
   {
-    "id": "the-a-team-14",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-14",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "Which member of The A-Team is known for his disguise skills?",
-    "answer": "Hannibal"
+    "prompt": "Which character is a conman known as 'Sawyer'?",
+    "answer": "James Ford"
   },
   {
-    "id": "the-a-team-15",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-15",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "Who is the team's pilot and con man?",
-    "answer": "Templeton Peck"
+    "prompt": "What is the name of the freighter offshore in Lost?",
+    "answer": "Kahana"
   },
   {
-    "id": "the-a-team-16",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-16",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "What crime were the A-Team falsely accused of?",
-    "answer": "Robbery they did not commit"
+    "prompt": "What is the real name of the character known as 'The Man in Black'?",
+    "answer": "Unknown/He is often called the Man in Black"
   },
   {
-    "id": "the-a-team-17",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-17",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "What is the full name of the character known as 'Face'?",
-    "answer": "Templeton Peck"
+    "prompt": "What is the name of the DHARMA Initiative station that involves time travel?",
+    "answer": "The Orchid"
   },
   {
-    "id": "the-a-team-18",
-    "showId": "the-a-team",
-    "showTitle": "The A-Team",
+    "id": "lost-18",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "Which character refuses to fly and has a fear of flying?",
-    "answer": "B.A. Baracus"
+    "prompt": "Who is the first character to find the hatch with the numbers?",
+    "answer": "John Locke"
   },
   {
-    "id": "knight-rider-19",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-19",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "easy",
-    "prompt": "What is the name of the talking car in Knight Rider?",
-    "answer": "KITT"
+    "prompt": "What is Dr. House's first name?",
+    "answer": "Gregory"
   },
   {
-    "id": "knight-rider-20",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-20",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "easy",
-    "prompt": "Who is the main driver and protagonist?",
-    "answer": "Michael Knight"
+    "prompt": "Which instrument does Dr. House play?",
+    "answer": "Piano"
   },
   {
-    "id": "knight-rider-21",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-21",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "easy",
-    "prompt": "What color is KITT’s scanner light?",
-    "answer": "Red"
+    "prompt": "What is Dr. House's medical specialty?",
+    "answer": "Diagnostic Medicine"
   },
   {
-    "id": "knight-rider-22",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-22",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "medium",
-    "prompt": "What does KITT stand for?",
-    "answer": "Knight Industries Two Thousand"
+    "prompt": "What is the name of House's best friend and oncologist?",
+    "answer": "James Wilson"
   },
   {
-    "id": "knight-rider-23",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-23",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "medium",
-    "prompt": "Who created KITT and leads the Foundation for Law and Government?",
-    "answer": "Wilton Knight"
+    "prompt": "What addiction does House struggle with?",
+    "answer": "Vicodin"
   },
   {
-    "id": "knight-rider-24",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-24",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "medium",
-    "prompt": "What is Michael Knight’s original name?",
-    "answer": "Michael Long"
+    "prompt": "Who is the head of the hospital in the series?",
+    "answer": "Lisa Cuddy"
   },
   {
-    "id": "knight-rider-25",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-25",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "hard",
-    "prompt": "What advanced feature allows KITT to operate autonomously?",
-    "answer": "Artificial Intelligence"
+    "prompt": "What rare disease does the patient in the episode 'Three Stories' suffer from?",
+    "answer": "Leg infarction"
   },
   {
-    "id": "knight-rider-26",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
+    "id": "house-26",
+    "showId": "house",
+    "showTitle": "House",
     "difficulty": "hard",
-    "prompt": "Where is the Knight Foundation headquartered?",
+    "prompt": "What is the name of the hospital where House works?",
+    "answer": "Princeton-Plainsboro Teaching Hospital"
+  },
+  {
+    "id": "house-27",
+    "showId": "house",
+    "showTitle": "House",
+    "difficulty": "hard",
+    "prompt": "Which character replaces Dr. Cameron on House's diagnostic team?",
+    "answer": "Dr. Amber Volakis"
+  },
+  {
+    "id": "grey-s-anatomy-28",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "easy",
+    "prompt": "What is the name of the hospital in Grey's Anatomy?",
+    "answer": "Seattle Grace Hospital"
+  },
+  {
+    "id": "grey-s-anatomy-29",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "easy",
+    "prompt": "Who is the main character and surgeon in Grey's Anatomy?",
+    "answer": "Meredith Grey"
+  },
+  {
+    "id": "grey-s-anatomy-30",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "easy",
+    "prompt": "What is the specialty of Cristina Yang?",
+    "answer": "Cardiothoracic Surgery"
+  },
+  {
+    "id": "grey-s-anatomy-31",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "medium",
+    "prompt": "Who does Meredith Grey marry?",
+    "answer": "Derek Shepherd"
+  },
+  {
+    "id": "grey-s-anatomy-32",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "medium",
+    "prompt": "Which character is known as 'McSteamy'?",
+    "answer": "Mark Sloan"
+  },
+  {
+    "id": "grey-s-anatomy-33",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "medium",
+    "prompt": "What tragic event happened in the plane crash episode?",
+    "answer": "Several characters injured or died"
+  },
+  {
+    "id": "grey-s-anatomy-34",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "hard",
+    "prompt": "What is the name of Meredith Grey's half-sister?",
+    "answer": "Lexie Grey"
+  },
+  {
+    "id": "grey-s-anatomy-35",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "hard",
+    "prompt": "Who performed the first open-heart surgery on the show?",
+    "answer": "Cristina Yang"
+  },
+  {
+    "id": "grey-s-anatomy-36",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
+    "difficulty": "hard",
+    "prompt": "Which character was shot in Season 6?",
+    "answer": "Derek Shepherd"
+  },
+  {
+    "id": "24-37",
+    "showId": "24",
+    "showTitle": "24",
+    "difficulty": "easy",
+    "prompt": "Who is the main protagonist in 24?",
+    "answer": "Jack Bauer"
+  },
+  {
+    "id": "24-38",
+    "showId": "24",
+    "showTitle": "24",
+    "difficulty": "easy",
+    "prompt": "What is Jack Bauer's occupation?",
+    "answer": "Counter Terrorist Unit agent"
+  },
+  {
+    "id": "24-39",
+    "showId": "24",
+    "showTitle": "24",
+    "difficulty": "easy",
+    "prompt": "How long does each season of 24 cover in real time?",
+    "answer": "24 hours"
+  },
+  {
+    "id": "24-40",
+    "showId": "24",
+    "showTitle": "24",
+    "difficulty": "medium",
+    "prompt": "What city is 24 primarily set in?",
     "answer": "Los Angeles"
   },
   {
-    "id": "knight-rider-27",
-    "showId": "knight-rider",
-    "showTitle": "Knight Rider",
-    "difficulty": "hard",
-    "prompt": "What is the name of Michael Knight’s love interest who is also a scientist?",
-    "answer": "Bonnie Barstow"
-  },
-  {
-    "id": "family-ties-28",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
-    "difficulty": "easy",
-    "prompt": "What is the name of the father in Family Ties?",
-    "answer": "Steven Keaton"
-  },
-  {
-    "id": "family-ties-29",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
-    "difficulty": "easy",
-    "prompt": "Who plays the character Alex P. Keaton?",
-    "answer": "Michael J. Fox"
-  },
-  {
-    "id": "family-ties-30",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
-    "difficulty": "easy",
-    "prompt": "What is the family’s last name?",
-    "answer": "Keaton"
-  },
-  {
-    "id": "family-ties-31",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
+    "id": "24-41",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "medium",
-    "prompt": "What political party does Alex P. Keaton support?",
-    "answer": "Republican"
+    "prompt": "Who is Jack Bauer's daughter?",
+    "answer": "Kim Bauer"
   },
   {
-    "id": "family-ties-32",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
+    "id": "24-42",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "medium",
-    "prompt": "What is the name of Alex’s younger sister who is a hippie?",
-    "answer": "Mallory Keaton"
+    "prompt": "Which government agency does Chloe O'Brian work for?",
+    "answer": "CTU (Counter Terrorist Unit)"
   },
   {
-    "id": "family-ties-33",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
-    "difficulty": "medium",
-    "prompt": "Which Keaton child is known for being the most conservative?",
-    "answer": "Alex P. Keaton"
-  },
-  {
-    "id": "family-ties-34",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
+    "id": "24-43",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "What is the profession of Steven Keaton?",
-    "answer": "Architect"
+    "prompt": "Who was the President of the United States during Season 1?",
+    "answer": "David Palmer"
   },
   {
-    "id": "family-ties-35",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
+    "id": "24-44",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "What year did Family Ties first premiere?",
-    "answer": "1982"
+    "prompt": "What is the name of the terrorist group in Season 2?",
+    "answer": "The Salazar Cartel"
   },
   {
-    "id": "family-ties-36",
-    "showId": "family-ties",
-    "showTitle": "Family Ties",
+    "id": "24-45",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "What is the name of the youngest Keaton sibling?",
-    "answer": "Jennifer Keaton"
-  },
-  {
-    "id": "the-golden-girls-37",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "easy",
-    "prompt": "How many women live together in The Golden Girls?",
-    "answer": "Four"
-  },
-  {
-    "id": "the-golden-girls-38",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "easy",
-    "prompt": "What city do The Golden Girls live in?",
-    "answer": "Miami"
-  },
-  {
-    "id": "the-golden-girls-39",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "easy",
-    "prompt": "What is the name of the character played by Bea Arthur?",
-    "answer": "Dorothy Zbornak"
-  },
-  {
-    "id": "the-golden-girls-40",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "medium",
-    "prompt": "Which Golden Girl is known for being naive and sweet?",
-    "answer": "Rose Nylund"
-  },
-  {
-    "id": "the-golden-girls-41",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "medium",
-    "prompt": "Who owns the house where The Golden Girls live?",
-    "answer": "Sophia Petrillo"
-  },
-  {
-    "id": "the-golden-girls-42",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "medium",
-    "prompt": "Which character is famous for her sarcastic wit?",
-    "answer": "Dorothy Zbornak"
-  },
-  {
-    "id": "the-golden-girls-43",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "hard",
-    "prompt": "What was the name of Dorothy's mother who also lived with them?",
-    "answer": "Sophia Petrillo"
-  },
-  {
-    "id": "the-golden-girls-44",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "hard",
-    "prompt": "Which character was a substitute teacher from St. Olaf, Minnesota?",
-    "answer": "Rose Nylund"
-  },
-  {
-    "id": "the-golden-girls-45",
-    "showId": "the-golden-girls",
-    "showTitle": "The Golden Girls",
-    "difficulty": "hard",
-    "prompt": "What is the name of the character played by Rue McClanahan?",
-    "answer": "Blanche Devereaux"
+    "prompt": "Who kills Nina Myers?",
+    "answer": "Jack Bauer"
   }
 ]
