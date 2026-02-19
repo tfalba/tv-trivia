@@ -1,362 +1,362 @@
 [
   {
-    "id": "m-a-s-h-1",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-1",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "easy",
-    "prompt": "What type of unit is M*A*S*H set in?",
-    "answer": "Mobile Army Surgical Hospital"
+    "prompt": "What is the name of the bar where Cheers is set?",
+    "answer": "Cheers"
   },
   {
-    "id": "m-a-s-h-2",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-2",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "easy",
-    "prompt": "Who is the main surgeon often seen wearing a captain's hat?",
-    "answer": "Hawkeye Pierce"
+    "prompt": "Who is the bartender known for his wit and charm?",
+    "answer": "Sam Malone"
   },
   {
-    "id": "m-a-s-h-3",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-3",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "easy",
-    "prompt": "In which war is M*A*S*H set?",
-    "answer": "Korean War"
+    "prompt": "Which city is Cheers set in?",
+    "answer": "Boston"
   },
   {
-    "id": "m-a-s-h-4",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-4",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "medium",
-    "prompt": "What is the nickname of the camp's commanding officer Colonel Potter?",
-    "answer": "Potter"
+    "prompt": "What sport did Sam Malone play professionally?",
+    "answer": "Baseball"
   },
   {
-    "id": "m-a-s-h-5",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-5",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "medium",
-    "prompt": "Which character is known for playing the banjo and being a radar operator?",
-    "answer": "Radar O'Reilly"
+    "prompt": "What is the name of the waitress who has an on-again, off-again relationship with Sam?",
+    "answer": "Diane Chambers"
   },
   {
-    "id": "m-a-s-h-6",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-6",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "medium",
-    "prompt": "What is the name of the nurse who often clashes with Hawkeye?",
-    "answer": "Nurse Hot Lips Houlihan"
+    "prompt": "Which character is a know-it-all mailman?",
+    "answer": "Cliff Clavin"
   },
   {
-    "id": "m-a-s-h-7",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-7",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "hard",
-    "prompt": "What is the full name of the character nicknamed 'Trapper'?",
-    "answer": "Trapper John McIntyre"
+    "prompt": "What is the full name of the character 'Norm'?",
+    "answer": "Norm Peterson"
   },
   {
-    "id": "m-a-s-h-8",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-8",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "hard",
-    "prompt": "Which actor played both the character of Henry Blake and later Colonel Sherman Potter?",
-    "answer": "Harry Morgan"
+    "prompt": "Who is the bar owner before Sam Malone takes over?",
+    "answer": "Alton Foote"
   },
   {
-    "id": "m-a-s-h-9",
-    "showId": "m-a-s-h",
-    "showTitle": "M*A*S*H",
+    "id": "cheers-9",
+    "showId": "cheers",
+    "showTitle": "Cheers",
     "difficulty": "hard",
-    "prompt": "What is the name of the camp's mess hall where characters often gather?",
-    "answer": "Swamp"
+    "prompt": "Which character is an accountant and Norm’s best friend?",
+    "answer": "Cliff Clavin"
   },
   {
-    "id": "three-s-company-10",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-10",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "easy",
-    "prompt": "What city is Three's Company set in?",
-    "answer": "Santa Monica"
+    "prompt": "What is the name of the team's leader played by George Peppard?",
+    "answer": "Hannibal"
   },
   {
-    "id": "three-s-company-11",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-11",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "easy",
-    "prompt": "Who is the main male character that moves in with two women?",
-    "answer": "Jack Tripper"
+    "prompt": "What vehicle is iconic to The A-Team?",
+    "answer": "A black van"
   },
   {
-    "id": "three-s-company-12",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-12",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "easy",
-    "prompt": "What is the name of the landlord couple?",
-    "answer": "Mr. and Mrs. Roper"
+    "prompt": "What military branch did The A-Team members serve in?",
+    "answer": "U.S. Army"
   },
   {
-    "id": "three-s-company-13",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-13",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "medium",
-    "prompt": "What is the name of Jack's two female roommates?",
-    "answer": "Janet and Chrissy"
+    "prompt": "What is the name of the mechanic and the team's muscle?",
+    "answer": "B.A. Baracus"
   },
   {
-    "id": "three-s-company-14",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-14",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "medium",
-    "prompt": "What is Jack's profession?",
-    "answer": "Chef"
+    "prompt": "Which member of The A-Team is known for his disguise skills?",
+    "answer": "Hannibal"
   },
   {
-    "id": "three-s-company-15",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-15",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "medium",
-    "prompt": "What is the reason Jack pretends to be gay to live with the women?",
-    "answer": "Landlord's rules"
+    "prompt": "Who is the team's pilot and con man?",
+    "answer": "Templeton Peck"
   },
   {
-    "id": "three-s-company-16",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-16",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "hard",
-    "prompt": "Who replaced the Ropers as landlords in later seasons?",
-    "answer": "Mr. Furley"
+    "prompt": "What crime were the A-Team falsely accused of?",
+    "answer": "Robbery they did not commit"
   },
   {
-    "id": "three-s-company-17",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-17",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "hard",
-    "prompt": "What is the name of the character played by Suzanne Somers?",
-    "answer": "Chrissy Snow"
+    "prompt": "What is the full name of the character known as 'Face'?",
+    "answer": "Templeton Peck"
   },
   {
-    "id": "three-s-company-18",
-    "showId": "three-s-company",
-    "showTitle": "Three's Company",
+    "id": "the-a-team-18",
+    "showId": "the-a-team",
+    "showTitle": "The A-Team",
     "difficulty": "hard",
-    "prompt": "Which character is known for her ditzy personality and frequent malapropisms?",
-    "answer": "Chrissy Snow"
+    "prompt": "Which character refuses to fly and has a fear of flying?",
+    "answer": "B.A. Baracus"
   },
   {
-    "id": "happy-days-19",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-19",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "easy",
-    "prompt": "In which decade is Happy Days primarily set?",
-    "answer": "1950s"
+    "prompt": "What is the name of the talking car in Knight Rider?",
+    "answer": "KITT"
   },
   {
-    "id": "happy-days-20",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-20",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "easy",
-    "prompt": "Who is the main teenage character known for his leather jacket?",
-    "answer": "Fonzie"
+    "prompt": "Who is the main driver and protagonist?",
+    "answer": "Michael Knight"
   },
   {
-    "id": "happy-days-21",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-21",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "easy",
-    "prompt": "What is the name of the diner the characters frequently visit?",
-    "answer": "Arnold's"
+    "prompt": "What color is KITT’s scanner light?",
+    "answer": "Red"
   },
   {
-    "id": "happy-days-22",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-22",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "medium",
-    "prompt": "What is Fonzie's real first name?",
-    "answer": "Arthur"
+    "prompt": "What does KITT stand for?",
+    "answer": "Knight Industries Two Thousand"
   },
   {
-    "id": "happy-days-23",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-23",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "medium",
-    "prompt": "Who are the two Cunningham siblings?",
-    "answer": "Richie and Joanie"
+    "prompt": "Who created KITT and leads the Foundation for Law and Government?",
+    "answer": "Wilton Knight"
   },
   {
-    "id": "happy-days-24",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-24",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "medium",
-    "prompt": "What is the profession of Richie's father, Howard Cunningham?",
-    "answer": "Hardware store owner"
+    "prompt": "What is Michael Knight’s original name?",
+    "answer": "Michael Long"
   },
   {
-    "id": "happy-days-25",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-25",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "hard",
-    "prompt": "Who was the original actor playing Richie Cunningham before Ron Howard took over?",
-    "answer": "Ron Howard was the original actor; no replacement"
+    "prompt": "What advanced feature allows KITT to operate autonomously?",
+    "answer": "Artificial Intelligence"
   },
   {
-    "id": "happy-days-26",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-26",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "hard",
-    "prompt": "What is the name of Fonzie's cousin who is a mechanic?",
-    "answer": "Chachi"
+    "prompt": "Where is the Knight Foundation headquartered?",
+    "answer": "Los Angeles"
   },
   {
-    "id": "happy-days-27",
-    "showId": "happy-days",
-    "showTitle": "Happy Days",
+    "id": "knight-rider-27",
+    "showId": "knight-rider",
+    "showTitle": "Knight Rider",
     "difficulty": "hard",
-    "prompt": "Which character famously said the catchphrase 'Sit on it'?",
-    "answer": "Fonzie"
+    "prompt": "What is the name of Michael Knight’s love interest who is also a scientist?",
+    "answer": "Bonnie Barstow"
   },
   {
-    "id": "the-jeffersons-28",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-28",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "easy",
-    "prompt": "What is the surname of the family in The Jeffersons?",
-    "answer": "Jefferson"
+    "prompt": "What is the name of the father in Family Ties?",
+    "answer": "Steven Keaton"
   },
   {
-    "id": "the-jeffersons-29",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-29",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "easy",
-    "prompt": "What type of business do the Jeffersons own?",
-    "answer": "Dry cleaning"
+    "prompt": "Who plays the character Alex P. Keaton?",
+    "answer": "Michael J. Fox"
   },
   {
-    "id": "the-jeffersons-30",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-30",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "easy",
-    "prompt": "What city do the Jeffersons move to in the show?",
-    "answer": "New York City"
+    "prompt": "What is the family’s last name?",
+    "answer": "Keaton"
   },
   {
-    "id": "the-jeffersons-31",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-31",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "medium",
-    "prompt": "What is the name of George Jefferson's wife?",
-    "answer": "Louise (Weezy)"
+    "prompt": "What political party does Alex P. Keaton support?",
+    "answer": "Republican"
   },
   {
-    "id": "the-jeffersons-32",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-32",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "medium",
-    "prompt": "Which character is George Jefferson's best friend and neighbor?",
-    "answer": "Tom Willis"
+    "prompt": "What is the name of Alex’s younger sister who is a hippie?",
+    "answer": "Mallory Keaton"
   },
   {
-    "id": "the-jeffersons-33",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-33",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "medium",
-    "prompt": "What is the name of George and Louise's son?",
-    "answer": "Lionel"
+    "prompt": "Which Keaton child is known for being the most conservative?",
+    "answer": "Alex P. Keaton"
   },
   {
-    "id": "the-jeffersons-34",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-34",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "hard",
-    "prompt": "Which actor portrayed George Jefferson?",
-    "answer": "Sherman Hemsley"
+    "prompt": "What is the profession of Steven Keaton?",
+    "answer": "Architect"
   },
   {
-    "id": "the-jeffersons-35",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-35",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "hard",
-    "prompt": "What is the name of the Jeffersons' maid?",
-    "answer": "Florence Johnston"
+    "prompt": "What year did Family Ties first premiere?",
+    "answer": "1982"
   },
   {
-    "id": "the-jeffersons-36",
-    "showId": "the-jeffersons",
-    "showTitle": "The Jeffersons",
+    "id": "family-ties-36",
+    "showId": "family-ties",
+    "showTitle": "Family Ties",
     "difficulty": "hard",
-    "prompt": "What was the original show from which The Jeffersons was spun off?",
-    "answer": "All in the Family"
+    "prompt": "What is the name of the youngest Keaton sibling?",
+    "answer": "Jennifer Keaton"
   },
   {
-    "id": "charlie-s-angels-37",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-37",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "easy",
-    "prompt": "What is the name of the mysterious boss of the Angels?",
-    "answer": "Charlie"
+    "prompt": "How many women live together in The Golden Girls?",
+    "answer": "Four"
   },
   {
-    "id": "charlie-s-angels-38",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-38",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "easy",
-    "prompt": "How many women make up the team of Angels?",
-    "answer": "Three"
+    "prompt": "What city do The Golden Girls live in?",
+    "answer": "Miami"
   },
   {
-    "id": "charlie-s-angels-39",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-39",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "easy",
-    "prompt": "What type of agency do the Angels work for?",
-    "answer": "Private detective agency"
+    "prompt": "What is the name of the character played by Bea Arthur?",
+    "answer": "Dorothy Zbornak"
   },
   {
-    "id": "charlie-s-angels-40",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-40",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "medium",
-    "prompt": "Who is the original female leader of the Angels?",
-    "answer": "Sabrina Duncan"
+    "prompt": "Which Golden Girl is known for being naive and sweet?",
+    "answer": "Rose Nylund"
   },
   {
-    "id": "charlie-s-angels-41",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-41",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "medium",
-    "prompt": "What is the name of the Angels' assistant?",
-    "answer": "Bosley"
+    "prompt": "Who owns the house where The Golden Girls live?",
+    "answer": "Sophia Petrillo"
   },
   {
-    "id": "charlie-s-angels-42",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-42",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "medium",
-    "prompt": "Which Angel was played by Farrah Fawcett?",
-    "answer": "Jill Munroe"
+    "prompt": "Which character is famous for her sarcastic wit?",
+    "answer": "Dorothy Zbornak"
   },
   {
-    "id": "charlie-s-angels-43",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-43",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "hard",
-    "prompt": "Which actress played Kelly Garrett?",
-    "answer": "Jaclyn Smith"
+    "prompt": "What was the name of Dorothy's mother who also lived with them?",
+    "answer": "Sophia Petrillo"
   },
   {
-    "id": "charlie-s-angels-44",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-44",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "hard",
-    "prompt": "What is the name of the production company that produced Charlie's Angels?",
-    "answer": "Aaron Spelling Productions"
+    "prompt": "Which character was a substitute teacher from St. Olaf, Minnesota?",
+    "answer": "Rose Nylund"
   },
   {
-    "id": "charlie-s-angels-45",
-    "showId": "charlie-s-angels",
-    "showTitle": "Charlie's Angels",
+    "id": "the-golden-girls-45",
+    "showId": "the-golden-girls",
+    "showTitle": "The Golden Girls",
     "difficulty": "hard",
-    "prompt": "In what year did the original Charlie's Angels TV series premiere?",
-    "answer": "1976"
+    "prompt": "What is the name of the character played by Rue McClanahan?",
+    "answer": "Blanche Devereaux"
   }
 ]

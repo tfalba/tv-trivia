@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import type { Difficulty, Question } from "@tv-trivia/shared";
+import type { Difficulty, Player, Question } from "@tv-trivia/shared";
 import { QuestionCard } from "../components/QuestionCard";
 import { WheelSpinner } from "../components/WheelSpinner";
 import { fetchQuestionBank } from "../lib/api";
 import { decadeShowPresets, getSavedDecade } from "../lib/decades";
+import { getSavedPlayers, savePlayers } from "../lib/players";
 
 const pointsByDifficulty: Record<Difficulty, number> = {
   easy: 100,
@@ -13,11 +14,7 @@ const pointsByDifficulty: Record<Difficulty, number> = {
 };
 
 export function GamePage() {
-  const [players, setPlayers] = useState([
-    { playerName: "Player 1", score: 220 },
-    { playerName: "Player 2", score: 190 },
-    { playerName: "Player 3", score: 160 },
-  ]);
+  const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
   const [selectedDecade] = useState(getSavedDecade);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
   const [spunShow, setSpunShow] = useState<string | null>(null);
@@ -31,11 +28,15 @@ export function GamePage() {
   const spinTimeoutRef = useRef<number | null>(null);
 
   const showPool = decadeShowPresets[selectedDecade];
-  const currentPlayer = players[currentPlayerIndex];
+  const currentPlayer = players[currentPlayerIndex] ?? players[0];
 
   useEffect(() => {
     void loadQuestionBank();
   }, []);
+
+  useEffect(() => {
+    savePlayers(players);
+  }, [players]);
 
   useEffect(() => {
     return () => {
@@ -59,6 +60,11 @@ export function GamePage() {
   }
 
   function spinWheel() {
+    if (!currentPlayer) {
+      setStatusMessage("Add players in Player Scoreboard before starting.");
+      return;
+    }
+
     if (isSpinning) {
       return;
     }
@@ -77,7 +83,7 @@ export function GamePage() {
     setSpunShow(null);
     setActiveQuestion(null);
     setAnswerRevealed(false);
-    setStatusMessage(`${currentPlayer.playerName} is spinning the wheel...`);
+    setStatusMessage(`${currentPlayer.name} is spinning the wheel...`);
 
     if (spinTimeoutRef.current) {
       window.clearTimeout(spinTimeoutRef.current);
@@ -85,7 +91,7 @@ export function GamePage() {
     spinTimeoutRef.current = window.setTimeout(() => {
       setIsSpinning(false);
       setSpunShow(selectedShow);
-      setStatusMessage(`${currentPlayer.playerName} spun: ${selectedShow}. Draw a question.`);
+      setStatusMessage(`${currentPlayer.name} spun: ${selectedShow}. Draw a question.`);
     }, 2600);
   }
 
@@ -116,7 +122,7 @@ export function GamePage() {
     setActiveQuestion(selectedQuestion);
     setUsedQuestionIds((prev) => [...prev, selectedQuestion.id]);
     setAnswerRevealed(false);
-    setStatusMessage(`Question loaded for ${currentPlayer.playerName} from ${spunShow}.`);
+    setStatusMessage(`Question loaded for ${currentPlayer.name} from ${spunShow}.`);
   }
 
   function completeTurn(isCorrect: boolean) {
@@ -126,7 +132,7 @@ export function GamePage() {
 
     const points = pointsByDifficulty[activeQuestion.difficulty];
     const nextPlayerIndex = (currentPlayerIndex + 1) % players.length;
-    const nextPlayerName = players[nextPlayerIndex]?.playerName ?? "Next player";
+    const nextPlayerName = players[nextPlayerIndex]?.name ?? "Next player";
 
     setPlayers((prev) =>
       prev.map((player, index) =>
@@ -138,8 +144,8 @@ export function GamePage() {
     setCurrentPlayerIndex(nextPlayerIndex);
     setStatusMessage(
       isCorrect
-        ? `${currentPlayer.playerName} earned ${points} points. ${nextPlayerName} is up next.`
-        : `${currentPlayer.playerName} missed. ${nextPlayerName} is up next.`
+        ? `${currentPlayer.name} earned ${points} points. ${nextPlayerName} is up next.`
+        : `${currentPlayer.name} missed. ${nextPlayerName} is up next.`
     );
     setActiveQuestion(null);
     setSpunShow(null);
@@ -161,7 +167,7 @@ export function GamePage() {
           className="rounded-xl px-4 py-2 text-sm font-bold text-white"
           style={{ backgroundColor: "var(--color-success)" }}
         >
-          {currentPlayer.playerName} Turn
+          {currentPlayer?.name ?? "No Player"}'s Turn
         </span>
       </div>
 
