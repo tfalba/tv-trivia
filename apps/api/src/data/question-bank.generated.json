@@ -1,0 +1,362 @@
+[
+  {
+    "id": "friends-1",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "easy",
+    "prompt": "What is the name of Ross's second wife?",
+    "answer": "Emily"
+  },
+  {
+    "id": "friends-2",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "easy",
+    "prompt": "Which character famously says 'We were on a break!'?",
+    "answer": "Ross"
+  },
+  {
+    "id": "friends-3",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "easy",
+    "prompt": "What is the name of Joey's stuffed penguin?",
+    "answer": "Hugsy"
+  },
+  {
+    "id": "friends-4",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "medium",
+    "prompt": "What is Chandler's middle name?",
+    "answer": "Muriel"
+  },
+  {
+    "id": "friends-5",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "medium",
+    "prompt": "Which friend was a paleontologist?",
+    "answer": "Ross"
+  },
+  {
+    "id": "friends-6",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "medium",
+    "prompt": "What is the name of the coffee shop where the friends hang out?",
+    "answer": "Central Perk"
+  },
+  {
+    "id": "friends-7",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "hard",
+    "prompt": "What is the name of the soap opera Joey stars in?",
+    "answer": "Days of Our Lives"
+  },
+  {
+    "id": "friends-8",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "hard",
+    "prompt": "What is the name of the character played by Tom Selleck?",
+    "answer": "Dr. Richard Burke"
+  },
+  {
+    "id": "friends-9",
+    "showId": "friends",
+    "showTitle": "Friends",
+    "difficulty": "hard",
+    "prompt": "What is the name of Ross and Monica's grandmother?",
+    "answer": "Althea"
+  },
+  {
+    "id": "seinfeld-10",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "easy",
+    "prompt": "What is Jerry Seinfeld's occupation?",
+    "answer": "Comedian"
+  },
+  {
+    "id": "seinfeld-11",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "easy",
+    "prompt": "What is the name of Jerry's neighbor who is often seen wearing a puffy shirt?",
+    "answer": "Kramer"
+  },
+  {
+    "id": "seinfeld-12",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "easy",
+    "prompt": "What is the name of the coffee shop the characters frequently visit?",
+    "answer": "Monk's Cafe"
+  },
+  {
+    "id": "seinfeld-13",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "medium",
+    "prompt": "What is the name of George Costanza's fiancée who leaves him at the altar?",
+    "answer": "Susan"
+  },
+  {
+    "id": "seinfeld-14",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "medium",
+    "prompt": "What alias does Jerry use when checking into a hotel in 'The Outing'?",
+    "answer": "Dr. Van Nostrand"
+  },
+  {
+    "id": "seinfeld-15",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "medium",
+    "prompt": "What is Elaine's signature dance style called?",
+    "answer": "The Elaine Dance"
+  },
+  {
+    "id": "seinfeld-16",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "hard",
+    "prompt": "What is the name of the book written by George's father?",
+    "answer": "The Book of George"
+  },
+  {
+    "id": "seinfeld-17",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "hard",
+    "prompt": "What is the name of the soup stand owner who famously yells 'No soup for you!'?",
+    "answer": "The Soup Nazi"
+  },
+  {
+    "id": "seinfeld-18",
+    "showId": "seinfeld",
+    "showTitle": "Seinfeld",
+    "difficulty": "hard",
+    "prompt": "What is the name of the character who steals a marble rye bread?",
+    "answer": "Jackie Chiles"
+  },
+  {
+    "id": "the-office-19",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "What is the name of the paper company in The Office?",
+    "answer": "Dunder Mifflin"
+  },
+  {
+    "id": "the-office-20",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "Who is the regional manager at the start of the series?",
+    "answer": "Michael Scott"
+  },
+  {
+    "id": "the-office-21",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "What town is The Office set in?",
+    "answer": "Scranton"
+  },
+  {
+    "id": "the-office-22",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "What is the name of Dwight's cousin?",
+    "answer": "Mose"
+  },
+  {
+    "id": "the-office-23",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "What is Pam's maiden name?",
+    "answer": "Beesly"
+  },
+  {
+    "id": "the-office-24",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "What is the name of the documentary crew's sound mixer who appears in the series?",
+    "answer": "Brian"
+  },
+  {
+    "id": "the-office-25",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "hard",
+    "prompt": "What is the name of the company that buys Dunder Mifflin?",
+    "answer": "Sabre"
+  },
+  {
+    "id": "the-office-26",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "hard",
+    "prompt": "What is the title of Michael Scott's screenplay?",
+    "answer": "Threat Level Midnight"
+  },
+  {
+    "id": "the-office-27",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "hard",
+    "prompt": "What is the name of Angela's favorite cat?",
+    "answer": "Sprinkles"
+  },
+  {
+    "id": "breaking-bad-28",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "What is Walter White's profession before he starts cooking meth?",
+    "answer": "Chemistry teacher"
+  },
+  {
+    "id": "breaking-bad-29",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "What is the street name of Jesse Pinkman's meth?",
+    "answer": "Blue Sky"
+  },
+  {
+    "id": "breaking-bad-30",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "Who is Walter White's partner in the meth business?",
+    "answer": "Jesse Pinkman"
+  },
+  {
+    "id": "breaking-bad-31",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "What is the name of the fast food chain owned by Gus Fring?",
+    "answer": "Los Pollos Hermanos"
+  },
+  {
+    "id": "breaking-bad-32",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "What is the alias Walter White uses when dealing with criminals?",
+    "answer": "Heisenberg"
+  },
+  {
+    "id": "breaking-bad-33",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "What is Jesse Pinkman's catchphrase often used when excited?",
+    "answer": "Yeah, science!"
+  },
+  {
+    "id": "breaking-bad-34",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "hard",
+    "prompt": "What chemical does Walter use to dissolve a body in the first season?",
+    "answer": "Hydrofluoric acid"
+  },
+  {
+    "id": "breaking-bad-35",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "hard",
+    "prompt": "What is the name of Walter White's son?",
+    "answer": "Walter Jr."
+  },
+  {
+    "id": "breaking-bad-36",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "hard",
+    "prompt": "Who kills Gus Fring?",
+    "answer": "Walter White"
+  },
+  {
+    "id": "lost-37",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "easy",
+    "prompt": "What is the flight number of the plane that crashes on the island?",
+    "answer": "815"
+  },
+  {
+    "id": "lost-38",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "easy",
+    "prompt": "Who is the leader of the survivors at the start?",
+    "answer": "Jack Shephard"
+  },
+  {
+    "id": "lost-39",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "easy",
+    "prompt": "What is the name of the mysterious island monster?",
+    "answer": "The Smoke Monster"
+  },
+  {
+    "id": "lost-40",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "What is the name of the group that lives on the island before the crash survivors?",
+    "answer": "The Others"
+  },
+  {
+    "id": "lost-41",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "What is the name of the scientific station on the island?",
+    "answer": "The Swan"
+  },
+  {
+    "id": "lost-42",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "Who is the con man among the survivors?",
+    "answer": "James 'Sawyer' Ford"
+  },
+  {
+    "id": "lost-43",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "What numbers must the survivors enter into the computer every 108 minutes?",
+    "answer": "4 8 15 16 23 42"
+  },
+  {
+    "id": "lost-44",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "What is the real name of the character known as John Locke?",
+    "answer": "John Locke"
+  },
+  {
+    "id": "lost-45",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "Who is revealed to be Jacob's nemesis?",
+    "answer": "The Man in Black"
+  }
+]

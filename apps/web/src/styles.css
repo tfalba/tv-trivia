@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 min-h-screen bg-trivia-slate bg-trivia-grid bg-[size:20px_20px] font-body text-trivia-paper;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply mx-auto min-h-screen w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply rounded-3xl border border-white/20 bg-white/10 shadow-card backdrop-blur-md;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-trivia-gold px-5 py-3 font-semibold text-trivia-ink transition hover:-translate-y-0.5 hover:brightness-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-trivia-blue/60 bg-trivia-blue/20 px-5 py-3 font-semibold text-trivia-paper transition hover:bg-trivia-blue/35;
+  }
+
+  .chip {
+    @apply rounded-full border border-white/25 bg-black/30 px-3 py-1 text-sm font-semibold;
+  }
+}
