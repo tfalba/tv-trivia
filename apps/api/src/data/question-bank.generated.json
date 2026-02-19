@@ -1,362 +1,362 @@
 [
   {
-    "id": "buffy-the-vampire-slayer-1",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-1",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "easy",
-    "prompt": "Who is the main vampire slayer in the show?",
-    "answer": "Buffy Summers"
+    "prompt": "Who played the father, Jason Seaver, on Growing Pains?",
+    "answer": "Alan Thicke"
   },
   {
-    "id": "buffy-the-vampire-slayer-2",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-2",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "easy",
-    "prompt": "What is the name of Buffy's high school?",
-    "answer": "Sunnydale High"
+    "prompt": "What city is Growing Pains primarily set in?",
+    "answer": "New York"
   },
   {
-    "id": "buffy-the-vampire-slayer-3",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-3",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "easy",
-    "prompt": "Who is Buffy's Watcher?",
-    "answer": "Rupert Giles"
+    "prompt": "What is the profession of Jason Seaver in Growing Pains?",
+    "answer": "Psychologist"
   },
   {
-    "id": "buffy-the-vampire-slayer-4",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-4",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "medium",
-    "prompt": "What demon is the main antagonist in season 2?",
-    "answer": "Angelus"
+    "prompt": "What is the name of the youngest Seaver child on Growing Pains?",
+    "answer": "Chrissy"
   },
   {
-    "id": "buffy-the-vampire-slayer-5",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-5",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "medium",
-    "prompt": "Which character is a vampire with a soul?",
-    "answer": "Angel"
+    "prompt": "Which actor joined Growing Pains as Luke Brower in later seasons?",
+    "answer": "Leonardo DiCaprio"
   },
   {
-    "id": "buffy-the-vampire-slayer-6",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-6",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "medium",
-    "prompt": "Who is the vampire slayer before Buffy?",
-    "answer": "Kendra Young"
+    "prompt": "What is the name of the Seaver's housekeeper on the show?",
+    "answer": "Mrs. McClusky"
   },
   {
-    "id": "buffy-the-vampire-slayer-7",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-7",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "hard",
-    "prompt": "What is the name of the demon that controls the hell dimension in season 6?",
-    "answer": "Glory"
+    "prompt": "What year did Growing Pains first premiere on television?",
+    "answer": "1985"
   },
   {
-    "id": "buffy-the-vampire-slayer-8",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
+    "id": "growing-pains-8",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "hard",
-    "prompt": "Which character was revealed to be a potential slayer in season 3?",
-    "answer": "Faith"
-  },
-  {
-    "id": "buffy-the-vampire-slayer-9",
-    "showId": "buffy-the-vampire-slayer",
-    "showTitle": "Buffy the Vampire Slayer",
-    "difficulty": "hard",
-    "prompt": "What is the name of the secret society Giles belonged to?",
-    "answer": "Watchers' Council"
-  },
-  {
-    "id": "er-10",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "easy",
-    "prompt": "What is the setting of ER?",
-    "answer": "County General Hospital"
-  },
-  {
-    "id": "er-11",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "easy",
-    "prompt": "Who is the head of the ER in the first season?",
-    "answer": "Dr. Mark Greene"
-  },
-  {
-    "id": "er-12",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "easy",
-    "prompt": "Which character is a nurse in the ER?",
-    "answer": "Carol Hathaway"
-  },
-  {
-    "id": "er-13",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "medium",
-    "prompt": "What is Dr. Doug Ross's specialty?",
-    "answer": "Pediatrics"
-  },
-  {
-    "id": "er-14",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "medium",
-    "prompt": "Which actor played Dr. John Carter?",
-    "answer": "Noah Wyle"
-  },
-  {
-    "id": "er-15",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "medium",
-    "prompt": "Which character struggles with addiction during the series?",
-    "answer": "Dr. Mark Greene"
-  },
-  {
-    "id": "er-16",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "hard",
-    "prompt": "Who replaces Dr. Mark Greene as the ER chief?",
-    "answer": "Dr. Luka Kovač"
-  },
-  {
-    "id": "er-17",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "hard",
-    "prompt": "What event causes Dr. Carter to leave the hospital in later seasons?",
-    "answer": "Going to Africa"
-  },
-  {
-    "id": "er-18",
-    "showId": "er",
-    "showTitle": "ER",
-    "difficulty": "hard",
-    "prompt": "Which character was a paramedic before becoming a doctor?",
-    "answer": "Dr. John Carter"
-  },
-  {
-    "id": "twin-peaks-19",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "easy",
-    "prompt": "Who is the murder victim in Twin Peaks?",
-    "answer": "Laura Palmer"
-  },
-  {
-    "id": "twin-peaks-20",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "easy",
-    "prompt": "Who is the lead FBI agent investigating the murder?",
-    "answer": "Dale Cooper"
-  },
-  {
-    "id": "twin-peaks-21",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "easy",
-    "prompt": "What is the name of the town where the show is set?",
-    "answer": "Twin Peaks"
-  },
-  {
-    "id": "twin-peaks-22",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "medium",
-    "prompt": "What is the name of the mysterious giant who appears to Agent Cooper?",
-    "answer": "The Giant"
-  },
-  {
-    "id": "twin-peaks-23",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "medium",
-    "prompt": "Who owns the Double R Diner?",
-    "answer": "Norma Jennings"
-  },
-  {
-    "id": "twin-peaks-24",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "medium",
-    "prompt": "What supernatural place exists in the woods near Twin Peaks?",
-    "answer": "The Black Lodge"
-  },
-  {
-    "id": "twin-peaks-25",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "hard",
-    "prompt": "What is the name of Laura Palmer's secret diary's author?",
-    "answer": "Laura Palmer"
-  },
-  {
-    "id": "twin-peaks-26",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "hard",
-    "prompt": "Who is revealed to be Laura Palmer's killer?",
-    "answer": "Leland Palmer"
-  },
-  {
-    "id": "twin-peaks-27",
-    "showId": "twin-peaks",
-    "showTitle": "Twin Peaks",
-    "difficulty": "hard",
-    "prompt": "What is the name of the one-armed man?",
+    "prompt": "Which Seaver child was known for being the troublemaker?",
     "answer": "Mike"
   },
   {
-    "id": "the-simpsons-28",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "easy",
-    "prompt": "What is the name of the Simpson family's town?",
-    "answer": "Springfield"
-  },
-  {
-    "id": "the-simpsons-29",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "easy",
-    "prompt": "Who is the father in the Simpson family?",
-    "answer": "Homer Simpson"
-  },
-  {
-    "id": "the-simpsons-30",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "easy",
-    "prompt": "What is the name of the Simpson's baby?",
-    "answer": "Maggie Simpson"
-  },
-  {
-    "id": "the-simpsons-31",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "medium",
-    "prompt": "What is the name of the bartender at Moe's Tavern?",
-    "answer": "Moe Szyslak"
-  },
-  {
-    "id": "the-simpsons-32",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "medium",
-    "prompt": "Who is Bart Simpson's best friend?",
-    "answer": "Milhouse Van Houten"
-  },
-  {
-    "id": "the-simpsons-33",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "medium",
-    "prompt": "What is the name of the elementary school principal?",
-    "answer": "Principal Skinner"
-  },
-  {
-    "id": "the-simpsons-34",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
+    "id": "growing-pains-9",
+    "showId": "growing-pains",
+    "showTitle": "Growing Pains",
     "difficulty": "hard",
-    "prompt": "What is the name of Homer's favorite beer?",
-    "answer": "Duff Beer"
+    "prompt": "Who played Carol Seaver, the eldest daughter on Growing Pains?",
+    "answer": "Tracey Gold"
   },
   {
-    "id": "the-simpsons-35",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "hard",
-    "prompt": "Who is the mayor of Springfield?",
-    "answer": "Joe Quimby"
-  },
-  {
-    "id": "the-simpsons-36",
-    "showId": "the-simpsons",
-    "showTitle": "The Simpsons",
-    "difficulty": "hard",
-    "prompt": "Which character owns the Kwik-E-Mart?",
-    "answer": "Apu Nahasapeemapetilon"
-  },
-  {
-    "id": "beverly-hills-90210-37",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-10",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "easy",
-    "prompt": "What is the high school attended by the main characters?",
-    "answer": "West Beverly High"
+    "prompt": "What is the name of the wealthy family that adopts two boys in Diff'rent Strokes?",
+    "answer": "Drummond"
   },
   {
-    "id": "beverly-hills-90210-38",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-11",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "easy",
-    "prompt": "Who is the main male protagonist in the series?",
-    "answer": "Brandon Walsh"
+    "prompt": "What are the first names of the two boys adopted in Diff'rent Strokes?",
+    "answer": "Arnold and Willis"
   },
   {
-    "id": "beverly-hills-90210-39",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-12",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "easy",
-    "prompt": "Who is Brandon's twin sister?",
-    "answer": "Brenda Walsh"
+    "prompt": "What is the famous catchphrase Arnold says on Diff'rent Strokes?",
+    "answer": "Whatchu talkin' 'bout, Willis?"
   },
   {
-    "id": "beverly-hills-90210-40",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-13",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "medium",
-    "prompt": "Which character is a popular cheerleader?",
-    "answer": "Kelly Taylor"
+    "prompt": "Who played the housekeeper, Mrs. Garrett, in Diff'rent Strokes?",
+    "answer": "Charlotte Rae"
   },
   {
-    "id": "beverly-hills-90210-41",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-14",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "medium",
-    "prompt": "Who is the principal of West Beverly High?",
-    "answer": "David Silver"
+    "prompt": "What city does Diff'rent Strokes take place in?",
+    "answer": "New York City"
   },
   {
-    "id": "beverly-hills-90210-42",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-15",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "medium",
-    "prompt": "What business do the Walsh family originally run?",
-    "answer": "Newspaper"
+    "prompt": "What is the first name of the Drummond family patriarch in Diff'rent Strokes?",
+    "answer": "Phillip"
   },
   {
-    "id": "beverly-hills-90210-43",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-16",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "hard",
-    "prompt": "Which character struggles with drug addiction?",
-    "answer": "Brandon Walsh"
+    "prompt": "Which actor played the role of Willis Jackson?",
+    "answer": "Todd Bridges"
   },
   {
-    "id": "beverly-hills-90210-44",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-17",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "hard",
-    "prompt": "Who does Donna Martin marry in the series?",
-    "answer": "David Silver"
+    "prompt": "What year did Diff'rent Strokes debut on television?",
+    "answer": "1978"
   },
   {
-    "id": "beverly-hills-90210-45",
-    "showId": "beverly-hills-90210",
-    "showTitle": "Beverly Hills, 90210",
+    "id": "diff-rent-strokes-18",
+    "showId": "diff-rent-strokes",
+    "showTitle": "Diff'rent Strokes",
     "difficulty": "hard",
-    "prompt": "What is the name of the local hangout spot?",
-    "answer": "Peach Pit"
+    "prompt": "What is the full name of the Drummond family's housekeeper in Diff'rent Strokes?",
+    "answer": "Mrs. Edna Garrett"
+  },
+  {
+    "id": "night-court-19",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "easy",
+    "prompt": "Who played Judge Harry Stone on Night Court?",
+    "answer": "Harry Anderson"
+  },
+  {
+    "id": "night-court-20",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "easy",
+    "prompt": "What city is Night Court set in?",
+    "answer": "New York"
+  },
+  {
+    "id": "night-court-21",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "easy",
+    "prompt": "What type of court is depicted in Night Court?",
+    "answer": "Nighttime municipal court"
+  },
+  {
+    "id": "night-court-22",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "medium",
+    "prompt": "Who played the bailiff Bull Shannon on Night Court?",
+    "answer": "Richard Moll"
+  },
+  {
+    "id": "night-court-23",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "medium",
+    "prompt": "What is the name of the court clerk on Night Court?",
+    "answer": "Roz Russell"
+  },
+  {
+    "id": "night-court-24",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "medium",
+    "prompt": "Night Court originally aired on which network?",
+    "answer": "NBC"
+  },
+  {
+    "id": "night-court-25",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "hard",
+    "prompt": "What year did Night Court first premiere?",
+    "answer": "1984"
+  },
+  {
+    "id": "night-court-26",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "hard",
+    "prompt": "Who created the television series Night Court?",
+    "answer": "Markie Post"
+  },
+  {
+    "id": "night-court-27",
+    "showId": "night-court",
+    "showTitle": "Night Court",
+    "difficulty": "hard",
+    "prompt": "What is Judge Harry Stone's favorite magic phrase?",
+    "answer": "Abracadabra"
+  },
+  {
+    "id": "moonlighting-28",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "easy",
+    "prompt": "Who are the two main detectives in Moonlighting?",
+    "answer": "Maddie Hayes and David Addison"
+  },
+  {
+    "id": "moonlighting-29",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "easy",
+    "prompt": "What is the name of the detective agency in Moonlighting?",
+    "answer": "Blue Moon Detective Agency"
+  },
+  {
+    "id": "moonlighting-30",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "easy",
+    "prompt": "On which network did Moonlighting air?",
+    "answer": "ABC"
+  },
+  {
+    "id": "moonlighting-31",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "medium",
+    "prompt": "Who played Maddie Hayes on Moonlighting?",
+    "answer": "Cybill Shepherd"
+  },
+  {
+    "id": "moonlighting-32",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "medium",
+    "prompt": "What year did Moonlighting premiere?",
+    "answer": "1985"
+  },
+  {
+    "id": "moonlighting-33",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "medium",
+    "prompt": "What profession does David Addison have in Moonlighting?",
+    "answer": "Private detective"
+  },
+  {
+    "id": "moonlighting-34",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "hard",
+    "prompt": "Who created the TV show Moonlighting?",
+    "answer": "Gloria Katz and Willard Huyck"
+  },
+  {
+    "id": "moonlighting-35",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "hard",
+    "prompt": "Moonlighting was known for breaking which TV convention?",
+    "answer": "Fourth wall"
+  },
+  {
+    "id": "moonlighting-36",
+    "showId": "moonlighting",
+    "showTitle": "Moonlighting",
+    "difficulty": "hard",
+    "prompt": "What is the name of Maddie Hayes' wealthy client who initially hires her agency?",
+    "answer": "Her boyfriend, but no specific name is given"
+  },
+  {
+    "id": "cheers-37",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "easy",
+    "prompt": "What is the name of the bar in Cheers?",
+    "answer": "Cheers"
+  },
+  {
+    "id": "cheers-38",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "easy",
+    "prompt": "Who is the bartender and main character in Cheers?",
+    "answer": "Sam Malone"
+  },
+  {
+    "id": "cheers-39",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "easy",
+    "prompt": "In which city is Cheers set?",
+    "answer": "Boston"
+  },
+  {
+    "id": "cheers-40",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "medium",
+    "prompt": "Who played Diane Chambers on Cheers?",
+    "answer": "Shelley Long"
+  },
+  {
+    "id": "cheers-41",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "medium",
+    "prompt": "What sport did Sam Malone play before becoming a bartender in Cheers?",
+    "answer": "Baseball"
+  },
+  {
+    "id": "cheers-42",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "medium",
+    "prompt": "Who was the bar owner of Cheers?",
+    "answer": "Sam Malone"
+  },
+  {
+    "id": "cheers-43",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "hard",
+    "prompt": "What year did Cheers first premiere?",
+    "answer": "1982"
+  },
+  {
+    "id": "cheers-44",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "hard",
+    "prompt": "Who created the TV show Cheers?",
+    "answer": "Glen Charles and Les Charles"
+  },
+  {
+    "id": "cheers-45",
+    "showId": "cheers",
+    "showTitle": "Cheers",
+    "difficulty": "hard",
+    "prompt": "What is the name of the character known for his catchphrase 'Norm!'?",
+    "answer": "Norm Peterson"
   }
 ]

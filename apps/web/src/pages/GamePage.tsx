@@ -24,6 +24,9 @@ export function GamePage() {
   const [statusMessage, setStatusMessage] = useState(
     "Select a TV show panel, then draw a question."
   );
+  const [turnNumber, setTurnNumber] = useState(0);
+  const [showSelectedForTurn, setShowSelectedForTurn] = useState<number | null>(null);
+  const [questionDrawnForTurn, setQuestionDrawnForTurn] = useState<number | null>(null);
   const [isSelectingShow, setIsSelectingShow] = useState(false);
   const [animatedShowIndex, setAnimatedShowIndex] = useState<number | null>(null);
   const showAnimationIntervalRef = useRef<number | null>(null);
@@ -75,6 +78,8 @@ export function GamePage() {
     }
 
     setSpunShow(show);
+    setShowSelectedForTurn(turnNumber);
+    setQuestionDrawnForTurn(null);
     setActiveQuestion(null);
     setAnswerRevealed(false);
     setStatusMessage(`${currentPlayer.name} selected: ${show}. Draw a question.`);
@@ -120,13 +125,20 @@ export function GamePage() {
       setIsSelectingShow(false);
       setAnimatedShowIndex(finalIndex);
       setSpunShow(finalShow);
+      setShowSelectedForTurn(turnNumber);
+      setQuestionDrawnForTurn(null);
       setStatusMessage(`${currentPlayer.name} selected: ${finalShow}. Draw a question.`);
     }, 5000);
   }
 
   function drawQuestion() {
-    if (!spunShow) {
-      setStatusMessage("Select a TV show first, then draw a question.");
+    if (!spunShow || showSelectedForTurn !== turnNumber) {
+      setStatusMessage("Select a new TV show for this player, then draw a question.");
+      return;
+    }
+
+    if (questionDrawnForTurn === turnNumber || activeQuestion) {
+      setStatusMessage("A question is already active for this turn.");
       return;
     }
 
@@ -144,6 +156,7 @@ export function GamePage() {
     const selectedQuestion =
       availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     setActiveQuestion(selectedQuestion);
+    setQuestionDrawnForTurn(turnNumber);
     setUsedQuestionIds((prev) => [...prev, selectedQuestion.id]);
     setAnswerRevealed(false);
     setStatusMessage(`Question loaded for ${currentPlayer.name} from ${spunShow}.`);
@@ -166,6 +179,7 @@ export function GamePage() {
       )
     );
     setCurrentPlayerIndex(nextPlayerIndex);
+    setTurnNumber((prev) => prev + 1);
     setStatusMessage(
       isCorrect
         ? `${currentPlayer.name} earned ${points} points. ${nextPlayerName} is up next.`
@@ -173,6 +187,8 @@ export function GamePage() {
     );
     setActiveQuestion(null);
     setSpunShow(null);
+    setShowSelectedForTurn(null);
+    setQuestionDrawnForTurn(null);
     setAnswerRevealed(false);
   }
 
@@ -235,12 +251,9 @@ export function GamePage() {
         </p>
         <p className="mb-4 text-white/85">{statusMessage}</p>
         <div className="flex flex-wrap gap-2">
-          <Link to="/settings" className="btn-secondary">
-            Open Settings
-          </Link>
           <button
             type="button"
-            className="btn-primary"
+            className={spunShow ? "btn-secondary" : "btn-primary"}
             onClick={runShowSelectionAnimation}
             disabled={isSelectingShow}
           >
@@ -248,9 +261,14 @@ export function GamePage() {
           </button>
           <button
             type="button"
-            className="btn-primary"
+            className={!spunShow || showSelectedForTurn !== turnNumber || questionDrawnForTurn === turnNumber || Boolean(activeQuestion) ? "btn-secondary" : "btn-primary"}
             onClick={drawQuestion}
-            disabled={!spunShow}
+            disabled={
+              !spunShow ||
+              showSelectedForTurn !== turnNumber ||
+              questionDrawnForTurn === turnNumber ||
+              Boolean(activeQuestion)
+            }
           >
             Draw question
           </button>
@@ -261,16 +279,20 @@ export function GamePage() {
       </div>
 
       {activeQuestion ? (
-        <QuestionCard
-          showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
-          difficulty={activeQuestion.difficulty}
-          prompt={activeQuestion.prompt}
-          answer={activeQuestion.answer}
-          isRevealed={answerRevealed}
-          onReveal={() => setAnswerRevealed(true)}
-          onMarkCorrect={() => completeTurn(true)}
-          onMarkWrong={() => completeTurn(false)}
-        />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm">
+          <div className="w-full max-w-2xl bg-black/80 rounded-2xl">
+            <QuestionCard
+              showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
+              difficulty={activeQuestion.difficulty}
+              prompt={activeQuestion.prompt}
+              answer={activeQuestion.answer}
+              isRevealed={answerRevealed}
+              onReveal={() => setAnswerRevealed(true)}
+              onMarkCorrect={() => completeTurn(true)}
+              onMarkWrong={() => completeTurn(false)}
+            />
+          </div>
+        </div>
       ) : null}
 
       <div
@@ -278,7 +300,7 @@ export function GamePage() {
         style={{
           border: "1px solid color-mix(in oklab, var(--color-accent) 55%, black 15%)",
           background:
-            "color-mix(in oklab, var(--color-accent) 26%, var(--color-surface-2) 74%)",
+            "color-mix(in oklab, var(--color-accent) 46%, var(--color-surface-2) 54%)",
         }}
       >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">

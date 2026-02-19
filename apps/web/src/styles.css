@@ -43,7 +43,7 @@
     --shadow-focus: 0 0 0 3px rgba(226, 62, 54, 0.52);
     --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
     --color-bg: #6b002a;
-    --color-surface: rgb(117, 0, 44, 0.3);
+    --color-surface: rgba(61, 2, 24, 0.3);
     --color-surface-2: rgb(101, 1, 45, 0.19);
     --color-border: #4d2424;
     --color-text: #fff3f1;
@@ -172,8 +172,8 @@
   [data-theme="option2"] .bg-black\/25 {
     background-color: color-mix(
       in oklab,
-      var(--color-surface-2) 90%,
-      transparent
-    ) !important;
+      var(--color-surface-2) 10%,
+      var(--color-surface) 90%
+    );
   }
 }
