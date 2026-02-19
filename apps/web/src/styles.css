@@ -18,7 +18,7 @@
     --color-text: #ffffff;
     --color-muted: rgba(255, 255, 255, 0.85);
 
-    --color-primary: #ffd034;
+    --color-primary: rgb(255, 208, 52, 0.6);
     --color-accent: #2b70e4;
     --color-violet: #209d5c;
 
@@ -43,13 +43,13 @@
     --shadow-focus: 0 0 0 3px rgba(226, 62, 54, 0.52);
     --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
     --color-bg: #6b002a;
-    --color-surface: rgb(117, 0, 44, 0.6);
-    --color-surface-2: #65012d;
+    --color-surface: rgb(117, 0, 44, 0.3);
+    --color-surface-2: rgb(101, 1, 45, 0.19);
     --color-border: #4d2424;
     --color-text: #fff3f1;
     --color-muted: #e4bbb5;
-    --color-primary: #b70333;
-    --color-accent: #f06a4f;
+    --color-primary: rgb(183, 3, 51, 0.65);
+    --color-accent: rgb(240, 106, 79, 0.95);
     --color-violet: #a83281;
     --color-success: #e27562;
     --color-warning: #f0a05e;
@@ -71,12 +71,12 @@
     --shadow-focus: 0 0 0 3px rgba(36, 82, 162, 0.5);
     --shadow-glow: 0 0 22px rgba(36, 82, 162, 0.28);
     --color-bg: #0b1426;
-    --color-surface: rgba(18, 31, 55, 0.88);
+    --color-surface: rgba(18, 31, 55, 0.3);
     --color-surface-2: rgba(11, 18, 32, 0.9);
     --color-border: #28406d;
     --color-text: #eaf2ff;
     --color-muted: #b4c4e5;
-    --color-primary: #ffd034;
+    --color-primary: rgb(255, 208, 52, 0.6);
     --color-accent: #2452a2;
     --color-violet: #209d5c;
     --color-success: #209d5c;
@@ -95,10 +95,12 @@
 
   body {
     @apply m-0 min-h-screen bg-[size:20px_20px] font-body;
-    background-color: var(--color-bg);
-    background-image: var(--hero-radial-1), var(--hero-radial-2),
-      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+    /* background-color: var(--color-bg); */
+    /* background-image: var(--hero-radial-1), var(--hero-radial-2),
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0); */
     color: var(--color-text);
+    background-image: url("./assets/pexels-tree-1866602_1280.jpg");
+    background-size: cover;
   }
 }
 
@@ -116,7 +118,11 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-white transition;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-accent)
+    );
     box-shadow: var(--shadow-glow);
   }
 
@@ -164,6 +170,10 @@
   }
 
   [data-theme="option2"] .bg-black\/25 {
-    background-color: color-mix(in oklab, var(--color-surface-2) 90%, transparent) !important;
+    background-color: color-mix(
+      in oklab,
+      var(--color-surface-2) 90%,
+      transparent
+    ) !important;
   }
 }

@@ -195,7 +195,7 @@ export function GamePage() {
         </span>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="rounded-2xl border border-white/15 bg-[var(--color-primary)] p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           TV Show Panels
         </p>
@@ -216,7 +216,7 @@ export function GamePage() {
                   "rounded-xl border px-4 py-4 text-left transition",
                   isSelected
                     ? "border-trivia-gold/70 bg-trivia-gold/15"
-                    : "border-white/15 bg-black/25 hover:bg-white/10",
+                    : "border-white/15 bg-primary/25 hover:bg-white/10",
                 ].join(" ")}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-trivia-gold">
@@ -229,7 +229,7 @@ export function GamePage() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="rounded-2xl border border-white/15 bg-bg/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Select + Draw Flow
         </p>
