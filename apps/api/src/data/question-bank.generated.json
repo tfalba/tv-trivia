@@ -1,362 +1,362 @@
 [
   {
-    "id": "the-office-1",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-1",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "easy",
-    "prompt": "What is the name of the paper company in The Office?",
-    "answer": "Dunder Mifflin"
+    "prompt": "Who is the main vampire slayer in the show?",
+    "answer": "Buffy Summers"
   },
   {
-    "id": "the-office-2",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-2",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "easy",
-    "prompt": "Who is the regional manager at the start of The Office?",
-    "answer": "Michael Scott"
+    "prompt": "What is the name of Buffy's high school?",
+    "answer": "Sunnydale High"
   },
   {
-    "id": "the-office-3",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-3",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "easy",
-    "prompt": "Which character is known for saying 'That's what she said'?",
-    "answer": "Michael Scott"
+    "prompt": "Who is Buffy's Watcher?",
+    "answer": "Rupert Giles"
   },
   {
-    "id": "the-office-4",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-4",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "medium",
-    "prompt": "What is the name of Jim Halpert's wife?",
-    "answer": "Pam Beesly"
+    "prompt": "What demon is the main antagonist in season 2?",
+    "answer": "Angelus"
   },
   {
-    "id": "the-office-5",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-5",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "medium",
-    "prompt": "Which city is The Office set in?",
-    "answer": "Scranton"
+    "prompt": "Which character is a vampire with a soul?",
+    "answer": "Angel"
   },
   {
-    "id": "the-office-6",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-6",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "medium",
-    "prompt": "Who started the fire in the episode titled 'The Fire'?",
-    "answer": "Ryan Howard"
+    "prompt": "Who is the vampire slayer before Buffy?",
+    "answer": "Kendra Young"
   },
   {
-    "id": "the-office-7",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-7",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "hard",
-    "prompt": "What is the name of the company that buys Dunder Mifflin?",
-    "answer": "Sabre"
+    "prompt": "What is the name of the demon that controls the hell dimension in season 6?",
+    "answer": "Glory"
   },
   {
-    "id": "the-office-8",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-8",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "hard",
-    "prompt": "What is Dwight Schrute's cousin's name who appears in the series?",
-    "answer": "Mose Schrute"
+    "prompt": "Which character was revealed to be a potential slayer in season 3?",
+    "answer": "Faith"
   },
   {
-    "id": "the-office-9",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "buffy-the-vampire-slayer-9",
+    "showId": "buffy-the-vampire-slayer",
+    "showTitle": "Buffy the Vampire Slayer",
     "difficulty": "hard",
-    "prompt": "Which character briefly becomes the office receptionist after Pam?",
-    "answer": "Ryan Howard"
+    "prompt": "What is the name of the secret society Giles belonged to?",
+    "answer": "Watchers' Council"
   },
   {
-    "id": "lost-10",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-10",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "easy",
-    "prompt": "What is the name of the island where Lost is set?",
-    "answer": "The Island"
+    "prompt": "What is the setting of ER?",
+    "answer": "County General Hospital"
   },
   {
-    "id": "lost-11",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-11",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "easy",
-    "prompt": "Who is the leader of the survivors in Lost?",
-    "answer": "Jack Shephard"
+    "prompt": "Who is the head of the ER in the first season?",
+    "answer": "Dr. Mark Greene"
   },
   {
-    "id": "lost-12",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-12",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "easy",
-    "prompt": "What is the number sequence that appears frequently in Lost?",
-    "answer": "4 8 15 16 23 42"
+    "prompt": "Which character is a nurse in the ER?",
+    "answer": "Carol Hathaway"
   },
   {
-    "id": "lost-13",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-13",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "medium",
-    "prompt": "What is the name of the mysterious group on the island?",
-    "answer": "The Others"
+    "prompt": "What is Dr. Doug Ross's specialty?",
+    "answer": "Pediatrics"
   },
   {
-    "id": "lost-14",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-14",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "medium",
-    "prompt": "Which character is a conman known as 'Sawyer'?",
-    "answer": "James Ford"
+    "prompt": "Which actor played Dr. John Carter?",
+    "answer": "Noah Wyle"
   },
   {
-    "id": "lost-15",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-15",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "medium",
-    "prompt": "What is the name of the freighter offshore in Lost?",
-    "answer": "Kahana"
+    "prompt": "Which character struggles with addiction during the series?",
+    "answer": "Dr. Mark Greene"
   },
   {
-    "id": "lost-16",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-16",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "hard",
-    "prompt": "What is the real name of the character known as 'The Man in Black'?",
-    "answer": "Unknown/He is often called the Man in Black"
+    "prompt": "Who replaces Dr. Mark Greene as the ER chief?",
+    "answer": "Dr. Luka Kovač"
   },
   {
-    "id": "lost-17",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-17",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "hard",
-    "prompt": "What is the name of the DHARMA Initiative station that involves time travel?",
-    "answer": "The Orchid"
+    "prompt": "What event causes Dr. Carter to leave the hospital in later seasons?",
+    "answer": "Going to Africa"
   },
   {
-    "id": "lost-18",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "er-18",
+    "showId": "er",
+    "showTitle": "ER",
     "difficulty": "hard",
-    "prompt": "Who is the first character to find the hatch with the numbers?",
-    "answer": "John Locke"
+    "prompt": "Which character was a paramedic before becoming a doctor?",
+    "answer": "Dr. John Carter"
   },
   {
-    "id": "house-19",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-19",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "easy",
-    "prompt": "What is Dr. House's first name?",
-    "answer": "Gregory"
+    "prompt": "Who is the murder victim in Twin Peaks?",
+    "answer": "Laura Palmer"
   },
   {
-    "id": "house-20",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-20",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "easy",
-    "prompt": "Which instrument does Dr. House play?",
-    "answer": "Piano"
+    "prompt": "Who is the lead FBI agent investigating the murder?",
+    "answer": "Dale Cooper"
   },
   {
-    "id": "house-21",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-21",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "easy",
-    "prompt": "What is Dr. House's medical specialty?",
-    "answer": "Diagnostic Medicine"
+    "prompt": "What is the name of the town where the show is set?",
+    "answer": "Twin Peaks"
   },
   {
-    "id": "house-22",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-22",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "medium",
-    "prompt": "What is the name of House's best friend and oncologist?",
-    "answer": "James Wilson"
+    "prompt": "What is the name of the mysterious giant who appears to Agent Cooper?",
+    "answer": "The Giant"
   },
   {
-    "id": "house-23",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-23",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "medium",
-    "prompt": "What addiction does House struggle with?",
-    "answer": "Vicodin"
+    "prompt": "Who owns the Double R Diner?",
+    "answer": "Norma Jennings"
   },
   {
-    "id": "house-24",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-24",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "medium",
-    "prompt": "Who is the head of the hospital in the series?",
-    "answer": "Lisa Cuddy"
+    "prompt": "What supernatural place exists in the woods near Twin Peaks?",
+    "answer": "The Black Lodge"
   },
   {
-    "id": "house-25",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-25",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "hard",
-    "prompt": "What rare disease does the patient in the episode 'Three Stories' suffer from?",
-    "answer": "Leg infarction"
+    "prompt": "What is the name of Laura Palmer's secret diary's author?",
+    "answer": "Laura Palmer"
   },
   {
-    "id": "house-26",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-26",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "hard",
-    "prompt": "What is the name of the hospital where House works?",
-    "answer": "Princeton-Plainsboro Teaching Hospital"
+    "prompt": "Who is revealed to be Laura Palmer's killer?",
+    "answer": "Leland Palmer"
   },
   {
-    "id": "house-27",
-    "showId": "house",
-    "showTitle": "House",
+    "id": "twin-peaks-27",
+    "showId": "twin-peaks",
+    "showTitle": "Twin Peaks",
     "difficulty": "hard",
-    "prompt": "Which character replaces Dr. Cameron on House's diagnostic team?",
-    "answer": "Dr. Amber Volakis"
+    "prompt": "What is the name of the one-armed man?",
+    "answer": "Mike"
   },
   {
-    "id": "grey-s-anatomy-28",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-28",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "easy",
-    "prompt": "What is the name of the hospital in Grey's Anatomy?",
-    "answer": "Seattle Grace Hospital"
+    "prompt": "What is the name of the Simpson family's town?",
+    "answer": "Springfield"
   },
   {
-    "id": "grey-s-anatomy-29",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-29",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "easy",
-    "prompt": "Who is the main character and surgeon in Grey's Anatomy?",
-    "answer": "Meredith Grey"
+    "prompt": "Who is the father in the Simpson family?",
+    "answer": "Homer Simpson"
   },
   {
-    "id": "grey-s-anatomy-30",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-30",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "easy",
-    "prompt": "What is the specialty of Cristina Yang?",
-    "answer": "Cardiothoracic Surgery"
+    "prompt": "What is the name of the Simpson's baby?",
+    "answer": "Maggie Simpson"
   },
   {
-    "id": "grey-s-anatomy-31",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-31",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "medium",
-    "prompt": "Who does Meredith Grey marry?",
-    "answer": "Derek Shepherd"
+    "prompt": "What is the name of the bartender at Moe's Tavern?",
+    "answer": "Moe Szyslak"
   },
   {
-    "id": "grey-s-anatomy-32",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-32",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "medium",
-    "prompt": "Which character is known as 'McSteamy'?",
-    "answer": "Mark Sloan"
+    "prompt": "Who is Bart Simpson's best friend?",
+    "answer": "Milhouse Van Houten"
   },
   {
-    "id": "grey-s-anatomy-33",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-33",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "medium",
-    "prompt": "What tragic event happened in the plane crash episode?",
-    "answer": "Several characters injured or died"
+    "prompt": "What is the name of the elementary school principal?",
+    "answer": "Principal Skinner"
   },
   {
-    "id": "grey-s-anatomy-34",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-34",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "hard",
-    "prompt": "What is the name of Meredith Grey's half-sister?",
-    "answer": "Lexie Grey"
+    "prompt": "What is the name of Homer's favorite beer?",
+    "answer": "Duff Beer"
   },
   {
-    "id": "grey-s-anatomy-35",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-35",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "hard",
-    "prompt": "Who performed the first open-heart surgery on the show?",
-    "answer": "Cristina Yang"
+    "prompt": "Who is the mayor of Springfield?",
+    "answer": "Joe Quimby"
   },
   {
-    "id": "grey-s-anatomy-36",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "the-simpsons-36",
+    "showId": "the-simpsons",
+    "showTitle": "The Simpsons",
     "difficulty": "hard",
-    "prompt": "Which character was shot in Season 6?",
-    "answer": "Derek Shepherd"
+    "prompt": "Which character owns the Kwik-E-Mart?",
+    "answer": "Apu Nahasapeemapetilon"
   },
   {
-    "id": "24-37",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-37",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "easy",
-    "prompt": "Who is the main protagonist in 24?",
-    "answer": "Jack Bauer"
+    "prompt": "What is the high school attended by the main characters?",
+    "answer": "West Beverly High"
   },
   {
-    "id": "24-38",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-38",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "easy",
-    "prompt": "What is Jack Bauer's occupation?",
-    "answer": "Counter Terrorist Unit agent"
+    "prompt": "Who is the main male protagonist in the series?",
+    "answer": "Brandon Walsh"
   },
   {
-    "id": "24-39",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-39",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "easy",
-    "prompt": "How long does each season of 24 cover in real time?",
-    "answer": "24 hours"
+    "prompt": "Who is Brandon's twin sister?",
+    "answer": "Brenda Walsh"
   },
   {
-    "id": "24-40",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-40",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "medium",
-    "prompt": "What city is 24 primarily set in?",
-    "answer": "Los Angeles"
+    "prompt": "Which character is a popular cheerleader?",
+    "answer": "Kelly Taylor"
   },
   {
-    "id": "24-41",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-41",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "medium",
-    "prompt": "Who is Jack Bauer's daughter?",
-    "answer": "Kim Bauer"
+    "prompt": "Who is the principal of West Beverly High?",
+    "answer": "David Silver"
   },
   {
-    "id": "24-42",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-42",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "medium",
-    "prompt": "Which government agency does Chloe O'Brian work for?",
-    "answer": "CTU (Counter Terrorist Unit)"
+    "prompt": "What business do the Walsh family originally run?",
+    "answer": "Newspaper"
   },
   {
-    "id": "24-43",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-43",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "hard",
-    "prompt": "Who was the President of the United States during Season 1?",
-    "answer": "David Palmer"
+    "prompt": "Which character struggles with drug addiction?",
+    "answer": "Brandon Walsh"
   },
   {
-    "id": "24-44",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-44",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "hard",
-    "prompt": "What is the name of the terrorist group in Season 2?",
-    "answer": "The Salazar Cartel"
+    "prompt": "Who does Donna Martin marry in the series?",
+    "answer": "David Silver"
   },
   {
-    "id": "24-45",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "beverly-hills-90210-45",
+    "showId": "beverly-hills-90210",
+    "showTitle": "Beverly Hills, 90210",
     "difficulty": "hard",
-    "prompt": "Who kills Nina Myers?",
-    "answer": "Jack Bauer"
+    "prompt": "What is the name of the local hangout spot?",
+    "answer": "Peach Pit"
   }
 ]

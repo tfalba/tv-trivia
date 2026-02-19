@@ -3,6 +3,7 @@ import type { Question } from "@tv-trivia/shared";
 import { fetchQuestionBank, seedQuestionBank } from "../lib/api";
 import {
   decadeShowPresets,
+  getConfiguredShowsForDecade,
   getSavedDecade,
   selectedDecadeStorageKey,
   type DecadeKey,
@@ -24,7 +25,7 @@ export function SettingsPage() {
     "Select a decade and generate the AI question bank."
   );
 
-  const showPool = decadeShowPresets[selectedDecade];
+  const showPool = getConfiguredShowsForDecade(selectedDecade);
 
   useEffect(() => {
     void loadQuestionBank();

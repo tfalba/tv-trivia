@@ -9,6 +9,7 @@ export const decadeShowPresets = {
 export type DecadeKey = keyof typeof decadeShowPresets;
 
 export const selectedDecadeStorageKey = "tv-trivia:selected-decade";
+export const selectedShowsByDecadeStorageKey = "tv-trivia:selected-shows-by-decade";
 
 export function getSavedDecade(): DecadeKey {
   if (typeof window === "undefined") {
@@ -20,4 +21,55 @@ export function getSavedDecade(): DecadeKey {
     return saved as DecadeKey;
   }
   return "1990s";
+}
+
+function isDecadeKey(value: string): value is DecadeKey {
+  return value in decadeShowPresets;
+}
+
+export function getSavedSelectedShowsByDecade(): Partial<Record<DecadeKey, string[]>> {
+  if (typeof window === "undefined") {
+    return {};
+  }
+
+  try {
+    const raw = window.localStorage.getItem(selectedShowsByDecadeStorageKey);
+    if (!raw) {
+      return {};
+    }
+    const parsed = JSON.parse(raw) as Record<string, unknown>;
+    const result: Partial<Record<DecadeKey, string[]>> = {};
+
+    for (const [decade, shows] of Object.entries(parsed)) {
+      if (!isDecadeKey(decade) || !Array.isArray(shows)) {
+        continue;
+      }
+      const cleanedShows = shows
+        .filter((show): show is string => typeof show === "string")
+        .map((show) => show.trim())
+        .filter((show) => show.length > 0);
+      result[decade] = Array.from(new Set(cleanedShows)).slice(0, 5);
+    }
+
+    return result;
+  } catch {
+    return {};
+  }
+}
+
+export function saveSelectedShowsByDecade(
+  selections: Partial<Record<DecadeKey, string[]>>
+): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+  window.localStorage.setItem(selectedShowsByDecadeStorageKey, JSON.stringify(selections));
+}
+
+export function getConfiguredShowsForDecade(decade: DecadeKey): readonly string[] {
+  const selected = getSavedSelectedShowsByDecade()[decade] ?? [];
+  if (selected.length > 0) {
+    return selected;
+  }
+  return decadeShowPresets[decade];
 }
