@@ -7,26 +7,30 @@ import { getConfiguredShowsForDecade, getSavedDecade } from "../lib/decades";
 import {
   getSavedCurrentPlayerIndex,
   getSavedRoundNumber,
-  hasRoundWinner,
+  getSavedUsedQuestionIds,
   saveCurrentPlayerIndex,
+  saveUsedQuestionIds,
+  startNextRound,
 } from "../lib/gameState";
 import { getSavedPlayers, savePlayers } from "../lib/players";
 
 const pointsByDifficulty: Record<Difficulty, number> = {
-  easy: 100,
-  medium: 200,
-  hard: 300,
+  easy: 50,
+  medium: 100,
+  hard: 200,
 };
 
 export function GamePage() {
   const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
   const [selectedDecade] = useState(getSavedDecade);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(getSavedCurrentPlayerIndex);
-  const [roundNumber] = useState(getSavedRoundNumber);
+  const [roundNumber, setRoundNumber] = useState(getSavedRoundNumber);
   const [spunShow, setSpunShow] = useState<string | null>(null);
   const [activeQuestion, setActiveQuestion] = useState<Question | null>(null);
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
-  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
+  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>(() =>
+    getSavedUsedQuestionIds(getSavedDecade())
+  );
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [statusMessage, setStatusMessage] = useState(
     "Select a TV show panel, then draw a question."
@@ -38,9 +42,16 @@ export function GamePage() {
   const [animatedShowIndex, setAnimatedShowIndex] = useState<number | null>(null);
   const showAnimationIntervalRef = useRef<number | null>(null);
   const showAnimationTimeoutRef = useRef<number | null>(null);
+  const completingTurnRef = useRef(false);
 
   const showPool = getConfiguredShowsForDecade(selectedDecade);
   const currentPlayer = players[currentPlayerIndex] ?? players[0];
+  const rankedPlayers = [...players].sort((a, b) => b.score - a.score);
+  const winnerPlayer =
+    players.length > 0
+      ? players.reduce((best, player) => (player.score > best.score ? player : best), players[0])
+      : null;
+  const hasWinner = Boolean(winnerPlayer && winnerPlayer.score >= 1000);
 
   useEffect(() => {
     void loadQuestionBank();
@@ -53,6 +64,10 @@ export function GamePage() {
   useEffect(() => {
     saveCurrentPlayerIndex(currentPlayerIndex);
   }, [currentPlayerIndex]);
+
+  useEffect(() => {
+    saveUsedQuestionIds(selectedDecade, usedQuestionIds);
+  }, [selectedDecade, usedQuestionIds]);
 
   useEffect(() => {
     return () => {
@@ -89,6 +104,7 @@ export function GamePage() {
     }
 
     setSpunShow(show);
+    completingTurnRef.current = false;
     setShowSelectedForTurn(turnNumber);
     setQuestionDrawnForTurn(null);
     setActiveQuestion(null);
@@ -117,6 +133,7 @@ export function GamePage() {
     const finalShow = showPool[finalIndex];
 
     setIsSelectingShow(true);
+    completingTurnRef.current = false;
     setActiveQuestion(null);
     setAnswerRevealed(false);
     setSpunShow(null);
@@ -143,8 +160,8 @@ export function GamePage() {
   }
 
   function drawQuestion() {
-    if (hasRoundWinner(players)) {
-      setStatusMessage("Round complete. Start next round from Home.");
+    if (hasWinner) {
+      setStatusMessage("Round complete. Use Start new round.");
       return;
     }
 
@@ -171,6 +188,7 @@ export function GamePage() {
 
     const selectedQuestion =
       availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    completingTurnRef.current = false;
     setActiveQuestion(selectedQuestion);
     setQuestionDrawnForTurn(turnNumber);
     setUsedQuestionIds((prev) => [...prev, selectedQuestion.id]);
@@ -179,9 +197,10 @@ export function GamePage() {
   }
 
   function completeTurn(isCorrect: boolean) {
-    if (!activeQuestion) {
+    if (!activeQuestion || completingTurnRef.current) {
       return;
     }
+    completingTurnRef.current = true;
 
     const points = pointsByDifficulty[activeQuestion.difficulty];
     const nextPlayerIndex = (currentPlayerIndex + 1) % players.length;
@@ -206,6 +225,23 @@ export function GamePage() {
     setShowSelectedForTurn(null);
     setQuestionDrawnForTurn(null);
     setAnswerRevealed(false);
+  }
+
+  function startNewRoundFromPopup() {
+    const resetPlayers = startNextRound(players);
+    setPlayers(resetPlayers);
+    setRoundNumber(getSavedRoundNumber());
+    setCurrentPlayerIndex(0);
+    setTurnNumber(0);
+    setSpunShow(null);
+    setActiveQuestion(null);
+    setAnswerRevealed(false);
+    setShowSelectedForTurn(null);
+    setQuestionDrawnForTurn(null);
+    setAnimatedShowIndex(null);
+    setIsSelectingShow(false);
+    completingTurnRef.current = false;
+    setStatusMessage("New round started. Select a TV show panel, then draw a question.");
   }
 
   return (
@@ -311,6 +347,25 @@ export function GamePage() {
         </div>
       ) : null}
 
+      {hasWinner && winnerPlayer ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+          <div className="w-full max-w-xl rounded-2xl border border-white/20 bg-black/85 p-6 text-center shadow-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-trivia-gold">
+              Round Complete
+            </p>
+            <h3 className="mt-2 font-display text-4xl text-trivia-paper">
+              {winnerPlayer.name} Wins!
+            </h3>
+            <p className="mt-3 text-white/85">
+              {winnerPlayer.name} reached {winnerPlayer.score} points and won Round {roundNumber}.
+            </p>
+            <button type="button" className="btn-primary mt-6" onClick={startNewRoundFromPopup}>
+              Start new round
+            </button>
+          </div>
+        </div>
+      ) : null}
+
       <div
         className="rounded-2xl p-5"
         style={{
@@ -320,12 +375,22 @@ export function GamePage() {
         }}
       >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-          Recommendation
+          Scoreboard
         </p>
-        <p className="text-white/90">
-          Add a projected scoreboard panel on this screen so hosts can quickly
-          resolve ties between close players.
-        </p>
+        <div className="space-y-2">
+          {rankedPlayers.map((player, index) => (
+            <div
+              key={player.id}
+              className="flex items-center justify-between rounded-lg border border-white/15 bg-black/20 px-3 py-2"
+            >
+              <p className="text-white/90">
+                <span className="mr-2 font-semibold text-trivia-gold">#{index + 1}</span>
+                {player.name}
+              </p>
+              <p className="font-semibold text-white">{player.score} pts</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <Link to="/" className="btn-secondary">

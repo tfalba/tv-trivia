@@ -71,8 +71,8 @@ app.get("/api/questions", async (_req, res) => {
 app.post("/api/questions/seed", async (req, res) => {
   const body = req.body as SeedQuestionBankRequest;
   const shows = Array.isArray(body?.shows) ? body.shows.filter(Boolean) : [];
-  const questionsPerShow = body?.questionsPerShow ?? 9;
-  const difficultyMix = body?.difficultyMix ?? { easy: 3, medium: 3, hard: 3 };
+  const questionsPerShow = body?.questionsPerShow ?? 18;
+  const difficultyMix = body?.difficultyMix ?? { easy: 6, medium: 6, hard: 6 };
   const seed = body?.seed ?? Date.now();
 
   if (shows.length === 0) {

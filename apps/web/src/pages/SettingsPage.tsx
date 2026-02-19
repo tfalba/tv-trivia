@@ -69,7 +69,7 @@ export function SettingsPage() {
     try {
       const generated = await seedQuestionBank({
         shows: selectedShowsForDecade,
-        questionsPerShow: 9,
+        questionsPerShow: 18,
         seed: Number(selectedDecade.slice(0, 4)),
       });
       setQuestionBank(generated);

@@ -2,6 +2,7 @@ import type { Player } from "@tv-trivia/shared";
 
 export const roundStorageKey = "tv-trivia:round-number";
 export const currentPlayerIndexStorageKey = "tv-trivia:current-player-index";
+export const usedQuestionIdsByDecadeStorageKey = "tv-trivia:used-question-ids-by-decade";
 
 export function getSavedRoundNumber(): number {
   if (typeof window === "undefined") {
@@ -50,4 +51,51 @@ export function startNextRound(players: Player[]): Player[] {
   saveRoundNumber(nextRound);
   saveCurrentPlayerIndex(0);
   return players.map((player) => ({ ...player, score: 0 }));
+}
+
+export function getSavedUsedQuestionIds(decade: string): string[] {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  try {
+    const raw = window.localStorage.getItem(usedQuestionIdsByDecadeStorageKey);
+    if (!raw) {
+      return [];
+    }
+    const parsed = JSON.parse(raw) as Record<string, unknown>;
+    const ids = parsed[decade];
+    if (!Array.isArray(ids)) {
+      return [];
+    }
+    return Array.from(
+      new Set(
+        ids.filter((id): id is string => typeof id === "string" && id.trim().length > 0)
+      )
+    );
+  } catch {
+    return [];
+  }
+}
+
+export function saveUsedQuestionIds(decade: string, ids: string[]): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  try {
+    const raw = window.localStorage.getItem(usedQuestionIdsByDecadeStorageKey);
+    const parsed = raw ? (JSON.parse(raw) as Record<string, unknown>) : {};
+    parsed[decade] = Array.from(
+      new Set(ids.filter((id) => typeof id === "string" && id.trim().length > 0))
+    );
+    window.localStorage.setItem(usedQuestionIdsByDecadeStorageKey, JSON.stringify(parsed));
+  } catch {
+    const fallback: Record<string, string[]> = {
+      [decade]: Array.from(
+        new Set(ids.filter((id) => typeof id === "string" && id.trim().length > 0))
+      ),
+    };
+    window.localStorage.setItem(usedQuestionIdsByDecadeStorageKey, JSON.stringify(fallback));
+  }
 }

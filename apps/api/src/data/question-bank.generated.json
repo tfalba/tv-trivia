@@ -4,7 +4,7 @@
     "showId": "lost",
     "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What is the name of the island where the survivors are stranded?",
+    "prompt": "What is the name of the island in 'Lost'?",
     "answer": "The Island"
   },
   {
@@ -12,227 +12,299 @@
     "showId": "lost",
     "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "Who is the pilot of the crashed plane?",
-    "answer": "Charlie Pace"
+    "prompt": "Who is the pilot of the crashed plane in 'Lost'?",
+    "answer": "Captain Jack Shephard"
   },
   {
     "id": "lost-3",
     "showId": "lost",
     "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What is the flight number of the plane that crashes?",
-    "answer": "815"
+    "prompt": "Which character is known as 'Sawyer' on 'Lost'?",
+    "answer": "James Ford"
   },
   {
     "id": "lost-4",
     "showId": "lost",
     "showTitle": "Lost",
-    "difficulty": "medium",
-    "prompt": "What is the name of the mysterious group on the island?",
-    "answer": "The Others"
+    "difficulty": "easy",
+    "prompt": "What type of plane crashed on the island in 'Lost'?",
+    "answer": "Oceanic Airlines Flight 815"
   },
   {
     "id": "lost-5",
     "showId": "lost",
     "showTitle": "Lost",
-    "difficulty": "medium",
-    "prompt": "Who is the leader of the survivors initially?",
+    "difficulty": "easy",
+    "prompt": "Which character is a doctor in 'Lost'?",
     "answer": "Jack Shephard"
   },
   {
     "id": "lost-6",
     "showId": "lost",
     "showTitle": "Lost",
-    "difficulty": "medium",
-    "prompt": "What is the name of the character who is a former con artist?",
-    "answer": "James 'Sawyer' Ford"
+    "difficulty": "easy",
+    "prompt": "Who is the mysterious man in black in 'Lost'?",
+    "answer": "The Smoke Monster"
   },
   {
     "id": "lost-7",
     "showId": "lost",
     "showTitle": "Lost",
-    "difficulty": "hard",
-    "prompt": "What is the name of the station used by the DHARMA Initiative for psychological experiments?",
-    "answer": "The Pearl"
+    "difficulty": "medium",
+    "prompt": "What is the name of the group led by Benjamin Linus?",
+    "answer": "The Others"
   },
   {
     "id": "lost-8",
     "showId": "lost",
     "showTitle": "Lost",
-    "difficulty": "hard",
-    "prompt": "Who is the real identity of the character known as Henry Gale?",
-    "answer": "Ben Linus"
+    "difficulty": "medium",
+    "prompt": "Who detonated the hydrogen bomb in 'Lost'?",
+    "answer": "Desmond Hume"
   },
   {
     "id": "lost-9",
     "showId": "lost",
     "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "What is the name of the hatch in 'Lost'?",
+    "answer": "The Swan"
+  },
+  {
+    "id": "lost-10",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "Which character speaks French and is a member of the Tailies?",
+    "answer": "Ana Lucia Cortez"
+  },
+  {
+    "id": "lost-11",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "What is the name of the Dharma Initiative station with the computer?",
+    "answer": "The Swan"
+  },
+  {
+    "id": "lost-12",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "medium",
+    "prompt": "Who is the leader of the survivors after the crash?",
+    "answer": "Jack Shephard"
+  },
+  {
+    "id": "lost-13",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "What number sequence is associated with the island and appears repeatedly?",
-    "answer": "4 8 15 16 23 42"
+    "prompt": "What is the significance of the numbers 4, 8, 15, 16, 23, 42?",
+    "answer": "They are the cursed numbers used in the hatch computer"
   },
   {
-    "id": "the-office-10",
+    "id": "lost-14",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "Who is revealed to be the Man in Black in 'Lost'?",
+    "answer": "Locke's doppelganger"
+  },
+  {
+    "id": "lost-15",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "What is the real name of the character known as 'Hurley'?",
+    "answer": "Hugo Reyes"
+  },
+  {
+    "id": "lost-16",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "Which character was a con artist before the crash?",
+    "answer": "James 'Sawyer' Ford"
+  },
+  {
+    "id": "lost-17",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "What is the name of the Dharma station focused on zoological research?",
+    "answer": "The Flame"
+  },
+  {
+    "id": "lost-18",
+    "showId": "lost",
+    "showTitle": "Lost",
+    "difficulty": "hard",
+    "prompt": "Who kills Jacob in 'Lost'?",
+    "answer": "The Man in Black"
+  },
+  {
+    "id": "the-office-19",
     "showId": "the-office",
     "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "Who is the regional manager of Dunder Mifflin's Scranton branch?",
-    "answer": "Michael Scott"
-  },
-  {
-    "id": "the-office-11",
-    "showId": "the-office",
-    "showTitle": "The Office",
-    "difficulty": "easy",
-    "prompt": "What is the name of the paper company featured in the show?",
+    "prompt": "What is the name of the company in 'The Office'?",
     "answer": "Dunder Mifflin"
   },
   {
-    "id": "the-office-12",
+    "id": "the-office-20",
     "showId": "the-office",
     "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "Who is Jim Halpert's love interest?",
-    "answer": "Pam Beesly"
-  },
-  {
-    "id": "the-office-13",
-    "showId": "the-office",
-    "showTitle": "The Office",
-    "difficulty": "medium",
-    "prompt": "What is the name of Dwight Schrute's farm?",
-    "answer": "Schrute Farms"
-  },
-  {
-    "id": "the-office-14",
-    "showId": "the-office",
-    "showTitle": "The Office",
-    "difficulty": "medium",
-    "prompt": "Which character starts the website 'Threat Level Midnight'?",
+    "prompt": "Who is the regional manager at the start of 'The Office'?",
     "answer": "Michael Scott"
   },
   {
-    "id": "the-office-15",
+    "id": "the-office-21",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "What is the name of the receptionist in 'The Office'?",
+    "answer": "Pam Beesly"
+  },
+  {
+    "id": "the-office-22",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "Which character is known for his pranks on Dwight?",
+    "answer": "Jim Halpert"
+  },
+  {
+    "id": "the-office-23",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "What city is 'The Office' set in?",
+    "answer": "Scranton"
+  },
+  {
+    "id": "the-office-24",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "easy",
+    "prompt": "Who is the beet farmer and assistant to the regional manager?",
+    "answer": "Dwight Schrute"
+  },
+  {
+    "id": "the-office-25",
     "showId": "the-office",
     "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "Who becomes the new regional manager after Michael Scott leaves?",
-    "answer": "Andy Bernard"
+    "prompt": "What is the name of Dwight's cousin who appears in the series?",
+    "answer": "Mose Schrute"
   },
   {
-    "id": "the-office-16",
+    "id": "the-office-26",
     "showId": "the-office",
     "showTitle": "The Office",
-    "difficulty": "hard",
-    "prompt": "What is the name of the documentary crew's sound mixer who appears on camera?",
+    "difficulty": "medium",
+    "prompt": "What does Michael Scott declare bankruptcy by doing?",
+    "answer": "Saying 'I declare bankruptcy'"
+  },
+  {
+    "id": "the-office-27",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "Who does Pam marry after Roy?",
+    "answer": "Jim Halpert"
+  },
+  {
+    "id": "the-office-28",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "What is the name of the documentary crew's in-show interviewer?",
     "answer": "Brian"
   },
   {
-    "id": "the-office-17",
+    "id": "the-office-29",
     "showId": "the-office",
     "showTitle": "The Office",
-    "difficulty": "hard",
-    "prompt": "What is the name of the company that merges with Dunder Mifflin in season 6?",
+    "difficulty": "medium",
+    "prompt": "Which character starts a fire by leaving a cheese pita in the toaster oven?",
+    "answer": "Ryan Howard"
+  },
+  {
+    "id": "the-office-30",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "medium",
+    "prompt": "What is the name of the local paper company that merges with Dunder Mifflin?",
     "answer": "Sabre"
   },
   {
-    "id": "the-office-18",
+    "id": "the-office-31",
     "showId": "the-office",
     "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What is the title of Dwight's self-published book?",
-    "answer": "The Schrute Way"
+    "prompt": "What is the name of the paper salesman who briefly replaces Michael Scott?",
+    "answer": "Deangelo Vickers"
   },
   {
-    "id": "24-19",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "easy",
-    "prompt": "Who is the main protagonist of 24?",
-    "answer": "Jack Bauer"
-  },
-  {
-    "id": "24-20",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "easy",
-    "prompt": "What agency does Jack Bauer work for?",
-    "answer": "CTU"
-  },
-  {
-    "id": "24-21",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "easy",
-    "prompt": "What is the format of the show 24?",
-    "answer": "Real-time"
-  },
-  {
-    "id": "24-22",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "medium",
-    "prompt": "Who is Jack Bauer's wife?",
-    "answer": "Teri Bauer"
-  },
-  {
-    "id": "24-23",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "medium",
-    "prompt": "What is the name of the president during season 1?",
-    "answer": "David Palmer"
-  },
-  {
-    "id": "24-24",
-    "showId": "24",
-    "showTitle": "24",
-    "difficulty": "medium",
-    "prompt": "Which terrorist group is a recurring antagonist in the series?",
-    "answer": "The Salazars"
-  },
-  {
-    "id": "24-25",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "the-office-32",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What is the name of Jack Bauer's daughter?",
-    "answer": "Kim Bauer"
+    "prompt": "What is the title of Michael Scott's movie?",
+    "answer": "Threat Level Midnight"
   },
   {
-    "id": "24-26",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "the-office-33",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "Who is the CTU director in season 3?",
-    "answer": "Michelle Dessler"
+    "prompt": "Which character becomes the regional manager after Michael leaves?",
+    "answer": "Andy Bernard"
   },
   {
-    "id": "24-27",
-    "showId": "24",
-    "showTitle": "24",
+    "id": "the-office-34",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What city is the primary setting for most of the series?",
-    "answer": "Los Angeles"
+    "prompt": "What is the name of the cat that Jim and Pam find?",
+    "answer": "Garbage"
   },
   {
-    "id": "breaking-bad-28",
+    "id": "the-office-35",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "hard",
+    "prompt": "What is the name of the warehouse worker who dated Pam?",
+    "answer": "Roy Anderson"
+  },
+  {
+    "id": "the-office-36",
+    "showId": "the-office",
+    "showTitle": "The Office",
+    "difficulty": "hard",
+    "prompt": "Which character sings 'The Little Drummer Boy' in the Christmas episode?",
+    "answer": "Dwight Schrute"
+  },
+  {
+    "id": "breaking-bad-37",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "easy",
-    "prompt": "What is Walter White's profession before cooking meth?",
+    "prompt": "What is Walter White's profession before becoming a meth manufacturer?",
     "answer": "Chemistry teacher"
   },
   {
-    "id": "breaking-bad-29",
+    "id": "breaking-bad-38",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "easy",
-    "prompt": "What is the street name of the drug Walter White manufactures?",
-    "answer": "Blue Sky"
+    "prompt": "What is the street name of the drug Walter White produces?",
+    "answer": "Blue Meth"
   },
   {
-    "id": "breaking-bad-30",
+    "id": "breaking-bad-39",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "easy",
@@ -240,15 +312,71 @@
     "answer": "Jesse Pinkman"
   },
   {
-    "id": "breaking-bad-31",
+    "id": "breaking-bad-40",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "What is the name of Walter White's wife?",
+    "answer": "Skyler White"
+  },
+  {
+    "id": "breaking-bad-41",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "What city is 'Breaking Bad' primarily set in?",
+    "answer": "Albuquerque"
+  },
+  {
+    "id": "breaking-bad-42",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "easy",
+    "prompt": "What is the name of the fast-food restaurant owned by Gus Fring?",
+    "answer": "Los Pollos Hermanos"
+  },
+  {
+    "id": "breaking-bad-43",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "medium",
-    "prompt": "What is the name of Walter White's alter ego?",
+    "prompt": "What is the alias Walter White uses in the drug world?",
     "answer": "Heisenberg"
   },
   {
-    "id": "breaking-bad-32",
+    "id": "breaking-bad-44",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "Who kills Gus Fring?",
+    "answer": "Walter White"
+  },
+  {
+    "id": "breaking-bad-45",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "What is the name of Jesse Pinkman's girlfriend who dies?",
+    "answer": "Jane Margolis"
+  },
+  {
+    "id": "breaking-bad-46",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "What device does Walter use to poison Brock?",
+    "answer": "Lily of the Valley"
+  },
+  {
+    "id": "breaking-bad-47",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
+    "difficulty": "medium",
+    "prompt": "Who is the DEA agent chasing Walter White?",
+    "answer": "Hank Schrader"
+  },
+  {
+    "id": "breaking-bad-48",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "medium",
@@ -256,31 +384,23 @@
     "answer": "Saul Goodman"
   },
   {
-    "id": "breaking-bad-33",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
-    "difficulty": "medium",
-    "prompt": "What is the name of the fast food chicken chain owned by Gus Fring?",
-    "answer": "Los Pollos Hermanos"
-  },
-  {
-    "id": "breaking-bad-34",
+    "id": "breaking-bad-49",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "What is the name of the drug kingpin Walter White replaces?",
-    "answer": "Gustavo Fring"
+    "prompt": "What is the name of the meth superlab location?",
+    "answer": "The underground lab under the industrial laundry"
   },
   {
-    "id": "breaking-bad-35",
+    "id": "breaking-bad-50",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "What is the chemical formula for methamphetamine shown in the series?",
-    "answer": "C10H15N"
+    "prompt": "Who kills Mike Ehrmantraut?",
+    "answer": "Walter White"
   },
   {
-    "id": "breaking-bad-36",
+    "id": "breaking-bad-51",
     "showId": "breaking-bad",
     "showTitle": "Breaking Bad",
     "difficulty": "hard",
@@ -288,75 +408,307 @@
     "answer": "Walter White Jr."
   },
   {
-    "id": "grey-s-anatomy-37",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "easy",
-    "prompt": "What is the profession of the main characters in Grey's Anatomy?",
-    "answer": "Doctors"
-  },
-  {
-    "id": "grey-s-anatomy-38",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "easy",
-    "prompt": "What is the name of the hospital where the show is set?",
-    "answer": "Seattle Grace Hospital"
-  },
-  {
-    "id": "grey-s-anatomy-39",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "easy",
-    "prompt": "Who is the main female protagonist?",
-    "answer": "Meredith Grey"
-  },
-  {
-    "id": "grey-s-anatomy-40",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "medium",
-    "prompt": "What is the name of Meredith Grey's best friend?",
-    "answer": "Cristina Yang"
-  },
-  {
-    "id": "grey-s-anatomy-41",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "medium",
-    "prompt": "Who is the chief of surgery at Seattle Grace Hospital in early seasons?",
-    "answer": "Richard Webber"
-  },
-  {
-    "id": "grey-s-anatomy-42",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
-    "difficulty": "medium",
-    "prompt": "Which character is known as 'McDreamy'?",
-    "answer": "Derek Shepherd"
-  },
-  {
-    "id": "grey-s-anatomy-43",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "breaking-bad-52",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "What is the name of the hospital after its merger in later seasons?",
-    "answer": "Grey Sloan Memorial Hospital"
+    "prompt": "Who ultimately kills Walter White?",
+    "answer": "Walter White himself (suicide by gunshot)"
   },
   {
-    "id": "grey-s-anatomy-44",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "breaking-bad-53",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "Who performed the first surgery of the series?",
-    "answer": "Meredith Grey"
+    "prompt": "What chemical element is symbolized by 'Br' in Walter White's logo?",
+    "answer": "Bromine"
   },
   {
-    "id": "grey-s-anatomy-45",
-    "showId": "grey-s-anatomy",
-    "showTitle": "Grey's Anatomy",
+    "id": "breaking-bad-54",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "What disease does Dr. Addison Montgomery specialize in?",
-    "answer": "Neonatology"
+    "prompt": "What is the name of the gang leader who gives Walter White the first meth job?",
+    "answer": "Tuco Salamanca"
+  },
+  {
+    "id": "mad-men-55",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "What is the name of the advertising agency in 'Mad Men'?",
+    "answer": "Sterling Cooper"
+  },
+  {
+    "id": "mad-men-56",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "Who is the main character in 'Mad Men'?",
+    "answer": "Don Draper"
+  },
+  {
+    "id": "mad-men-57",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "In which decade is 'Mad Men' primarily set?",
+    "answer": "1960s"
+  },
+  {
+    "id": "mad-men-58",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "Who is Don Draper's secretary?",
+    "answer": "Peggy Olson"
+  },
+  {
+    "id": "mad-men-59",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "What city does 'Mad Men' take place in?",
+    "answer": "New York City"
+  },
+  {
+    "id": "mad-men-60",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "easy",
+    "prompt": "Who is Don Draper's wife at the beginning of the series?",
+    "answer": "Betty Draper"
+  },
+  {
+    "id": "mad-men-61",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "What is the name of Don Draper's rival and partner?",
+    "answer": "Pete Campbell"
+  },
+  {
+    "id": "mad-men-62",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "Which character famously says 'Change isn't good or bad, it just is'?",
+    "answer": "Don Draper"
+  },
+  {
+    "id": "mad-men-63",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "Who becomes creative director at Sterling Cooper?",
+    "answer": "Peggy Olson"
+  },
+  {
+    "id": "mad-men-64",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "What is the name of the agency Don Draper joins after leaving Sterling Cooper?",
+    "answer": "McCann Erickson"
+  },
+  {
+    "id": "mad-men-65",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "Who is the head of accounts at Sterling Cooper?",
+    "answer": "Joan Holloway"
+  },
+  {
+    "id": "mad-men-66",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "medium",
+    "prompt": "What is the name of Don Draper's daughter?",
+    "answer": "Sally Draper"
+  },
+  {
+    "id": "mad-men-67",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "What is Don Draper's real birth name?",
+    "answer": "Dick Whitman"
+  },
+  {
+    "id": "mad-men-68",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "Who is the mysterious woman Don Draper meets in California?",
+    "answer": "Anna Draper"
+  },
+  {
+    "id": "mad-men-69",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "What is the name of the ad campaign Peggy Olson creates for lipstick?",
+    "answer": "Belle Jolie"
+  },
+  {
+    "id": "mad-men-70",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "Which character struggles with alcoholism throughout the series?",
+    "answer": "Don Draper"
+  },
+  {
+    "id": "mad-men-71",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "Who is the creative genius behind the Kodak Carousel pitch?",
+    "answer": "Don Draper"
+  },
+  {
+    "id": "mad-men-72",
+    "showId": "mad-men",
+    "showTitle": "Mad Men",
+    "difficulty": "hard",
+    "prompt": "What is the name of Joan Holloway's husband?",
+    "answer": "Greg Harris"
+  },
+  {
+    "id": "the-sopranos-73",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "Who is the boss of the DiMeo crime family?",
+    "answer": "Tony Soprano"
+  },
+  {
+    "id": "the-sopranos-74",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "What is the name of Tony Soprano's wife?",
+    "answer": "Carmela Soprano"
+  },
+  {
+    "id": "the-sopranos-75",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "Who is Tony's psychiatrist?",
+    "answer": "Dr. Jennifer Melfi"
+  },
+  {
+    "id": "the-sopranos-76",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "What is the name of Tony's daughter?",
+    "answer": "Meadow Soprano"
+  },
+  {
+    "id": "the-sopranos-77",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "What is the name of Tony's son?",
+    "answer": "A.J. Soprano"
+  },
+  {
+    "id": "the-sopranos-78",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "easy",
+    "prompt": "In which state is 'The Sopranos' primarily set?",
+    "answer": "New Jersey"
+  },
+  {
+    "id": "the-sopranos-79",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "medium",
+    "prompt": "Who is Tony Soprano's uncle?",
+    "answer": "Junior Soprano"
+  },
+  {
+    "id": "the-sopranos-80",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "medium",
+    "prompt": "What is the name of the rival mob boss killed by Tony?",
+    "answer": "Ralph Cifaretto"
+  },
+  {
+    "id": "the-sopranos-81",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "medium",
+    "prompt": "Who is Christopher Moltisanti's fiancée?",
+    "answer": "Adriana La Cerva"
+  },
+  {
+    "id": "the-sopranos-82",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "medium",
+    "prompt": "Which character is an FBI agent investigating Tony?",
+    "answer": "Agent Harris"
+  },
+  {
+    "id": "the-sopranos-83",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "medium",
+    "prompt": "Who kills Richie Aprile?",
+    "answer": "Janice Soprano"
+  },
+  {
+    "id": "the-sopranos-84",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "What song plays during the final scene of the series?",
+    "answer": "Don't Stop Believin'"
+  },
+  {
+    "id": "the-sopranos-85",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "Who is the creator of 'The Sopranos'?",
+    "answer": "David Chase"
+  },
+  {
+    "id": "the-sopranos-86",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "What is the name of Tony's mother?",
+    "answer": "Livia Soprano"
+  },
+  {
+    "id": "the-sopranos-87",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "Who kills Tony's cousin Tony Blundetto?",
+    "answer": "Tony Soprano"
+  },
+  {
+    "id": "the-sopranos-88",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "What is the name of the strip club owned by Tony?",
+    "answer": "Bada Bing"
+  },
+  {
+    "id": "the-sopranos-89",
+    "showId": "the-sopranos",
+    "showTitle": "The Sopranos",
+    "difficulty": "hard",
+    "prompt": "Which character is revealed to be an informant for the FBI?",
+    "answer": "Adriana La Cerva"
   }
 ]
