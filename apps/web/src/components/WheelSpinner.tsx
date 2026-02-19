@@ -47,13 +47,15 @@ export function WheelSpinner({
           }}
         >
           {shows.map((show, index) => {
-            const angle = index * segmentAngle;
+            const segmentCenterAngle = index * segmentAngle + segmentAngle / 2;
+            const radius = 102;
+            const diagonalTilt = -32;
             return (
               <span
                 key={show}
-                className="absolute left-1/2 top-1/2 w-24 -translate-x-1/2 -translate-y-1/2 text-center text-xs font-bold uppercase tracking-wide text-black"
+                className="absolute left-1/2 top-1/2 w-20 -translate-x-1/2 -translate-y-1/2 break-words text-center text-[10px] font-bold uppercase leading-tight tracking-wide text-black"
                 style={{
-                  transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-108px) rotate(${-angle}deg)`,
+                  transform: `translate(-50%, -50%) rotate(${segmentCenterAngle}deg) translateY(-${radius}px) rotate(${-segmentCenterAngle + diagonalTilt}deg)`,
                 }}
               >
                 {show}

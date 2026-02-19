@@ -1,362 +1,362 @@
 [
   {
-    "id": "friends-1",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-1",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "easy",
-    "prompt": "What is the name of Ross's second wife?",
-    "answer": "Emily"
+    "prompt": "What type of unit is M*A*S*H set in?",
+    "answer": "Mobile Army Surgical Hospital"
   },
   {
-    "id": "friends-2",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-2",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "easy",
-    "prompt": "Which character famously says 'We were on a break!'?",
-    "answer": "Ross"
+    "prompt": "Who is the main surgeon often seen wearing a captain's hat?",
+    "answer": "Hawkeye Pierce"
   },
   {
-    "id": "friends-3",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-3",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "easy",
-    "prompt": "What is the name of Joey's stuffed penguin?",
-    "answer": "Hugsy"
+    "prompt": "In which war is M*A*S*H set?",
+    "answer": "Korean War"
   },
   {
-    "id": "friends-4",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-4",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "medium",
-    "prompt": "What is Chandler's middle name?",
-    "answer": "Muriel"
+    "prompt": "What is the nickname of the camp's commanding officer Colonel Potter?",
+    "answer": "Potter"
   },
   {
-    "id": "friends-5",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-5",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "medium",
-    "prompt": "Which friend was a paleontologist?",
-    "answer": "Ross"
+    "prompt": "Which character is known for playing the banjo and being a radar operator?",
+    "answer": "Radar O'Reilly"
   },
   {
-    "id": "friends-6",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-6",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "medium",
-    "prompt": "What is the name of the coffee shop where the friends hang out?",
-    "answer": "Central Perk"
+    "prompt": "What is the name of the nurse who often clashes with Hawkeye?",
+    "answer": "Nurse Hot Lips Houlihan"
   },
   {
-    "id": "friends-7",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-7",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "hard",
-    "prompt": "What is the name of the soap opera Joey stars in?",
-    "answer": "Days of Our Lives"
+    "prompt": "What is the full name of the character nicknamed 'Trapper'?",
+    "answer": "Trapper John McIntyre"
   },
   {
-    "id": "friends-8",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-8",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "hard",
-    "prompt": "What is the name of the character played by Tom Selleck?",
-    "answer": "Dr. Richard Burke"
+    "prompt": "Which actor played both the character of Henry Blake and later Colonel Sherman Potter?",
+    "answer": "Harry Morgan"
   },
   {
-    "id": "friends-9",
-    "showId": "friends",
-    "showTitle": "Friends",
+    "id": "m-a-s-h-9",
+    "showId": "m-a-s-h",
+    "showTitle": "M*A*S*H",
     "difficulty": "hard",
-    "prompt": "What is the name of Ross and Monica's grandmother?",
-    "answer": "Althea"
+    "prompt": "What is the name of the camp's mess hall where characters often gather?",
+    "answer": "Swamp"
   },
   {
-    "id": "seinfeld-10",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-10",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "easy",
-    "prompt": "What is Jerry Seinfeld's occupation?",
-    "answer": "Comedian"
+    "prompt": "What city is Three's Company set in?",
+    "answer": "Santa Monica"
   },
   {
-    "id": "seinfeld-11",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-11",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "easy",
-    "prompt": "What is the name of Jerry's neighbor who is often seen wearing a puffy shirt?",
-    "answer": "Kramer"
+    "prompt": "Who is the main male character that moves in with two women?",
+    "answer": "Jack Tripper"
   },
   {
-    "id": "seinfeld-12",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-12",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "easy",
-    "prompt": "What is the name of the coffee shop the characters frequently visit?",
-    "answer": "Monk's Cafe"
+    "prompt": "What is the name of the landlord couple?",
+    "answer": "Mr. and Mrs. Roper"
   },
   {
-    "id": "seinfeld-13",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-13",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "medium",
-    "prompt": "What is the name of George Costanza's fiancée who leaves him at the altar?",
-    "answer": "Susan"
+    "prompt": "What is the name of Jack's two female roommates?",
+    "answer": "Janet and Chrissy"
   },
   {
-    "id": "seinfeld-14",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-14",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "medium",
-    "prompt": "What alias does Jerry use when checking into a hotel in 'The Outing'?",
-    "answer": "Dr. Van Nostrand"
+    "prompt": "What is Jack's profession?",
+    "answer": "Chef"
   },
   {
-    "id": "seinfeld-15",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-15",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "medium",
-    "prompt": "What is Elaine's signature dance style called?",
-    "answer": "The Elaine Dance"
+    "prompt": "What is the reason Jack pretends to be gay to live with the women?",
+    "answer": "Landlord's rules"
   },
   {
-    "id": "seinfeld-16",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-16",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "hard",
-    "prompt": "What is the name of the book written by George's father?",
-    "answer": "The Book of George"
+    "prompt": "Who replaced the Ropers as landlords in later seasons?",
+    "answer": "Mr. Furley"
   },
   {
-    "id": "seinfeld-17",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-17",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "hard",
-    "prompt": "What is the name of the soup stand owner who famously yells 'No soup for you!'?",
-    "answer": "The Soup Nazi"
+    "prompt": "What is the name of the character played by Suzanne Somers?",
+    "answer": "Chrissy Snow"
   },
   {
-    "id": "seinfeld-18",
-    "showId": "seinfeld",
-    "showTitle": "Seinfeld",
+    "id": "three-s-company-18",
+    "showId": "three-s-company",
+    "showTitle": "Three's Company",
     "difficulty": "hard",
-    "prompt": "What is the name of the character who steals a marble rye bread?",
-    "answer": "Jackie Chiles"
+    "prompt": "Which character is known for her ditzy personality and frequent malapropisms?",
+    "answer": "Chrissy Snow"
   },
   {
-    "id": "the-office-19",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-19",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "easy",
-    "prompt": "What is the name of the paper company in The Office?",
-    "answer": "Dunder Mifflin"
+    "prompt": "In which decade is Happy Days primarily set?",
+    "answer": "1950s"
   },
   {
-    "id": "the-office-20",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-20",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "easy",
-    "prompt": "Who is the regional manager at the start of the series?",
-    "answer": "Michael Scott"
+    "prompt": "Who is the main teenage character known for his leather jacket?",
+    "answer": "Fonzie"
   },
   {
-    "id": "the-office-21",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-21",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "easy",
-    "prompt": "What town is The Office set in?",
-    "answer": "Scranton"
+    "prompt": "What is the name of the diner the characters frequently visit?",
+    "answer": "Arnold's"
   },
   {
-    "id": "the-office-22",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-22",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "medium",
-    "prompt": "What is the name of Dwight's cousin?",
-    "answer": "Mose"
+    "prompt": "What is Fonzie's real first name?",
+    "answer": "Arthur"
   },
   {
-    "id": "the-office-23",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-23",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "medium",
-    "prompt": "What is Pam's maiden name?",
-    "answer": "Beesly"
+    "prompt": "Who are the two Cunningham siblings?",
+    "answer": "Richie and Joanie"
   },
   {
-    "id": "the-office-24",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-24",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "medium",
-    "prompt": "What is the name of the documentary crew's sound mixer who appears in the series?",
-    "answer": "Brian"
+    "prompt": "What is the profession of Richie's father, Howard Cunningham?",
+    "answer": "Hardware store owner"
   },
   {
-    "id": "the-office-25",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-25",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "hard",
-    "prompt": "What is the name of the company that buys Dunder Mifflin?",
-    "answer": "Sabre"
+    "prompt": "Who was the original actor playing Richie Cunningham before Ron Howard took over?",
+    "answer": "Ron Howard was the original actor; no replacement"
   },
   {
-    "id": "the-office-26",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-26",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "hard",
-    "prompt": "What is the title of Michael Scott's screenplay?",
-    "answer": "Threat Level Midnight"
+    "prompt": "What is the name of Fonzie's cousin who is a mechanic?",
+    "answer": "Chachi"
   },
   {
-    "id": "the-office-27",
-    "showId": "the-office",
-    "showTitle": "The Office",
+    "id": "happy-days-27",
+    "showId": "happy-days",
+    "showTitle": "Happy Days",
     "difficulty": "hard",
-    "prompt": "What is the name of Angela's favorite cat?",
-    "answer": "Sprinkles"
+    "prompt": "Which character famously said the catchphrase 'Sit on it'?",
+    "answer": "Fonzie"
   },
   {
-    "id": "breaking-bad-28",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-28",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "easy",
-    "prompt": "What is Walter White's profession before he starts cooking meth?",
-    "answer": "Chemistry teacher"
+    "prompt": "What is the surname of the family in The Jeffersons?",
+    "answer": "Jefferson"
   },
   {
-    "id": "breaking-bad-29",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-29",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "easy",
-    "prompt": "What is the street name of Jesse Pinkman's meth?",
-    "answer": "Blue Sky"
+    "prompt": "What type of business do the Jeffersons own?",
+    "answer": "Dry cleaning"
   },
   {
-    "id": "breaking-bad-30",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-30",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "easy",
-    "prompt": "Who is Walter White's partner in the meth business?",
-    "answer": "Jesse Pinkman"
+    "prompt": "What city do the Jeffersons move to in the show?",
+    "answer": "New York City"
   },
   {
-    "id": "breaking-bad-31",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-31",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "medium",
-    "prompt": "What is the name of the fast food chain owned by Gus Fring?",
-    "answer": "Los Pollos Hermanos"
+    "prompt": "What is the name of George Jefferson's wife?",
+    "answer": "Louise (Weezy)"
   },
   {
-    "id": "breaking-bad-32",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-32",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "medium",
-    "prompt": "What is the alias Walter White uses when dealing with criminals?",
-    "answer": "Heisenberg"
+    "prompt": "Which character is George Jefferson's best friend and neighbor?",
+    "answer": "Tom Willis"
   },
   {
-    "id": "breaking-bad-33",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-33",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "medium",
-    "prompt": "What is Jesse Pinkman's catchphrase often used when excited?",
-    "answer": "Yeah, science!"
+    "prompt": "What is the name of George and Louise's son?",
+    "answer": "Lionel"
   },
   {
-    "id": "breaking-bad-34",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-34",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "hard",
-    "prompt": "What chemical does Walter use to dissolve a body in the first season?",
-    "answer": "Hydrofluoric acid"
+    "prompt": "Which actor portrayed George Jefferson?",
+    "answer": "Sherman Hemsley"
   },
   {
-    "id": "breaking-bad-35",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-35",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "hard",
-    "prompt": "What is the name of Walter White's son?",
-    "answer": "Walter Jr."
+    "prompt": "What is the name of the Jeffersons' maid?",
+    "answer": "Florence Johnston"
   },
   {
-    "id": "breaking-bad-36",
-    "showId": "breaking-bad",
-    "showTitle": "Breaking Bad",
+    "id": "the-jeffersons-36",
+    "showId": "the-jeffersons",
+    "showTitle": "The Jeffersons",
     "difficulty": "hard",
-    "prompt": "Who kills Gus Fring?",
-    "answer": "Walter White"
+    "prompt": "What was the original show from which The Jeffersons was spun off?",
+    "answer": "All in the Family"
   },
   {
-    "id": "lost-37",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-37",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "easy",
-    "prompt": "What is the flight number of the plane that crashes on the island?",
-    "answer": "815"
+    "prompt": "What is the name of the mysterious boss of the Angels?",
+    "answer": "Charlie"
   },
   {
-    "id": "lost-38",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-38",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "easy",
-    "prompt": "Who is the leader of the survivors at the start?",
-    "answer": "Jack Shephard"
+    "prompt": "How many women make up the team of Angels?",
+    "answer": "Three"
   },
   {
-    "id": "lost-39",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-39",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "easy",
-    "prompt": "What is the name of the mysterious island monster?",
-    "answer": "The Smoke Monster"
+    "prompt": "What type of agency do the Angels work for?",
+    "answer": "Private detective agency"
   },
   {
-    "id": "lost-40",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-40",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "medium",
-    "prompt": "What is the name of the group that lives on the island before the crash survivors?",
-    "answer": "The Others"
+    "prompt": "Who is the original female leader of the Angels?",
+    "answer": "Sabrina Duncan"
   },
   {
-    "id": "lost-41",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-41",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "medium",
-    "prompt": "What is the name of the scientific station on the island?",
-    "answer": "The Swan"
+    "prompt": "What is the name of the Angels' assistant?",
+    "answer": "Bosley"
   },
   {
-    "id": "lost-42",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-42",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "medium",
-    "prompt": "Who is the con man among the survivors?",
-    "answer": "James 'Sawyer' Ford"
+    "prompt": "Which Angel was played by Farrah Fawcett?",
+    "answer": "Jill Munroe"
   },
   {
-    "id": "lost-43",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-43",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "hard",
-    "prompt": "What numbers must the survivors enter into the computer every 108 minutes?",
-    "answer": "4 8 15 16 23 42"
+    "prompt": "Which actress played Kelly Garrett?",
+    "answer": "Jaclyn Smith"
   },
   {
-    "id": "lost-44",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-44",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "hard",
-    "prompt": "What is the real name of the character known as John Locke?",
-    "answer": "John Locke"
+    "prompt": "What is the name of the production company that produced Charlie's Angels?",
+    "answer": "Aaron Spelling Productions"
   },
   {
-    "id": "lost-45",
-    "showId": "lost",
-    "showTitle": "Lost",
+    "id": "charlie-s-angels-45",
+    "showId": "charlie-s-angels",
+    "showTitle": "Charlie's Angels",
     "difficulty": "hard",
-    "prompt": "Who is revealed to be Jacob's nemesis?",
-    "answer": "The Man in Black"
+    "prompt": "In what year did the original Charlie's Angels TV series premiere?",
+    "answer": "1976"
   }
 ]

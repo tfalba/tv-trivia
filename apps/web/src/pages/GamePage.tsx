@@ -85,25 +85,38 @@ export function GamePage() {
     spinTimeoutRef.current = window.setTimeout(() => {
       setIsSpinning(false);
       setSpunShow(selectedShow);
-      const availableQuestions = questionBank.filter(
-        (question) =>
-          (question.showTitle ?? question.showId) === selectedShow &&
-          !usedQuestionIds.includes(question.id)
-      );
-      if (availableQuestions.length === 0) {
-        setStatusMessage(
-          `${currentPlayer.playerName} spun: ${selectedShow}. No unused questions left for this show.`
-        );
-        return;
-      }
-
-      const selectedQuestion =
-        availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
-      setActiveQuestion(selectedQuestion);
-      setUsedQuestionIds((prev) => [...prev, selectedQuestion.id]);
-      setAnswerRevealed(false);
-      setStatusMessage(`${currentPlayer.playerName} spun: ${selectedShow}. Question loaded.`);
+      setStatusMessage(`${currentPlayer.playerName} spun: ${selectedShow}. Draw a question.`);
     }, 2600);
+  }
+
+  function drawQuestion() {
+    if (isSpinning) {
+      setStatusMessage("Wait for the wheel to stop before drawing a question.");
+      return;
+    }
+
+    if (!spunShow) {
+      setStatusMessage("Spin the wheel first, then draw a question.");
+      return;
+    }
+
+    const availableQuestions = questionBank.filter(
+      (question) =>
+        (question.showTitle ?? question.showId) === spunShow &&
+        !usedQuestionIds.includes(question.id)
+    );
+
+    if (availableQuestions.length === 0) {
+      setStatusMessage(`${spunShow} has no unused questions left. Spin again.`);
+      return;
+    }
+
+    const selectedQuestion =
+      availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    setActiveQuestion(selectedQuestion);
+    setUsedQuestionIds((prev) => [...prev, selectedQuestion.id]);
+    setAnswerRevealed(false);
+    setStatusMessage(`Question loaded for ${currentPlayer.playerName} from ${spunShow}.`);
   }
 
   function completeTurn(isCorrect: boolean) {
@@ -112,6 +125,8 @@ export function GamePage() {
     }
 
     const points = pointsByDifficulty[activeQuestion.difficulty];
+    const nextPlayerIndex = (currentPlayerIndex + 1) % players.length;
+    const nextPlayerName = players[nextPlayerIndex]?.playerName ?? "Next player";
 
     setPlayers((prev) =>
       prev.map((player, index) =>
@@ -120,11 +135,11 @@ export function GamePage() {
           : player
       )
     );
-    setCurrentPlayerIndex((prev) => (prev + 1) % players.length);
+    setCurrentPlayerIndex(nextPlayerIndex);
     setStatusMessage(
       isCorrect
-        ? `${currentPlayer.playerName} earned ${points} points. Next player, spin the wheel.`
-        : `${currentPlayer.playerName} missed. Next player, spin the wheel.`
+        ? `${currentPlayer.playerName} earned ${points} points. ${nextPlayerName} is up next.`
+        : `${currentPlayer.playerName} missed. ${nextPlayerName} is up next.`
     );
     setActiveQuestion(null);
     setSpunShow(null);
@@ -169,7 +184,7 @@ export function GamePage() {
 
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-          Game Flow
+          Spin + Draw Flow
         </p>
         <p className="mb-4 text-white/85">{statusMessage}</p>
         <div className="flex flex-wrap gap-2">
@@ -178,6 +193,14 @@ export function GamePage() {
           </Link>
           <button type="button" className="btn-primary" onClick={spinWheel} disabled={isSpinning}>
             {isSpinning ? "Spinning..." : "Spin wheel"}
+          </button>
+          <button
+            type="button"
+            className="btn-primary"
+            onClick={drawQuestion}
+            disabled={isSpinning || !spunShow}
+          >
+            Draw question
           </button>
         </div>
         <p className="mt-4 text-sm text-white/80">

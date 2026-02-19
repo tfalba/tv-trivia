@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Question } from "@tv-trivia/shared";
 import { fetchQuestionBank, seedQuestionBank } from "../lib/api";
 import {
@@ -12,8 +12,6 @@ export function SettingsPage() {
   const [selectedDecade, setSelectedDecade] = useState<DecadeKey>(getSavedDecade);
   const [isGenerating, setIsGenerating] = useState(false);
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
-  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
-  const [spunShow, setSpunShow] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState(
     "Select a decade and generate the AI question bank."
   );
@@ -39,8 +37,6 @@ export function SettingsPage() {
   function switchDecade(decade: DecadeKey) {
     setSelectedDecade(decade);
     window.localStorage.setItem(selectedDecadeStorageKey, decade);
-    setSpunShow(null);
-    setUsedQuestionIds([]);
     setStatusMessage(`${decade} selected. Generate questions for this decade.`);
   }
 
@@ -53,8 +49,6 @@ export function SettingsPage() {
         seed: Number(selectedDecade.slice(0, 4)),
       });
       setQuestionBank(generated);
-      setUsedQuestionIds([]);
-      setSpunShow(null);
       setStatusMessage(
         `Generated ${generated.length} questions for ${selectedDecade}.`
       );
@@ -63,38 +57,6 @@ export function SettingsPage() {
     } finally {
       setIsGenerating(false);
     }
-  }
-
-  const availableQuestionsForShow = useMemo(() => {
-    if (!spunShow) {
-      return [];
-    }
-    return questionBank.filter(
-      (question) =>
-        (question.showTitle ?? question.showId) === spunShow &&
-        !usedQuestionIds.includes(question.id)
-    );
-  }, [questionBank, spunShow, usedQuestionIds]);
-
-  function spinForShow() {
-    const selectedShow = showPool[Math.floor(Math.random() * showPool.length)];
-    setSpunShow(selectedShow);
-    setStatusMessage(`Spun show: ${selectedShow}. Click Draw question.`);
-  }
-
-  function drawQuestion() {
-    if (!spunShow) {
-      setStatusMessage("Spin first, then draw a question.");
-      return;
-    }
-    if (availableQuestionsForShow.length === 0) {
-      setStatusMessage(`No unused questions left for ${spunShow}. Spin again.`);
-      return;
-    }
-    const selected =
-      availableQuestionsForShow[Math.floor(Math.random() * availableQuestionsForShow.length)];
-    setUsedQuestionIds((prev) => [...prev, selected.id]);
-    setStatusMessage(`Drawn question from ${spunShow}: ${selected.id}`);
   }
 
   return (
@@ -143,26 +105,6 @@ export function SettingsPage() {
             ? `Generating ${selectedDecade}...`
             : `Generate ${selectedDecade} AI question bank`}
         </button>
-      </div>
-
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-          Spin + Draw Flow
-        </p>
-        <p className="mb-4 text-white/85">{statusMessage}</p>
-        <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={spinForShow} className="btn-secondary">
-            Spin show
-          </button>
-          <button type="button" onClick={drawQuestion} className="btn-primary">
-            Draw question
-          </button>
-        </div>
-        {spunShow ? (
-          <p className="mt-4 text-sm text-white/80">
-            Current show: <span className="font-semibold text-trivia-gold">{spunShow}</span>
-          </p>
-        ) : null}
       </div>
     </section>
   );
