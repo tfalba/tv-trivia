@@ -4,6 +4,12 @@ import type { Difficulty, Player, Question } from "@tv-trivia/shared";
 import { QuestionCard } from "../components/QuestionCard";
 import { fetchQuestionBank } from "../lib/api";
 import { getConfiguredShowsForDecade, getSavedDecade } from "../lib/decades";
+import {
+  getSavedCurrentPlayerIndex,
+  getSavedRoundNumber,
+  hasRoundWinner,
+  saveCurrentPlayerIndex,
+} from "../lib/gameState";
 import { getSavedPlayers, savePlayers } from "../lib/players";
 
 const pointsByDifficulty: Record<Difficulty, number> = {
@@ -15,7 +21,8 @@ const pointsByDifficulty: Record<Difficulty, number> = {
 export function GamePage() {
   const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
   const [selectedDecade] = useState(getSavedDecade);
-  const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+  const [currentPlayerIndex, setCurrentPlayerIndex] = useState(getSavedCurrentPlayerIndex);
+  const [roundNumber] = useState(getSavedRoundNumber);
   const [spunShow, setSpunShow] = useState<string | null>(null);
   const [activeQuestion, setActiveQuestion] = useState<Question | null>(null);
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
@@ -42,6 +49,10 @@ export function GamePage() {
   useEffect(() => {
     savePlayers(players);
   }, [players]);
+
+  useEffect(() => {
+    saveCurrentPlayerIndex(currentPlayerIndex);
+  }, [currentPlayerIndex]);
 
   useEffect(() => {
     return () => {
@@ -132,6 +143,11 @@ export function GamePage() {
   }
 
   function drawQuestion() {
+    if (hasRoundWinner(players)) {
+      setStatusMessage("Round complete. Start next round from Home.");
+      return;
+    }
+
     if (!spunShow || showSelectedForTurn !== turnNumber) {
       setStatusMessage("Select a new TV show for this player, then draw a question.");
       return;
@@ -197,7 +213,7 @@ export function GamePage() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-trivia-gold">
-            Round One
+            Round {roundNumber}
           </p>
           <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
             Game Board

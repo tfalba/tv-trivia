@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import type { Player } from "@tv-trivia/shared";
 import { CategoryCard } from "../components/CategoryCard";
 import { DifficultyBadge } from "../components/DifficultyBadge";
 import { fetchPopularShowsForDecade } from "../lib/api";
@@ -10,11 +11,14 @@ import {
   selectedDecadeStorageKey,
   type DecadeKey,
 } from "../lib/decades";
+import { hasRoundWinner, startNextRound } from "../lib/gameState";
+import { getSavedPlayers, savePlayers } from "../lib/players";
 
 const decades: DecadeKey[] = ["1970s", "1980s", "1990s", "2000s", "2010s"];
 const maxSelectedShows = 5;
 
 export function HomePage() {
+  const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
   const [selectedDecade, setSelectedDecade] = useState<DecadeKey>(getSavedDecade);
   const [showsByDecade, setShowsByDecade] = useState<Partial<Record<DecadeKey, string[]>>>({});
   const [selectedShowsByDecade, setSelectedShowsByDecade] = useState<
@@ -27,6 +31,7 @@ export function HomePage() {
   const availableShows = showsByDecade[selectedDecade] ?? [];
   const selectedShows = selectedShowsByDecade[selectedDecade] ?? [];
   const selectedShowSet = useMemo(() => new Set(selectedShows), [selectedShows]);
+  const roundHasWinner = useMemo(() => hasRoundWinner(players), [players]);
 
   function persistSelectedShows(next: Partial<Record<DecadeKey, string[]>>) {
     setSelectedShowsByDecade(next);
@@ -81,6 +86,13 @@ export function HomePage() {
     if (next.length === maxSelectedShows) {
       setSelectorMessage(`${selectedDecade} is ready with 5 selected shows.`);
     }
+  }
+
+  function handleStartNextRound() {
+    const resetPlayers = startNextRound(players);
+    setPlayers(resetPlayers);
+    savePlayers(resetPlayers);
+    setSelectorMessage("Next round started. Scores reset and turn order restarted.");
   }
 
   return (
@@ -183,9 +195,11 @@ export function HomePage() {
         <Link to="/game" className="btn-primary">
           Start game board
         </Link>
-        <Link to="/game" className="btn-secondary">
-          Preview wheel mode
-        </Link>
+        {roundHasWinner ? (
+          <button type="button" className="btn-primary" onClick={handleStartNextRound}>
+            Start next round
+          </button>
+        ) : null}
       </div>
     </section>
   );

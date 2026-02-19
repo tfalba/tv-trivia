@@ -1,13 +1,28 @@
 import { useEffect, useState } from "react";
 import type { Player } from "@tv-trivia/shared";
+import { getSavedCurrentPlayerIndex, saveCurrentPlayerIndex } from "../lib/gameState";
 import { getSavedPlayers, savePlayers } from "../lib/players";
 
 export function PlayerScoreboardPage() {
   const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
+  const [activePlayerIndex, setActivePlayerIndex] = useState(getSavedCurrentPlayerIndex);
 
   useEffect(() => {
     savePlayers(players);
   }, [players]);
+
+  useEffect(() => {
+    if (players.length === 0) {
+      setActivePlayerIndex(0);
+      saveCurrentPlayerIndex(0);
+      return;
+    }
+    const normalizedIndex = activePlayerIndex % players.length;
+    if (normalizedIndex !== activePlayerIndex) {
+      setActivePlayerIndex(normalizedIndex);
+      saveCurrentPlayerIndex(normalizedIndex);
+    }
+  }, [activePlayerIndex, players.length]);
 
   function updatePlayerName(playerId: string, name: string) {
     setPlayers((prev) =>
@@ -61,7 +76,7 @@ export function PlayerScoreboardPage() {
               key={player.id}
               className={[
                 "rounded-xl border px-4 py-3",
-                index === 0
+                index === activePlayerIndex
                   ? "border-trivia-gold/70 bg-trivia-gold/15"
                   : "border-white/15 bg-black/25",
               ].join(" ")}

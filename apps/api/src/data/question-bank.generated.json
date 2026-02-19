@@ -1,362 +1,362 @@
 [
   {
-    "id": "growing-pains-1",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-1",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "Who played the father, Jason Seaver, on Growing Pains?",
-    "answer": "Alan Thicke"
+    "prompt": "What is the name of the island where the survivors are stranded?",
+    "answer": "The Island"
   },
   {
-    "id": "growing-pains-2",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-2",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What city is Growing Pains primarily set in?",
-    "answer": "New York"
+    "prompt": "Who is the pilot of the crashed plane?",
+    "answer": "Charlie Pace"
   },
   {
-    "id": "growing-pains-3",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-3",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "easy",
-    "prompt": "What is the profession of Jason Seaver in Growing Pains?",
-    "answer": "Psychologist"
+    "prompt": "What is the flight number of the plane that crashes?",
+    "answer": "815"
   },
   {
-    "id": "growing-pains-4",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-4",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "What is the name of the youngest Seaver child on Growing Pains?",
-    "answer": "Chrissy"
+    "prompt": "What is the name of the mysterious group on the island?",
+    "answer": "The Others"
   },
   {
-    "id": "growing-pains-5",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-5",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "Which actor joined Growing Pains as Luke Brower in later seasons?",
-    "answer": "Leonardo DiCaprio"
+    "prompt": "Who is the leader of the survivors initially?",
+    "answer": "Jack Shephard"
   },
   {
-    "id": "growing-pains-6",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-6",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "medium",
-    "prompt": "What is the name of the Seaver's housekeeper on the show?",
-    "answer": "Mrs. McClusky"
+    "prompt": "What is the name of the character who is a former con artist?",
+    "answer": "James 'Sawyer' Ford"
   },
   {
-    "id": "growing-pains-7",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-7",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "What year did Growing Pains first premiere on television?",
-    "answer": "1985"
+    "prompt": "What is the name of the station used by the DHARMA Initiative for psychological experiments?",
+    "answer": "The Pearl"
   },
   {
-    "id": "growing-pains-8",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-8",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "Which Seaver child was known for being the troublemaker?",
-    "answer": "Mike"
+    "prompt": "Who is the real identity of the character known as Henry Gale?",
+    "answer": "Ben Linus"
   },
   {
-    "id": "growing-pains-9",
-    "showId": "growing-pains",
-    "showTitle": "Growing Pains",
+    "id": "lost-9",
+    "showId": "lost",
+    "showTitle": "Lost",
     "difficulty": "hard",
-    "prompt": "Who played Carol Seaver, the eldest daughter on Growing Pains?",
-    "answer": "Tracey Gold"
+    "prompt": "What number sequence is associated with the island and appears repeatedly?",
+    "answer": "4 8 15 16 23 42"
   },
   {
-    "id": "diff-rent-strokes-10",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-10",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "What is the name of the wealthy family that adopts two boys in Diff'rent Strokes?",
-    "answer": "Drummond"
+    "prompt": "Who is the regional manager of Dunder Mifflin's Scranton branch?",
+    "answer": "Michael Scott"
   },
   {
-    "id": "diff-rent-strokes-11",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-11",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "What are the first names of the two boys adopted in Diff'rent Strokes?",
-    "answer": "Arnold and Willis"
+    "prompt": "What is the name of the paper company featured in the show?",
+    "answer": "Dunder Mifflin"
   },
   {
-    "id": "diff-rent-strokes-12",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-12",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "easy",
-    "prompt": "What is the famous catchphrase Arnold says on Diff'rent Strokes?",
-    "answer": "Whatchu talkin' 'bout, Willis?"
+    "prompt": "Who is Jim Halpert's love interest?",
+    "answer": "Pam Beesly"
   },
   {
-    "id": "diff-rent-strokes-13",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-13",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "Who played the housekeeper, Mrs. Garrett, in Diff'rent Strokes?",
-    "answer": "Charlotte Rae"
+    "prompt": "What is the name of Dwight Schrute's farm?",
+    "answer": "Schrute Farms"
   },
   {
-    "id": "diff-rent-strokes-14",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-14",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "What city does Diff'rent Strokes take place in?",
-    "answer": "New York City"
+    "prompt": "Which character starts the website 'Threat Level Midnight'?",
+    "answer": "Michael Scott"
   },
   {
-    "id": "diff-rent-strokes-15",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-15",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "medium",
-    "prompt": "What is the first name of the Drummond family patriarch in Diff'rent Strokes?",
-    "answer": "Phillip"
+    "prompt": "Who becomes the new regional manager after Michael Scott leaves?",
+    "answer": "Andy Bernard"
   },
   {
-    "id": "diff-rent-strokes-16",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-16",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "Which actor played the role of Willis Jackson?",
-    "answer": "Todd Bridges"
+    "prompt": "What is the name of the documentary crew's sound mixer who appears on camera?",
+    "answer": "Brian"
   },
   {
-    "id": "diff-rent-strokes-17",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-17",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What year did Diff'rent Strokes debut on television?",
-    "answer": "1978"
+    "prompt": "What is the name of the company that merges with Dunder Mifflin in season 6?",
+    "answer": "Sabre"
   },
   {
-    "id": "diff-rent-strokes-18",
-    "showId": "diff-rent-strokes",
-    "showTitle": "Diff'rent Strokes",
+    "id": "the-office-18",
+    "showId": "the-office",
+    "showTitle": "The Office",
     "difficulty": "hard",
-    "prompt": "What is the full name of the Drummond family's housekeeper in Diff'rent Strokes?",
-    "answer": "Mrs. Edna Garrett"
+    "prompt": "What is the title of Dwight's self-published book?",
+    "answer": "The Schrute Way"
   },
   {
-    "id": "night-court-19",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-19",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "easy",
-    "prompt": "Who played Judge Harry Stone on Night Court?",
-    "answer": "Harry Anderson"
+    "prompt": "Who is the main protagonist of 24?",
+    "answer": "Jack Bauer"
   },
   {
-    "id": "night-court-20",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-20",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "easy",
-    "prompt": "What city is Night Court set in?",
-    "answer": "New York"
+    "prompt": "What agency does Jack Bauer work for?",
+    "answer": "CTU"
   },
   {
-    "id": "night-court-21",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-21",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "easy",
-    "prompt": "What type of court is depicted in Night Court?",
-    "answer": "Nighttime municipal court"
+    "prompt": "What is the format of the show 24?",
+    "answer": "Real-time"
   },
   {
-    "id": "night-court-22",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-22",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "medium",
-    "prompt": "Who played the bailiff Bull Shannon on Night Court?",
-    "answer": "Richard Moll"
+    "prompt": "Who is Jack Bauer's wife?",
+    "answer": "Teri Bauer"
   },
   {
-    "id": "night-court-23",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-23",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "medium",
-    "prompt": "What is the name of the court clerk on Night Court?",
-    "answer": "Roz Russell"
+    "prompt": "What is the name of the president during season 1?",
+    "answer": "David Palmer"
   },
   {
-    "id": "night-court-24",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-24",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "medium",
-    "prompt": "Night Court originally aired on which network?",
-    "answer": "NBC"
+    "prompt": "Which terrorist group is a recurring antagonist in the series?",
+    "answer": "The Salazars"
   },
   {
-    "id": "night-court-25",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-25",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "What year did Night Court first premiere?",
-    "answer": "1984"
+    "prompt": "What is the name of Jack Bauer's daughter?",
+    "answer": "Kim Bauer"
   },
   {
-    "id": "night-court-26",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-26",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "Who created the television series Night Court?",
-    "answer": "Markie Post"
+    "prompt": "Who is the CTU director in season 3?",
+    "answer": "Michelle Dessler"
   },
   {
-    "id": "night-court-27",
-    "showId": "night-court",
-    "showTitle": "Night Court",
+    "id": "24-27",
+    "showId": "24",
+    "showTitle": "24",
     "difficulty": "hard",
-    "prompt": "What is Judge Harry Stone's favorite magic phrase?",
-    "answer": "Abracadabra"
+    "prompt": "What city is the primary setting for most of the series?",
+    "answer": "Los Angeles"
   },
   {
-    "id": "moonlighting-28",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-28",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "easy",
-    "prompt": "Who are the two main detectives in Moonlighting?",
-    "answer": "Maddie Hayes and David Addison"
+    "prompt": "What is Walter White's profession before cooking meth?",
+    "answer": "Chemistry teacher"
   },
   {
-    "id": "moonlighting-29",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-29",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "easy",
-    "prompt": "What is the name of the detective agency in Moonlighting?",
-    "answer": "Blue Moon Detective Agency"
+    "prompt": "What is the street name of the drug Walter White manufactures?",
+    "answer": "Blue Sky"
   },
   {
-    "id": "moonlighting-30",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-30",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "easy",
-    "prompt": "On which network did Moonlighting air?",
-    "answer": "ABC"
+    "prompt": "Who is Walter White's partner in the meth business?",
+    "answer": "Jesse Pinkman"
   },
   {
-    "id": "moonlighting-31",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-31",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "medium",
-    "prompt": "Who played Maddie Hayes on Moonlighting?",
-    "answer": "Cybill Shepherd"
+    "prompt": "What is the name of Walter White's alter ego?",
+    "answer": "Heisenberg"
   },
   {
-    "id": "moonlighting-32",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-32",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "medium",
-    "prompt": "What year did Moonlighting premiere?",
-    "answer": "1985"
+    "prompt": "What is the name of the lawyer who helps Walter and Jesse?",
+    "answer": "Saul Goodman"
   },
   {
-    "id": "moonlighting-33",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-33",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "medium",
-    "prompt": "What profession does David Addison have in Moonlighting?",
-    "answer": "Private detective"
+    "prompt": "What is the name of the fast food chicken chain owned by Gus Fring?",
+    "answer": "Los Pollos Hermanos"
   },
   {
-    "id": "moonlighting-34",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-34",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "Who created the TV show Moonlighting?",
-    "answer": "Gloria Katz and Willard Huyck"
+    "prompt": "What is the name of the drug kingpin Walter White replaces?",
+    "answer": "Gustavo Fring"
   },
   {
-    "id": "moonlighting-35",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-35",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "Moonlighting was known for breaking which TV convention?",
-    "answer": "Fourth wall"
+    "prompt": "What is the chemical formula for methamphetamine shown in the series?",
+    "answer": "C10H15N"
   },
   {
-    "id": "moonlighting-36",
-    "showId": "moonlighting",
-    "showTitle": "Moonlighting",
+    "id": "breaking-bad-36",
+    "showId": "breaking-bad",
+    "showTitle": "Breaking Bad",
     "difficulty": "hard",
-    "prompt": "What is the name of Maddie Hayes' wealthy client who initially hires her agency?",
-    "answer": "Her boyfriend, but no specific name is given"
+    "prompt": "What is the name of Walter White's son?",
+    "answer": "Walter White Jr."
   },
   {
-    "id": "cheers-37",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-37",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "easy",
-    "prompt": "What is the name of the bar in Cheers?",
-    "answer": "Cheers"
+    "prompt": "What is the profession of the main characters in Grey's Anatomy?",
+    "answer": "Doctors"
   },
   {
-    "id": "cheers-38",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-38",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "easy",
-    "prompt": "Who is the bartender and main character in Cheers?",
-    "answer": "Sam Malone"
+    "prompt": "What is the name of the hospital where the show is set?",
+    "answer": "Seattle Grace Hospital"
   },
   {
-    "id": "cheers-39",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-39",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "easy",
-    "prompt": "In which city is Cheers set?",
-    "answer": "Boston"
+    "prompt": "Who is the main female protagonist?",
+    "answer": "Meredith Grey"
   },
   {
-    "id": "cheers-40",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-40",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "medium",
-    "prompt": "Who played Diane Chambers on Cheers?",
-    "answer": "Shelley Long"
+    "prompt": "What is the name of Meredith Grey's best friend?",
+    "answer": "Cristina Yang"
   },
   {
-    "id": "cheers-41",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-41",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "medium",
-    "prompt": "What sport did Sam Malone play before becoming a bartender in Cheers?",
-    "answer": "Baseball"
+    "prompt": "Who is the chief of surgery at Seattle Grace Hospital in early seasons?",
+    "answer": "Richard Webber"
   },
   {
-    "id": "cheers-42",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-42",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "medium",
-    "prompt": "Who was the bar owner of Cheers?",
-    "answer": "Sam Malone"
+    "prompt": "Which character is known as 'McDreamy'?",
+    "answer": "Derek Shepherd"
   },
   {
-    "id": "cheers-43",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-43",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "hard",
-    "prompt": "What year did Cheers first premiere?",
-    "answer": "1982"
+    "prompt": "What is the name of the hospital after its merger in later seasons?",
+    "answer": "Grey Sloan Memorial Hospital"
   },
   {
-    "id": "cheers-44",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-44",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "hard",
-    "prompt": "Who created the TV show Cheers?",
-    "answer": "Glen Charles and Les Charles"
+    "prompt": "Who performed the first surgery of the series?",
+    "answer": "Meredith Grey"
   },
   {
-    "id": "cheers-45",
-    "showId": "cheers",
-    "showTitle": "Cheers",
+    "id": "grey-s-anatomy-45",
+    "showId": "grey-s-anatomy",
+    "showTitle": "Grey's Anatomy",
     "difficulty": "hard",
-    "prompt": "What is the name of the character known for his catchphrase 'Norm!'?",
-    "answer": "Norm Peterson"
+    "prompt": "What disease does Dr. Addison Montgomery specialize in?",
+    "answer": "Neonatology"
   }
 ]

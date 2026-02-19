@@ -3,8 +3,8 @@ import type { Question } from "@tv-trivia/shared";
 import { fetchQuestionBank, seedQuestionBank } from "../lib/api";
 import {
   decadeShowPresets,
-  getConfiguredShowsForDecade,
   getSavedDecade,
+  getSavedSelectedShowsByDecade,
   selectedDecadeStorageKey,
   type DecadeKey,
 } from "../lib/decades";
@@ -25,7 +25,9 @@ export function SettingsPage() {
     "Select a decade and generate the AI question bank."
   );
 
-  const showPool = getConfiguredShowsForDecade(selectedDecade);
+  const selectedShowsByDecade = getSavedSelectedShowsByDecade();
+  const selectedShowsForDecade = selectedShowsByDecade[selectedDecade] ?? [];
+  const canGenerateForDecade = selectedShowsForDecade.length === 5;
 
   useEffect(() => {
     void loadQuestionBank();
@@ -56,10 +58,17 @@ export function SettingsPage() {
   }
 
   async function generateQuestionBank() {
+    if (!canGenerateForDecade) {
+      setStatusMessage(
+        `Pick exactly 5 shows for ${selectedDecade} on Home before generating.`
+      );
+      return;
+    }
+
     setIsGenerating(true);
     try {
       const generated = await seedQuestionBank({
-        shows: showPool,
+        shows: selectedShowsForDecade,
         questionsPerShow: 9,
         seed: Number(selectedDecade.slice(0, 4)),
       });
@@ -130,14 +139,23 @@ export function SettingsPage() {
           ))}
         </div>
         <p className="mt-3 text-sm text-white/80">
-          Active shows:{" "}
-          <span className="font-semibold text-trivia-gold">{showPool.join(", ")}</span>
+          Home selections ({selectedShowsForDecade.length}/5):{" "}
+          <span className="font-semibold text-trivia-gold">
+            {selectedShowsForDecade.length > 0
+              ? selectedShowsForDecade.join(", ")
+              : "No shows selected"}
+          </span>
         </p>
+        {!canGenerateForDecade ? (
+          <p className="mt-2 text-sm text-white/75">
+            Go to Home and select exactly 5 shows for this decade.
+          </p>
+        ) : null}
         <button
           type="button"
           onClick={generateQuestionBank}
           className="btn-secondary mt-4"
-          disabled={isGenerating}
+          disabled={isGenerating || !canGenerateForDecade}
         >
           {isGenerating
             ? `Generating ${selectedDecade}...`
