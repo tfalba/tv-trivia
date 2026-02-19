@@ -157,7 +157,10 @@ export function GamePage() {
             Game Board
           </h2>
         </div>
-        <span className="rounded-xl bg-trivia-green px-4 py-2 text-sm font-bold text-white">
+        <span
+          className="rounded-xl px-4 py-2 text-sm font-bold text-white"
+          style={{ backgroundColor: "var(--color-success)" }}
+        >
           {currentPlayer.playerName} Turn
         </span>
       </div>
@@ -221,7 +224,14 @@ export function GamePage() {
         />
       ) : null}
 
-      <div className="rounded-2xl border border-trivia-blue/50 bg-trivia-blue/20 p-5">
+      <div
+        className="rounded-2xl p-5"
+        style={{
+          border: "1px solid color-mix(in oklab, var(--color-accent) 55%, black 15%)",
+          background:
+            "color-mix(in oklab, var(--color-accent) 26%, var(--color-surface-2) 74%)",
+        }}
+      >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Recommendation
         </p>

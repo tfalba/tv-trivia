@@ -7,9 +7,17 @@ import {
   selectedDecadeStorageKey,
   type DecadeKey,
 } from "../lib/decades";
+import {
+  appThemes,
+  applyTheme,
+  getSavedTheme,
+  selectedThemeStorageKey,
+  type AppThemeKey,
+} from "../lib/theme";
 
 export function SettingsPage() {
   const [selectedDecade, setSelectedDecade] = useState<DecadeKey>(getSavedDecade);
+  const [selectedTheme, setSelectedTheme] = useState<AppThemeKey>(getSavedTheme);
   const [isGenerating, setIsGenerating] = useState(false);
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
   const [statusMessage, setStatusMessage] = useState(
@@ -40,6 +48,12 @@ export function SettingsPage() {
     setStatusMessage(`${decade} selected. Generate questions for this decade.`);
   }
 
+  function switchTheme(theme: AppThemeKey) {
+    setSelectedTheme(theme);
+    window.localStorage.setItem(selectedThemeStorageKey, theme);
+    applyTheme(theme);
+  }
+
   async function generateQuestionBank() {
     setIsGenerating(true);
     try {
@@ -68,6 +82,29 @@ export function SettingsPage() {
         <p className="max-w-2xl text-base text-white/85 sm:text-lg">
           This is the settings page where you can configure your game settings.
         </p>
+      </div>
+
+      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+          App Theme
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {(Object.keys(appThemes) as AppThemeKey[]).map((theme) => (
+            <button
+              key={theme}
+              type="button"
+              onClick={() => switchTheme(theme)}
+              className={[
+                "rounded-lg px-4 py-2 text-sm font-semibold transition",
+                theme === selectedTheme
+                  ? "bg-trivia-gold text-trivia-ink"
+                  : "bg-white/10 text-white hover:bg-white/20",
+              ].join(" ")}
+            >
+              {appThemes[theme]}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">

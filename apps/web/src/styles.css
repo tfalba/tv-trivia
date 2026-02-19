@@ -5,8 +5,100 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --shadow-panel: 0 16px 32px rgba(0, 0, 0, 0.16);
+    --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    --shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.42);
+    --shadow-glow: 0 0 24px rgba(43, 112, 228, 0.24);
+
+    --color-bg: #0f172a;
+    --color-surface: rgba(255, 255, 255, 0.1);
+    --color-surface-2: rgba(0, 0, 0, 0.25);
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-text: #ffffff;
+    --color-muted: rgba(255, 255, 255, 0.85);
+
+    --color-primary: #ffd034;
+    --color-accent: #2b70e4;
+    --color-violet: #209d5c;
+
+    --color-success: #209d5c;
+    --color-warning: #ffd034;
+
+    --hero-radial-1: radial-gradient(
+      900px 620px at 12% -8%,
+      rgba(43, 112, 228, 0.45),
+      rgba(43, 112, 228, 0)
+    );
+    --hero-radial-2: radial-gradient(
+      840px 560px at 88% 110%,
+      rgba(32, 157, 92, 0.3),
+      rgba(32, 157, 92, 0)
+    );
+  }
+
+  [data-theme="option2"] {
+    --shadow-panel: 0 12px 30px rgba(0, 0, 0, 0.45);
+    --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    --shadow-focus: 0 0 0 3px rgba(226, 62, 54, 0.52);
+    --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
+    --color-bg: #6b002a;
+    --color-surface: rgb(117, 0, 44, 0.6);
+    --color-surface-2: #65012d;
+    --color-border: #4d2424;
+    --color-text: #fff3f1;
+    --color-muted: #e4bbb5;
+    --color-primary: #b70333;
+    --color-accent: #f06a4f;
+    --color-violet: #a83281;
+    --color-success: #e27562;
+    --color-warning: #f0a05e;
+    --hero-radial-1: radial-gradient(
+      900px 620px at 12% -8%,
+      rgba(124, 58, 237, 0.68),
+      rgba(124, 58, 237, 0)
+    );
+    --hero-radial-2: radial-gradient(
+      780px 520px at 88% 110%,
+      rgba(240, 106, 79, 0.42),
+      rgba(240, 106, 79, 0)
+    );
+  }
+
+  [data-theme="option3"] {
+    --shadow-panel: 0 10px 26px rgba(7, 11, 22, 0.44);
+    --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    --shadow-focus: 0 0 0 3px rgba(36, 82, 162, 0.5);
+    --shadow-glow: 0 0 22px rgba(36, 82, 162, 0.28);
+    --color-bg: #0b1426;
+    --color-surface: rgba(18, 31, 55, 0.88);
+    --color-surface-2: rgba(11, 18, 32, 0.9);
+    --color-border: #28406d;
+    --color-text: #eaf2ff;
+    --color-muted: #b4c4e5;
+    --color-primary: #ffd034;
+    --color-accent: #2452a2;
+    --color-violet: #209d5c;
+    --color-success: #209d5c;
+    --color-warning: #ffd034;
+    --hero-radial-1: radial-gradient(
+      900px 620px at 12% -8%,
+      rgba(36, 82, 162, 0.58),
+      rgba(36, 82, 162, 0)
+    );
+    --hero-radial-2: radial-gradient(
+      780px 520px at 88% 110%,
+      rgba(32, 157, 92, 0.34),
+      rgba(32, 157, 92, 0)
+    );
+  }
+
   body {
-    @apply m-0 min-h-screen bg-trivia-slate bg-trivia-grid bg-[size:20px_20px] font-body text-trivia-paper;
+    @apply m-0 min-h-screen bg-[size:20px_20px] font-body;
+    background-color: var(--color-bg);
+    background-image: var(--hero-radial-1), var(--hero-radial-2),
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+    color: var(--color-text);
   }
 }
 
@@ -16,18 +108,62 @@
   }
 
   .glass-panel {
-    @apply rounded-3xl border border-white/20 bg-white/10 shadow-card backdrop-blur-md;
+    @apply rounded-3xl backdrop-blur-md;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-panel), var(--shadow-inset);
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-trivia-gold px-5 py-3 font-semibold text-trivia-ink transition hover:-translate-y-0.5 hover:brightness-95;
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-white transition;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    filter: brightness(1.05);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border border-trivia-blue/60 bg-trivia-blue/20 px-5 py-3 font-semibold text-trivia-paper transition hover:bg-trivia-blue/35;
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+    border: 1px solid color-mix(in oklab, var(--color-accent) 65%, white 15%);
+    background: color-mix(in oklab, var(--color-accent) 24%, transparent);
+    color: var(--color-text);
+  }
+
+  .btn-secondary:hover {
+    background: color-mix(in oklab, var(--color-accent) 34%, transparent);
   }
 
   .chip {
-    @apply rounded-full border border-white/25 bg-black/30 px-3 py-1 text-sm font-semibold;
+    @apply rounded-full px-3 py-1 text-sm font-semibold;
+    border: 1px solid color-mix(in oklab, var(--color-text) 22%, transparent);
+    background: color-mix(in oklab, var(--color-surface-2) 82%, transparent);
+  }
+
+  [data-theme="option2"] .text-trivia-gold {
+    color: var(--color-accent) !important;
+  }
+
+  [data-theme="option2"] .bg-trivia-green {
+    background-color: var(--color-success) !important;
+  }
+
+  [data-theme="option2"] .bg-trivia-blue {
+    background-color: var(--color-violet) !important;
+  }
+
+  [data-theme="option2"] .text-trivia-paper {
+    color: var(--color-text) !important;
+  }
+
+  [data-theme="option2"] .border-white\/15,
+  [data-theme="option2"] .border-white\/20 {
+    border-color: var(--color-border) !important;
+  }
+
+  [data-theme="option2"] .bg-black\/25 {
+    background-color: color-mix(in oklab, var(--color-surface-2) 90%, transparent) !important;
   }
 }

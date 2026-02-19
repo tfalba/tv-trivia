@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CategoryCard } from "../components/CategoryCard";
 import { DifficultyBadge } from "../components/DifficultyBadge";
 
-const decades = ["1980s", "1990s", "2000s"];
+const decades = ["1970s", "1980s", "1990s", "2000s", "2010s"];
 
 export function HomePage() {
   return (

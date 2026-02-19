@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { applyTheme, getSavedTheme } from "./lib/theme";
 
 const navItems = [
   { to: "/", label: "Home", end: true },
@@ -9,6 +11,10 @@ const navItems = [
 ] as const;
 
 export function AppLayout() {
+  useEffect(() => {
+    applyTheme(getSavedTheme());
+  }, []);
+
   return (
     <div className="app-shell">
       <header className="glass-panel mb-6 flex flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
