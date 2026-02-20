@@ -15,13 +15,20 @@ import {
   selectedThemeStorageKey,
   type AppThemeKey,
 } from "../lib/theme";
-import { getSavedCurrentPlayerIndex, saveCurrentPlayerIndex } from "../lib/gameState";
+import {
+  getSavedCurrentPlayerIndex,
+  getSavedRoundNumber,
+  saveCurrentPlayerIndex,
+  startNextRoundWithRandomRotation,
+} from "../lib/gameState";
 import { getSavedPlayers, savePlayers } from "../lib/players";
 
 export function SettingsPage() {
   const [selectedDecade, setSelectedDecade] = useState<DecadeKey>(getSavedDecade);
   const [selectedTheme, setSelectedTheme] = useState<AppThemeKey>(getSavedTheme);
   const [players, setPlayers] = useState<Player[]>(getSavedPlayers);
+  const [newPlayerIds, setNewPlayerIds] = useState<string[]>([]);
+  const [editingPlayerIds, setEditingPlayerIds] = useState<string[]>([]);
   const [activePlayerIndex, setActivePlayerIndex] = useState(getSavedCurrentPlayerIndex);
   const [isGenerating, setIsGenerating] = useState(false);
   const [questionBank, setQuestionBank] = useState<Question[]>([]);
@@ -35,7 +42,7 @@ export function SettingsPage() {
 
   useEffect(() => {
     void loadQuestionBank();
-  }, []);
+  }, [selectedDecade]);
 
   useEffect(() => {
     savePlayers(players);
@@ -58,10 +65,10 @@ export function SettingsPage() {
 
   async function loadQuestionBank() {
     try {
-      const questions = await fetchQuestionBank();
+      const questions = await fetchQuestionBank(selectedDecade);
       setQuestionBank(questions);
       if (questions.length > 0) {
-        setStatusMessage(`Loaded ${questions.length} questions from the API.`);
+        setStatusMessage(`Loaded ${questions.length} ${selectedDecade} questions from the API.`);
       }
     } catch {
       setStatusMessage("Question bank unavailable. Generate AI questions to continue.");
@@ -91,6 +98,7 @@ export function SettingsPage() {
     setIsGenerating(true);
     try {
       const generated = await seedQuestionBank({
+        decade: selectedDecade,
         shows: selectedShowsForDecade,
         questionsPerShow: 18,
         seed: Number(selectedDecade.slice(0, 4)),
@@ -115,15 +123,20 @@ export function SettingsPage() {
   function addPlayer() {
     setPlayers((prev) => {
       const nextIndex = prev.length + 1;
+      const newPlayerId = `player-${Date.now()}`;
+      setNewPlayerIds((current) => [...current, newPlayerId]);
+      setEditingPlayerIds((current) => [...current, newPlayerId]);
       return [
         ...prev,
-        { id: `player-${Date.now()}`, name: `Player ${nextIndex}`, score: 0 },
+        { id: newPlayerId, name: `Player ${nextIndex}`, score: 0 },
       ];
     });
   }
 
   function deletePlayer(playerId: string) {
     setPlayers((prev) => prev.filter((player) => player.id !== playerId));
+    setNewPlayerIds((prev) => prev.filter((id) => id !== playerId));
+    setEditingPlayerIds((prev) => prev.filter((id) => id !== playerId));
   }
 
   function normalizePlayerName(playerId: string, currentName: string) {
@@ -135,6 +148,50 @@ export function SettingsPage() {
         )
       );
     }
+  }
+
+  function clearDefaultNameOnFirstFocus(playerId: string, currentName: string) {
+    if (!newPlayerIds.includes(playerId)) {
+      return;
+    }
+    if (!/^Player \d+$/.test(currentName.trim())) {
+      setNewPlayerIds((prev) => prev.filter((id) => id !== playerId));
+      return;
+    }
+    updatePlayerName(playerId, "");
+    setNewPlayerIds((prev) => prev.filter((id) => id !== playerId));
+  }
+
+  function beginEditingPlayer(playerId: string) {
+    setEditingPlayerIds((prev) => (prev.includes(playerId) ? prev : [...prev, playerId]));
+  }
+
+  function savePlayerName(playerId: string, currentName: string) {
+    const trimmed = currentName.trim();
+    setPlayers((prev) =>
+      prev.map((player) =>
+        player.id === playerId
+          ? { ...player, name: trimmed.length > 0 ? trimmed : "Unnamed Player" }
+          : player
+      )
+    );
+    setEditingPlayerIds((prev) => prev.filter((id) => id !== playerId));
+    setNewPlayerIds((prev) => prev.filter((id) => id !== playerId));
+  }
+
+  function clearRoundAndStartNewRandomRound() {
+    if (players.length === 0) {
+      setStatusMessage("Add at least one player before starting a new round.");
+      return;
+    }
+
+    const resetPlayers = startNextRoundWithRandomRotation(players);
+    const startingPlayer = resetPlayers[0];
+    setPlayers(resetPlayers);
+    setActivePlayerIndex(0);
+    setStatusMessage(
+      `Round ${getSavedRoundNumber()} started. ${startingPlayer?.name ?? "Player 1"} goes first.`
+    );
   }
 
   return (
@@ -171,7 +228,7 @@ export function SettingsPage() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      {/* <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Decade For AI Generation
         </p>
@@ -215,7 +272,7 @@ export function SettingsPage() {
             ? `Generating ${selectedDecade}...`
             : `Generate ${selectedDecade} AI question bank`}
         </button>
-      </div>
+      </div> */}
 
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
@@ -233,16 +290,34 @@ export function SettingsPage() {
               ].join(" ")}
             >
               <div className="flex flex-wrap items-center gap-2">
-                <input
-                  value={player.name}
-                  onChange={(event) => updatePlayerName(player.id, event.target.value)}
-                  onBlur={() => normalizePlayerName(player.id, player.name)}
-                  className="min-w-[170px] flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-white outline-none transition focus:border-white/50"
-                  placeholder={`Player ${index + 1}`}
-                />
+                {editingPlayerIds.includes(player.id) ? (
+                  <input
+                    value={player.name}
+                    onChange={(event) => updatePlayerName(player.id, event.target.value)}
+                    onFocus={() => clearDefaultNameOnFirstFocus(player.id, player.name)}
+                    onBlur={() => normalizePlayerName(player.id, player.name)}
+                    className="min-w-[170px] flex-1 rounded-lg border border-white/20 bg-black/30 px-3 py-2 text-white outline-none transition focus:border-white/50"
+                    placeholder={`Player ${index + 1}`}
+                  />
+                ) : (
+                  <p className="min-w-[170px] flex-1 rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-white">
+                    {player.name}
+                  </p>
+                )}
                 <span className="rounded-md bg-white/10 px-3 py-1 text-sm font-bold text-white">
                   {player.score} pts
                 </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    editingPlayerIds.includes(player.id)
+                      ? savePlayerName(player.id, player.name)
+                      : beginEditingPlayer(player.id)
+                  }
+                  className="rounded-md border border-white/30 bg-white/10 px-3 py-1 text-sm font-semibold text-white transition hover:bg-white/20"
+                >
+                  {editingPlayerIds.includes(player.id) ? "Save" : "Edit"}
+                </button>
                 <button
                   type="button"
                   onClick={() => deletePlayer(player.id)}
@@ -256,6 +331,14 @@ export function SettingsPage() {
         </ul>
         <button type="button" onClick={addPlayer} className="btn-secondary mt-4">
           Add player
+        </button>
+        <button
+          type="button"
+          onClick={clearRoundAndStartNewRandomRound}
+          className="btn-primary mt-3"
+          disabled={players.length === 0}
+        >
+          Clear round + start new round
         </button>
       </div>
     </section>

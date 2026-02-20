@@ -1,0 +1,725 @@
+{
+  "decade": "1980s",
+  "shows": [
+    "The Cosby Show",
+    "Miami Vice",
+    "Cheers",
+    "The A-Team",
+    "Family Ties"
+  ],
+  "questions": [
+    {
+      "id": "the-cosby-show-1",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "What is the name of the Huxtable family patriarch?",
+      "answer": "Cliff Huxtable"
+    },
+    {
+      "id": "the-cosby-show-2",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "What profession does Cliff Huxtable have?",
+      "answer": "Doctor"
+    },
+    {
+      "id": "the-cosby-show-3",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "What is the first name of Cliff and Clair Huxtable's eldest daughter?",
+      "answer": "Sondra"
+    },
+    {
+      "id": "the-cosby-show-4",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "Which city is The Cosby Show set in?",
+      "answer": "Brooklyn"
+    },
+    {
+      "id": "the-cosby-show-5",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "What is the name of the Huxtable family dog?",
+      "answer": "Dog"
+    },
+    {
+      "id": "the-cosby-show-6",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "easy",
+      "prompt": "What subject does Theo Huxtable struggle with in school?",
+      "answer": "Math"
+    },
+    {
+      "id": "the-cosby-show-7",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "Who plays Clair Huxtable?",
+      "answer": "Phylicia Rashad"
+    },
+    {
+      "id": "the-cosby-show-8",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "What is the name of the Huxtable family's youngest child?",
+      "answer": "Rudy"
+    },
+    {
+      "id": "the-cosby-show-9",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "In which decade did The Cosby Show first premiere?",
+      "answer": "1980s"
+    },
+    {
+      "id": "the-cosby-show-10",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "What is the name of Cliff Huxtable's best friend?",
+      "answer": "Elvin Tibideaux"
+    },
+    {
+      "id": "the-cosby-show-11",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "What instrument does Rudy Huxtable play in the show?",
+      "answer": "Piano"
+    },
+    {
+      "id": "the-cosby-show-12",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "medium",
+      "prompt": "Which Huxtable child goes to college first?",
+      "answer": "Sondra"
+    },
+    {
+      "id": "the-cosby-show-13",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "What is the name of the actress who played Denise Huxtable?",
+      "answer": "Lisa Bonet"
+    },
+    {
+      "id": "the-cosby-show-14",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "What college does Sondra Huxtable attend?",
+      "answer": "Princeton"
+    },
+    {
+      "id": "the-cosby-show-15",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "In which season does Theo Huxtable graduate high school?",
+      "answer": "Season 7"
+    },
+    {
+      "id": "the-cosby-show-16",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "What is the name of the episode where Cliff and Clair renew their vows?",
+      "answer": "The Wedding"
+    },
+    {
+      "id": "the-cosby-show-17",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "Which Huxtable child marries a character named Elvin?",
+      "answer": "Sondra"
+    },
+    {
+      "id": "the-cosby-show-18",
+      "showId": "the-cosby-show",
+      "showTitle": "The Cosby Show",
+      "difficulty": "hard",
+      "prompt": "What job does Rudy Huxtable's teacher, Miss Westbrook, have?",
+      "answer": "Teacher"
+    },
+    {
+      "id": "miami-vice-19",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "Who is the main male lead in Miami Vice?",
+      "answer": "Sonny Crockett"
+    },
+    {
+      "id": "miami-vice-20",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "What color are Sonny Crockett's iconic sunglasses?",
+      "answer": "Pink"
+    },
+    {
+      "id": "miami-vice-21",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "What city is Miami Vice set in?",
+      "answer": "Miami"
+    },
+    {
+      "id": "miami-vice-22",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "Who is Sonny Crockett's partner?",
+      "answer": "Ricardo Tubbs"
+    },
+    {
+      "id": "miami-vice-23",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "What is the name of Sonny Crockett's pet alligator?",
+      "answer": "Elvis"
+    },
+    {
+      "id": "miami-vice-24",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "easy",
+      "prompt": "What type of car does Crockett drive?",
+      "answer": "Ferrari"
+    },
+    {
+      "id": "miami-vice-25",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "Who portrayed Ricardo Tubbs?",
+      "answer": "Philip Michael Thomas"
+    },
+    {
+      "id": "miami-vice-26",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "What is the name of the nightclub often featured in Miami Vice?",
+      "answer": "Malibu Club"
+    },
+    {
+      "id": "miami-vice-27",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "Which actor played Sonny Crockett?",
+      "answer": "Don Johnson"
+    },
+    {
+      "id": "miami-vice-28",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "What year did Miami Vice first air?",
+      "answer": "1984"
+    },
+    {
+      "id": "miami-vice-29",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "What is the name of the recurring villain played by Edward James Olmos?",
+      "answer": "Lt. Martin Castillo"
+    },
+    {
+      "id": "miami-vice-30",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "medium",
+      "prompt": "What musical genre heavily influenced Miami Vice's style?",
+      "answer": "Synth-pop"
+    },
+    {
+      "id": "miami-vice-31",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "What is the full name of the character 'Sonny Crockett'?",
+      "answer": "James Sonny Crockett"
+    },
+    {
+      "id": "miami-vice-32",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "Who was the original creator of Miami Vice?",
+      "answer": "Anthony Yerkovich"
+    },
+    {
+      "id": "miami-vice-33",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "Which famous fashion designer contributed to Miami Vice's costume design?",
+      "answer": "Giorgio Armani"
+    },
+    {
+      "id": "miami-vice-34",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "What was the model of the boat used by Crockett?",
+      "answer": "Cigarette boat"
+    },
+    {
+      "id": "miami-vice-35",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "Which episode features a guest appearance by musician Glenn Frey?",
+      "answer": "Phil the Shill"
+    },
+    {
+      "id": "miami-vice-36",
+      "showId": "miami-vice",
+      "showTitle": "Miami Vice",
+      "difficulty": "hard",
+      "prompt": "What is the name of Ricardo Tubbs' brother?",
+      "answer": "Antonio Tubbs"
+    },
+    {
+      "id": "cheers-37",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "What is the name of the bar in Cheers?",
+      "answer": "Cheers"
+    },
+    {
+      "id": "cheers-38",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "Who is the bartender and main character in Cheers?",
+      "answer": "Sam Malone"
+    },
+    {
+      "id": "cheers-39",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "In which city is Cheers set?",
+      "answer": "Boston"
+    },
+    {
+      "id": "cheers-40",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "What sport did Sam Malone play professionally?",
+      "answer": "Baseball"
+    },
+    {
+      "id": "cheers-41",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "Who is the waitress known for her red hair?",
+      "answer": "Diane Chambers"
+    },
+    {
+      "id": "cheers-42",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "easy",
+      "prompt": "What is the name of the bar owner in early seasons?",
+      "answer": "Sam Malone"
+    },
+    {
+      "id": "cheers-43",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "Who plays Diane Chambers?",
+      "answer": "Shelley Long"
+    },
+    {
+      "id": "cheers-44",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "What is the name of the know-it-all character Cliff?",
+      "answer": "Cliff Clavin"
+    },
+    {
+      "id": "cheers-45",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "Which character is a mail carrier?",
+      "answer": "Cliff Clavin"
+    },
+    {
+      "id": "cheers-46",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "What is the name of Norm's wife?",
+      "answer": "Vera"
+    },
+    {
+      "id": "cheers-47",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "What is Carla's last name?",
+      "answer": "Tudball"
+    },
+    {
+      "id": "cheers-48",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "medium",
+      "prompt": "Who replaced Diane Chambers as the female lead?",
+      "answer": "Rebecca Howe"
+    },
+    {
+      "id": "cheers-49",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "What year did Cheers first premiere?",
+      "answer": "1982"
+    },
+    {
+      "id": "cheers-50",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "Who plays the bar owner Rebecca Howe?",
+      "answer": "Kirstie Alley"
+    },
+    {
+      "id": "cheers-51",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "What is the name of Sam Malone's longtime rival bartender?",
+      "answer": "Diane Chambers"
+    },
+    {
+      "id": "cheers-52",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "Which character is known for saying 'Norm!' when entering the bar?",
+      "answer": "Everyone"
+    },
+    {
+      "id": "cheers-53",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "What is the name of the character who is a jazz musician and bar regular?",
+      "answer": "Frasier Crane"
+    },
+    {
+      "id": "cheers-54",
+      "showId": "cheers",
+      "showTitle": "Cheers",
+      "difficulty": "hard",
+      "prompt": "Which Cheers character later got a spin-off show?",
+      "answer": "Frasier Crane"
+    },
+    {
+      "id": "the-a-team-55",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "Who is the leader of The A-Team?",
+      "answer": "Hannibal"
+    },
+    {
+      "id": "the-a-team-56",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "What is the profession of the A-Team members after the war?",
+      "answer": "Soldiers of fortune"
+    },
+    {
+      "id": "the-a-team-57",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "What vehicle is The A-Team famous for using?",
+      "answer": "Black van"
+    },
+    {
+      "id": "the-a-team-58",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "Who is the team's mechanic and pilot?",
+      "answer": "B.A. Baracus"
+    },
+    {
+      "id": "the-a-team-59",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "What is the real first name of B.A. Baracus?",
+      "answer": "Bosco"
+    },
+    {
+      "id": "the-a-team-60",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "easy",
+      "prompt": "Which actor played Hannibal?",
+      "answer": "George Peppard"
+    },
+    {
+      "id": "the-a-team-61",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "What is the name of the actor who played B.A. Baracus?",
+      "answer": "Mr. T"
+    },
+    {
+      "id": "the-a-team-62",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "Who is the team's sniper?",
+      "answer": "Futé"
+    },
+    {
+      "id": "the-a-team-63",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "Which member of The A-Team is known for making disguises?",
+      "answer": "Hannibal"
+    },
+    {
+      "id": "the-a-team-64",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "What year did The A-Team first air?",
+      "answer": "1983"
+    },
+    {
+      "id": "the-a-team-65",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "What is the name of the police officer frequently pursuing The A-Team?",
+      "answer": "Colonel Lynch"
+    },
+    {
+      "id": "the-a-team-66",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "medium",
+      "prompt": "Which actor played Face?",
+      "answer": "Dirk Benedict"
+    },
+    {
+      "id": "the-a-team-67",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "What branch of the military were The A-Team members discharged from?",
+      "answer": "U.S. Army"
+    },
+    {
+      "id": "the-a-team-68",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "What was the charge The A-Team was accused of?",
+      "answer": "Robbery"
+    },
+    {
+      "id": "the-a-team-69",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "What is the full name of Face?",
+      "answer": "Templeton Peck"
+    },
+    {
+      "id": "the-a-team-70",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "Which member of The A-Team is known for his fear of flying?",
+      "answer": "B.A. Baracus"
+    },
+    {
+      "id": "the-a-team-71",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "What is the name of the actor who played Murdock?",
+      "answer": "Dwight Schultz"
+    },
+    {
+      "id": "the-a-team-72",
+      "showId": "the-a-team",
+      "showTitle": "The A-Team",
+      "difficulty": "hard",
+      "prompt": "Which character is known for his catchphrase 'I love it when a plan comes together'?",
+      "answer": "Hannibal"
+    },
+    {
+      "id": "family-ties-73",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "What is the name of the father in Family Ties?",
+      "answer": "Steven Keaton"
+    },
+    {
+      "id": "family-ties-74",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "Who is the mother in Family Ties?",
+      "answer": "Elyse Keaton"
+    },
+    {
+      "id": "family-ties-75",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "What is the name of the eldest son?",
+      "answer": "Alex P. Keaton"
+    },
+    {
+      "id": "family-ties-76",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "Which actor played Alex P. Keaton?",
+      "answer": "Michael J. Fox"
+    },
+    {
+      "id": "family-ties-77",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "What political views does Alex P. Keaton mostly represent?",
+      "answer": "Conservative"
+    },
+    {
+      "id": "family-ties-78",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "easy",
+      "prompt": "What decade did Family Ties premiere?",
+      "answer": "1980s"
+    },
+    {
+      "id": "family-ties-79",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "Who played Elyse Keaton?",
+      "answer": "Meredith Baxter"
+    },
+    {
+      "id": "family-ties-80",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "What is the name of the Keaton's youngest child?",
+      "answer": "Andrew"
+    },
+    {
+      "id": "family-ties-81",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "Which Keaton daughter is known for her free-spirited nature?",
+      "answer": "Mallory"
+    },
+    {
+      "id": "family-ties-82",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "What is the name of the Keaton's middle daughter?",
+      "answer": "Mallory"
+    },
+    {
+      "id": "family-ties-83",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "Who is Alex's best friend in the show?",
+      "answer": "Eugene"
+    },
+    {
+      "id": "family-ties-84",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "medium",
+      "prompt": "What is the occupation of Steven Keaton?",
+      "answer": "Architect"
+    },
+    {
+      "id": "family-ties-85",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "hard",
+      "prompt": "What is the full name of Alex Keaton?",
+      "answer": "Alex P. Keaton"
+    },
+    {
+      "id": "family-ties-86",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "hard",
+      "prompt": "What university does Alex Keaton attend?",
+      "answer": "Liberal Arts College"
+    },
+    {
+      "id": "family-ties-87",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "hard",
+      "prompt": "What year did Family Ties first premiere?",
+      "answer": "1982"
+    },
+    {
+      "id": "family-ties-88",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "hard",
+      "prompt": "Who replaced Meredith Baxter as Elyse's co-star after a season?",
+      "answer": "No replacement"
+    },
+    {
+      "id": "family-ties-89",
+      "showId": "family-ties",
+      "showTitle": "Family Ties",
+      "difficulty": "hard",
+      "prompt": "Which Family Ties character is known for his sarcastic remarks?",
+      "answer": "Alex P. Keaton"
+    }
+  ],
+  "updatedAt": "2026-02-20T22:13:18.128Z"
+}

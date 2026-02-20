@@ -14,6 +14,7 @@ export type Question = {
 };
 
 export type SeedQuestionBankRequest = {
+  decade: string;
   shows: string[];
   questionsPerShow?: number;
   difficultyMix?: {

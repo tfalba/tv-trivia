@@ -14,8 +14,8 @@ app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const DATA_DIR = join(__dirname, "data");
-const QUESTION_BANK_PATH = join(DATA_DIR, "question-bank.generated.json");
 const API_ENV_PATH = join(__dirname, "..", ".env");
+const DECADE_PATTERN = /^\d{4}s$/;
 
 loadEnvFile(API_ENV_PATH);
 
@@ -28,6 +28,18 @@ type GeneratedQuestion = {
 
 type DecadeShowsRequest = {
   decade?: string;
+};
+
+type QuestionBankStatusRequest = {
+  decade?: string;
+  shows?: string[];
+};
+
+type StoredQuestionBank = {
+  decade: string;
+  shows: string[];
+  questions: Question[];
+  updatedAt: string;
 };
 
 function loadEnvFile(path: string): void {
@@ -50,7 +62,6 @@ function loadEnvFile(path: string): void {
       }
     }
   } catch {
-    console.log('hitting the catch');
     // Ignore missing .env files to keep env vars optional in production.
   }
 }
@@ -59,10 +70,21 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
 });
 
-app.get("/api/questions", async (_req, res) => {
+app.get("/api/questions", async (req, res) => {
+  const decade = (req.query.decade as string | undefined)?.trim() ?? "";
+  if (!DECADE_PATTERN.test(decade)) {
+    res.status(400).json({ ok: false, error: "Query must include a decade like 1980s." });
+    return;
+  }
+
   try {
-    const questions = await readQuestionBankFromDisk();
-    res.json({ ok: true, questions });
+    const bank = await readQuestionBankFromDisk(decade);
+    res.json({
+      ok: true,
+      decade,
+      shows: bank?.shows ?? [],
+      questions: bank?.questions ?? [],
+    });
   } catch (error) {
     console.error("Failed to load question bank", error);
     res.status(500).json({ ok: false, error: "Failed to load question bank" });
@@ -71,10 +93,16 @@ app.get("/api/questions", async (_req, res) => {
 
 app.post("/api/questions/seed", async (req, res) => {
   const body = req.body as SeedQuestionBankRequest;
+  const decade = (body?.decade ?? "").trim();
   const shows = Array.isArray(body?.shows) ? body.shows.filter(Boolean) : [];
   const questionsPerShow = body?.questionsPerShow ?? 18;
   const difficultyMix = body?.difficultyMix ?? { easy: 6, medium: 6, hard: 6 };
   const seed = body?.seed ?? Date.now();
+
+  if (!DECADE_PATTERN.test(decade)) {
+    res.status(400).json({ ok: false, error: "Request must include a decade like 1980s." });
+    return;
+  }
 
   if (shows.length === 0) {
     res.status(400).json({ ok: false, error: "Request must include at least one show." });
@@ -97,9 +125,11 @@ app.post("/api/questions/seed", async (req, res) => {
       seed,
     });
     const questions = toQuestionRecords(generated);
-    await writeQuestionBankToDisk(questions);
+    await writeQuestionBankToDisk(decade, shows, questions);
     res.json({
       ok: true,
+      decade,
+      shows,
       seed,
       count: questions.length,
       questions,
@@ -114,7 +144,7 @@ app.post("/api/decades/shows", async (req, res) => {
   const body = req.body as DecadeShowsRequest;
   const decade = (body?.decade ?? "").trim();
 
-  if (!/^\d{4}s$/.test(decade)) {
+  if (!DECADE_PATTERN.test(decade)) {
     res.status(400).json({ ok: false, error: "Request must include a decade like 1980s." });
     return;
   }
@@ -136,19 +166,96 @@ app.post("/api/decades/shows", async (req, res) => {
   }
 });
 
-async function readQuestionBankFromDisk(): Promise<Question[]> {
+app.post("/api/questions/status", async (req, res) => {
+  const body = req.body as QuestionBankStatusRequest;
+  const decade = (body?.decade ?? "").trim();
+  const selectedShows = Array.isArray(body?.shows) ? body.shows.filter(Boolean) : [];
+
+  if (!DECADE_PATTERN.test(decade)) {
+    res.status(400).json({ ok: false, error: "Request must include a decade like 1980s." });
+    return;
+  }
+
   try {
-    const raw = await readFile(QUESTION_BANK_PATH, "utf8");
-    const parsed = JSON.parse(raw) as Question[];
-    return Array.isArray(parsed) ? parsed : [];
+    const bank = await readQuestionBankFromDisk(decade);
+    const hasBank = Boolean(bank && bank.questions.length > 0);
+    const matchesSelectedShows =
+      selectedShows.length === 0
+        ? null
+        : hasBank && areEquivalentShowSets(selectedShows, bank?.shows ?? []);
+
+    res.json({
+      ok: true,
+      decade,
+      hasBank,
+      questionCount: bank?.questions.length ?? 0,
+      storedShows: bank?.shows ?? [],
+      matchesSelectedShows,
+    });
+  } catch (error) {
+    console.error("Failed to check question bank status", error);
+    res.status(500).json({ ok: false, error: "Failed to check question bank status" });
+  }
+});
+
+function getQuestionBankPathForDecade(decade: string): string {
+  return join(DATA_DIR, `question-bank.${decade}.generated.json`);
+}
+
+function normalizeShows(shows: string[]): string[] {
+  return Array.from(
+    new Set(
+      shows
+        .map((show) => show.trim().toLowerCase())
+        .filter((show) => show.length > 0)
+    )
+  ).sort((a, b) => a.localeCompare(b));
+}
+
+function areEquivalentShowSets(left: string[], right: string[]): boolean {
+  const normalizedLeft = normalizeShows(left);
+  const normalizedRight = normalizeShows(right);
+  if (normalizedLeft.length !== normalizedRight.length) {
+    return false;
+  }
+  return normalizedLeft.every((show, index) => show === normalizedRight[index]);
+}
+
+async function readQuestionBankFromDisk(decade: string): Promise<StoredQuestionBank | null> {
+  try {
+    const raw = await readFile(getQuestionBankPathForDecade(decade), "utf8");
+    const parsed = JSON.parse(raw) as StoredQuestionBank;
+    if (
+      !parsed ||
+      !Array.isArray(parsed.shows) ||
+      !Array.isArray(parsed.questions) ||
+      typeof parsed.decade !== "string"
+    ) {
+      return null;
+    }
+    return parsed;
   } catch {
-    return [];
+    return null;
   }
 }
 
-async function writeQuestionBankToDisk(questions: Question[]): Promise<void> {
+async function writeQuestionBankToDisk(
+  decade: string,
+  shows: string[],
+  questions: Question[]
+): Promise<void> {
   await mkdir(DATA_DIR, { recursive: true });
-  await writeFile(QUESTION_BANK_PATH, JSON.stringify(questions, null, 2), "utf8");
+  const payload: StoredQuestionBank = {
+    decade,
+    shows: Array.from(new Set(shows.map((show) => show.trim()).filter(Boolean))),
+    questions,
+    updatedAt: new Date().toISOString(),
+  };
+  await writeFile(
+    getQuestionBankPathForDecade(decade),
+    JSON.stringify(payload, null, 2),
+    "utf8"
+  );
 }
 
 function toQuestionRecords(generated: GeneratedQuestion[]): Question[] {

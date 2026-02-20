@@ -9,6 +9,7 @@ type QuestionCardProps = {
   answer: string;
   isRevealed: boolean;
   onReveal: () => void;
+  onSkip: () => void;
   onMarkCorrect: () => void;
   onMarkWrong: () => void;
 };
@@ -20,6 +21,7 @@ export function QuestionCard({
   answer,
   isRevealed,
   onReveal,
+  onSkip,
   onMarkCorrect,
   onMarkWrong,
 }: QuestionCardProps) {
@@ -36,22 +38,38 @@ export function QuestionCard({
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Answer
         </p>
-        <p className="mt-2 text-white/90">{isRevealed ? answer : "Hidden until reveal"}</p>
+        <p className="mt-2 text-white/90">
+          {isRevealed ? answer : "Hidden until reveal"}
+        </p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        <button type="button" onClick={onReveal} className="btn-secondary" disabled={isRevealed}>
-          {isRevealed ? "Answer revealed" : "Reveal answer"}
-        </button>
-        <button type="button" onClick={onMarkCorrect} className="btn-primary">
-          Mark correct
-        </button>
+      <div className="flex flex-wrap gap-2 justify-between w-full">
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={onReveal}
+            className="btn-secondary"
+            disabled={isRevealed}
+          >
+            {isRevealed ? "Answer revealed" : "Reveal answer"}
+          </button>
+          <button type="button" onClick={onMarkCorrect} className="btn-primary">
+            Mark correct
+          </button>
+          <button
+            type="button"
+            onClick={onMarkWrong}
+            className="inline-flex items-center justify-center rounded-xl border border-red-400/70 bg-red-500/20 px-5 py-3 font-semibold text-white transition hover:bg-red-500/35"
+          >
+            Mark wrong
+          </button>
+        </div>
         <button
           type="button"
-          onClick={onMarkWrong}
+          onClick={onSkip}
           className="inline-flex items-center justify-center rounded-xl border border-red-400/70 bg-red-500/20 px-5 py-3 font-semibold text-white transition hover:bg-red-500/35"
         >
-          Mark wrong
+          Skip question
         </button>
       </div>
     </article>

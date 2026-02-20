@@ -1,9 +1,13 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import type { Player } from "@tv-trivia/shared";
 import { CategoryCard } from "../components/CategoryCard";
 import { DifficultyBadge } from "../components/DifficultyBadge";
-import { fetchPopularShowsForDecade } from "../lib/api";
+import {
+  fetchPopularShowsForDecade,
+  fetchQuestionBankStatus,
+  seedQuestionBank,
+} from "../lib/api";
 import {
   getSavedDecade,
   getSavedSelectedShowsByDecade,
@@ -25,12 +29,19 @@ export function HomePage() {
     Partial<Record<DecadeKey, string[]>>
   >(getSavedSelectedShowsByDecade);
   const [isLoadingShows, setIsLoadingShows] = useState(false);
+  const [isCheckingQuestionStatus, setIsCheckingQuestionStatus] = useState(false);
+  const [isGeneratingQuestions, setIsGeneratingQuestions] = useState(false);
+  const [needsQuestionGeneration, setNeedsQuestionGeneration] = useState(false);
   const [selectorMessage, setSelectorMessage] = useState<string>("");
 
   const availableShows = showsByDecade[selectedDecade] ?? [];
   const selectedShows = selectedShowsByDecade[selectedDecade] ?? [];
   const selectedShowSet = useMemo(() => new Set(selectedShows), [selectedShows]);
   const roundHasWinner = useMemo(() => hasRoundWinner(players), [players]);
+
+  useEffect(() => {
+    void refreshQuestionGenerationState(selectedDecade, selectedShows);
+  }, [selectedDecade, selectedShows]);
 
   function persistSelectedShows(next: Partial<Record<DecadeKey, string[]>>) {
     setSelectedShowsByDecade(next);
@@ -43,6 +54,7 @@ export function HomePage() {
     setSelectorMessage("");
 
     if (showsByDecade[decade]) {
+      void refreshQuestionGenerationState(decade, selectedShowsByDecade[decade] ?? []);
       return;
     }
 
@@ -56,6 +68,25 @@ export function HomePage() {
       setSelectorMessage("Could not load shows for that decade. Try again.");
     } finally {
       setIsLoadingShows(false);
+      void refreshQuestionGenerationState(decade, selectedShowsByDecade[decade] ?? []);
+    }
+  }
+
+  async function refreshQuestionGenerationState(decade: DecadeKey, shows: string[]) {
+    if (shows.length !== maxSelectedShows) {
+      setNeedsQuestionGeneration(false);
+      return;
+    }
+
+    setIsCheckingQuestionStatus(true);
+    try {
+      const status = await fetchQuestionBankStatus({ decade, shows });
+      setNeedsQuestionGeneration(!status.hasBank || status.matchesSelectedShows === false);
+    } catch (error) {
+      console.error(error);
+      setNeedsQuestionGeneration(true);
+    } finally {
+      setIsCheckingQuestionStatus(false);
     }
   }
 
@@ -64,10 +95,12 @@ export function HomePage() {
     const isSelected = current.includes(show);
 
     if (isSelected) {
+      const nextShows = current.filter((item) => item !== show);
       persistSelectedShows({
         ...selectedShowsByDecade,
-        [selectedDecade]: current.filter((item) => item !== show),
+        [selectedDecade]: nextShows,
       });
+      void refreshQuestionGenerationState(selectedDecade, nextShows);
       return;
     }
 
@@ -81,6 +114,7 @@ export function HomePage() {
       ...selectedShowsByDecade,
       [selectedDecade]: next,
     });
+    void refreshQuestionGenerationState(selectedDecade, next);
     if (next.length === maxSelectedShows) {
       setSelectorMessage(`${selectedDecade} is ready with 5 selected shows.`);
     }
@@ -98,7 +132,32 @@ export function HomePage() {
       ...selectedShowsByDecade,
       [selectedDecade]: [],
     });
+    setNeedsQuestionGeneration(false);
     setSelectorMessage(`${selectedDecade} selections were cleared. Pick 5 shows.`);
+  }
+
+  async function handleGenerateQuestions() {
+    if (selectedShows.length !== maxSelectedShows) {
+      return;
+    }
+
+    setIsGeneratingQuestions(true);
+    try {
+      await seedQuestionBank({
+        decade: selectedDecade,
+        shows: selectedShows,
+        questionsPerShow: 18,
+        seed: Number(selectedDecade.slice(0, 4)),
+      });
+      setSelectorMessage(`Generated ${selectedDecade} questions for the selected 5 shows.`);
+      setNeedsQuestionGeneration(false);
+    } catch (error) {
+      console.error(error);
+      setSelectorMessage("Could not generate questions. Check API and OPENAI_API_KEY.");
+    } finally {
+      setIsGeneratingQuestions(false);
+      void refreshQuestionGenerationState(selectedDecade, selectedShows);
+    }
   }
 
   return (
@@ -206,6 +265,18 @@ export function HomePage() {
         {roundHasWinner ? (
           <button type="button" className="btn-primary" onClick={handleStartNextRound}>
             Start next round
+          </button>
+        ) : null}
+        {selectedShows.length === maxSelectedShows && needsQuestionGeneration ? (
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => void handleGenerateQuestions()}
+            disabled={isGeneratingQuestions || isCheckingQuestionStatus}
+          >
+            {isGeneratingQuestions || isCheckingQuestionStatus
+              ? "Generating questions..."
+              : `Generate ${selectedDecade} questions`}
           </button>
         ) : null}
       </div>

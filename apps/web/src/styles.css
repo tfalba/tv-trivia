@@ -95,9 +95,6 @@
 
   body {
     @apply m-0 min-h-screen bg-[size:20px_20px] font-body;
-    /* background-color: var(--color-bg); */
-    /* background-image: var(--hero-radial-1), var(--hero-radial-2),
-      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0); */
     color: var(--color-text);
     background-image: url("./assets/pexels-tree-1866602_1280.jpg");
     background-size: cover;
@@ -118,11 +115,8 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-white transition;
-    background: linear-gradient(
-      135deg,
-      var(--color-primary),
-      var(--color-accent)
-    );
+    background: color-mix(in oklab, var(--color-accent) 84%, transparent);
+
     box-shadow: var(--shadow-glow);
   }
 

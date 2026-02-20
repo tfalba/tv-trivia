@@ -82,10 +82,12 @@ export function GamePage() {
 
   async function loadQuestionBank() {
     try {
-      const questions = await fetchQuestionBank();
+      const questions = await fetchQuestionBank(selectedDecade);
       setQuestionBank(questions);
       if (questions.length > 0) {
-        setStatusMessage(`Loaded ${questions.length} generated questions. Select a show to start.`);
+        setStatusMessage(
+          `Loaded ${questions.length} generated ${selectedDecade} questions. Select a show to start.`
+        );
       }
     } catch (error) {
       console.error(error);
@@ -227,6 +229,18 @@ export function GamePage() {
     setAnswerRevealed(false);
   }
 
+  function skipActiveQuestion() {
+    if (!activeQuestion) {
+      return;
+    }
+    setActiveQuestion(null);
+    setAnswerRevealed(false);
+    setQuestionDrawnForTurn(null);
+    setStatusMessage(
+      `Skipped question for ${currentPlayer.name}. Draw another question for ${spunShow ?? "this show"}.`
+    );
+  }
+
   function startNewRoundFromPopup() {
     const resetPlayers = startNextRound(players);
     setPlayers(resetPlayers);
@@ -340,6 +354,7 @@ export function GamePage() {
               answer={activeQuestion.answer}
               isRevealed={answerRevealed}
               onReveal={() => setAnswerRevealed(true)}
+              onSkip={skipActiveQuestion}
               onMarkCorrect={() => completeTurn(true)}
               onMarkWrong={() => completeTurn(false)}
             />

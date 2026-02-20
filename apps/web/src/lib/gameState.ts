@@ -53,6 +53,35 @@ export function startNextRound(players: Player[]): Player[] {
   return players.map((player) => ({ ...player, score: 0 }));
 }
 
+function shufflePlayers(players: Player[]): Player[] {
+  const shuffled = [...players];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    const current = shuffled[index];
+    shuffled[index] = shuffled[swapIndex];
+    shuffled[swapIndex] = current;
+  }
+  return shuffled;
+}
+
+export function startNextRoundWithRandomRotation(players: Player[]): Player[] {
+  const resetPlayers = shufflePlayers(players).map((player) => ({ ...player, score: 0 }));
+  if (resetPlayers.length <= 1) {
+    return startNextRound(resetPlayers);
+  }
+
+  const randomStartIndex = Math.floor(Math.random() * resetPlayers.length);
+  const rotatedPlayers = [
+    ...resetPlayers.slice(randomStartIndex),
+    ...resetPlayers.slice(0, randomStartIndex),
+  ];
+
+  const nextRound = getSavedRoundNumber() + 1;
+  saveRoundNumber(nextRound);
+  saveCurrentPlayerIndex(0);
+  return rotatedPlayers;
+}
+
 export function getSavedUsedQuestionIds(decade: string): string[] {
   if (typeof window === "undefined") {
     return [];
