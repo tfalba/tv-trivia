@@ -50,6 +50,7 @@ function loadEnvFile(path: string): void {
       }
     }
   } catch {
+    console.log('hitting the catch');
     // Ignore missing .env files to keep env vars optional in production.
   }
 }

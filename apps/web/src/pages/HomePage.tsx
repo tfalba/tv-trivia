@@ -25,7 +25,6 @@ export function HomePage() {
     Partial<Record<DecadeKey, string[]>>
   >(getSavedSelectedShowsByDecade);
   const [isLoadingShows, setIsLoadingShows] = useState(false);
-  const [isSelectorOpen, setIsSelectorOpen] = useState(true);
   const [selectorMessage, setSelectorMessage] = useState<string>("");
 
   const availableShows = showsByDecade[selectedDecade] ?? [];
@@ -41,7 +40,6 @@ export function HomePage() {
   async function selectDecade(decade: DecadeKey) {
     setSelectedDecade(decade);
     window.localStorage.setItem(selectedDecadeStorageKey, decade);
-    setIsSelectorOpen(true);
     setSelectorMessage("");
 
     if (showsByDecade[decade]) {
@@ -95,6 +93,14 @@ export function HomePage() {
     setSelectorMessage("Next round started. Scores reset and turn order restarted.");
   }
 
+  function clearSelectedShows() {
+    persistSelectedShows({
+      ...selectedShowsByDecade,
+      [selectedDecade]: [],
+    });
+    setSelectorMessage(`${selectedDecade} selections were cleared. Pick 5 shows.`);
+  }
+
   return (
     <section className="space-y-8">
       <div className="space-y-3">
@@ -128,61 +134,63 @@ export function HomePage() {
       </div>
 
       <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
-              {selectedDecade} Show Picker ({selectedShows.length}/{maxSelectedShows})
-            </p>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+            {selectedDecade} Show Picker ({selectedShows.length}/{maxSelectedShows})
+          </p>
+          {selectedShows.length === maxSelectedShows ? (
             <button
               type="button"
-              onClick={() => setIsSelectorOpen((prev) => !prev)}
+              onClick={clearSelectedShows}
               className="btn-secondary"
             >
-              {isSelectorOpen ? "Hide selector" : "Show selector"}
+              Clear selected shows
             </button>
+          ) : null}
+        </div>
+
+        {selectorMessage ? (
+          <p className="mt-3 text-sm text-white/85">{selectorMessage}</p>
+        ) : null}
+
+        {isLoadingShows ? <p className="mt-3 text-sm text-white/85">Loading shows...</p> : null}
+
+        {!isLoadingShows && selectedShows.length < maxSelectedShows ? (
+          <div className="mt-4 max-h-72 overflow-auto rounded-xl border border-white/15 bg-black/35 p-3">
+            {availableShows.length === 0 ? (
+              <p className="text-sm text-white/75">Click on a decade above to load shows.</p>
+            ) : (
+              <ul className="space-y-2">
+                {availableShows.map((show) => {
+                  const checked = selectedShowSet.has(show);
+                  return (
+                    <li key={show}>
+                      <label className="flex cursor-pointer items-center gap-3 rounded-lg px-2 py-2 hover:bg-white/10">
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => toggleShow(show)}
+                          className="h-4 w-4"
+                        />
+                        <span className="text-sm text-white">{show}</span>
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </div>
+        ) : null}
 
-          {selectorMessage ? (
-            <p className="mt-3 text-sm text-white/85">{selectorMessage}</p>
-          ) : null}
-
-          {isLoadingShows ? <p className="mt-3 text-sm text-white/85">Loading shows...</p> : null}
-
-          {isSelectorOpen && !isLoadingShows ? (
-            <div className="mt-4 max-h-72 overflow-auto rounded-xl border border-white/15 bg-black/35 p-3">
-              {availableShows.length === 0 ? (
-                <p className="text-sm text-white/75">No shows loaded yet.</p>
-              ) : (
-                <ul className="space-y-2">
-                  {availableShows.map((show) => {
-                    const checked = selectedShowSet.has(show);
-                    return (
-                      <li key={show}>
-                        <label className="flex cursor-pointer items-center gap-3 rounded-lg px-2 py-2 hover:bg-white/10">
-                          <input
-                            type="checkbox"
-                            checked={checked}
-                            onChange={() => toggleShow(show)}
-                            className="h-4 w-4"
-                          />
-                          <span className="text-sm text-white">{show}</span>
-                        </label>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </div>
-          ) : null}
-
-          {selectedShows.length > 0 ? (
-            <div className="mt-4 flex flex-wrap gap-2">
-              {selectedShows.map((show) => (
-                <span key={show} className="chip border-trivia-gold/60 text-trivia-gold">
-                  {show}
-                </span>
-              ))}
-            </div>
-          ) : null}
+        {selectedShows.length > 0 ? (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {selectedShows.map((show) => (
+              <span key={show} className="chip border-trivia-gold/60 text-trivia-gold">
+                {show}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <div className="flex flex-wrap gap-2">

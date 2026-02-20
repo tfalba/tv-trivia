@@ -99,7 +99,7 @@ export function GamePage() {
     }
 
     if (!currentPlayer) {
-      setStatusMessage("Add players in Player Scoreboard before starting.");
+      setStatusMessage("Add players in Settings > Manage Players before starting.");
       return;
     }
 
@@ -118,7 +118,7 @@ export function GamePage() {
     }
 
     if (!currentPlayer) {
-      setStatusMessage("Add players in Player Scoreboard before starting.");
+      setStatusMessage("Add players in Settings > Manage Players before starting.");
       return;
     }
 
@@ -367,21 +367,21 @@ export function GamePage() {
       ) : null}
 
       <div
-        className="rounded-2xl p-5"
+        className="rounded-2xl p-5 space-y-4"
         style={{
-          border: "1px solid color-mix(in oklab, var(--color-accent) 55%, black 15%)",
+          border: "1px solid color-mix(in oklab, var(--color-success) 55%, black 15%)",
           background:
-            "color-mix(in oklab, var(--color-accent) 46%, var(--color-surface-2) 54%)",
+            "color-mix(in oklab, var(--color-success) 45%, var(--color-surface-2) 55%)",
         }}
       >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Scoreboard
         </p>
-        <div className="space-y-2">
+        <div className="flex flex-wrap gap-4">
           {rankedPlayers.map((player, index) => (
             <div
               key={player.id}
-              className="flex items-center justify-between rounded-lg border border-white/15 bg-black/20 px-3 py-2"
+              className="flex flex-1 min-w-[200px] max-w-[200px] items-center justify-between rounded-lg border border-white/15 bg-black/40 px-3 py-2"
             >
               <p className="text-white/90">
                 <span className="mr-2 font-semibold text-trivia-gold">#{index + 1}</span>
