@@ -35,6 +35,8 @@
       rgba(32, 157, 92, 0.3),
       rgba(32, 157, 92, 0)
     );
+    background-image: url("./assets/surprising_media-ferris-wheel-8461874_1280.jpg");
+    background-size: cover;
   }
 
   [data-theme="option2"] {
@@ -43,15 +45,15 @@
     --shadow-focus: 0 0 0 3px rgba(226, 62, 54, 0.52);
     --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
     --color-bg: #6b002a;
-    --color-surface: rgba(61, 2, 24, 0.3);
+    --color-surface: rgba(77, 32, 49, 0.65);
     --color-surface-2: rgb(101, 1, 45, 0.59);
     --color-border: #4d2424;
     --color-text: #fff3f1;
     --color-muted: #e4bbb5;
     --color-primary: rgb(183, 3, 51, 0.65);
-    --color-accent: rgb(240, 106, 79, 0.95);
+    --color-accent: rgba(237, 68, 223, 0.95);
     --color-violet: #a83281;
-    --color-success: #e27562;
+    --color-success: #c374b5;
     --color-warning: #f0a05e;
     --hero-radial-1: radial-gradient(
       900px 620px at 12% -8%,
@@ -63,6 +65,8 @@
       rgba(240, 106, 79, 0.42),
       rgba(240, 106, 79, 0)
     );
+    background-image: url("./assets/krystianwin-flower-3746754_1280.jpg");
+    background-size: cover;
   }
 
   [data-theme="option3"] {
@@ -91,13 +95,13 @@
       rgba(32, 157, 92, 0.34),
       rgba(32, 157, 92, 0)
     );
+    background-image: url("./assets/pexels-tree-1866602_1280.jpg");
+    background-size: cover;
   }
 
   body {
     @apply m-0 min-h-screen bg-[size:20px_20px] font-body;
     color: var(--color-text);
-    background-image: url("./assets/pexels-tree-1866602_1280.jpg");
-    background-size: cover;
   }
 }
 

@@ -345,8 +345,8 @@ export function GamePage() {
       </div>
 
       {activeQuestion ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-md">
-          <div className="w-full max-w-2xl bg-black/80 rounded-2xl">
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4 backdrop-blur-md">
+          <div className="w-full max-w-2xl rounded-2xl bg-black/80">
             <QuestionCard
               showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
               difficulty={activeQuestion.difficulty}

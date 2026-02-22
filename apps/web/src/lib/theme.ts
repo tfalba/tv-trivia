@@ -1,7 +1,7 @@
 export const appThemes = {
-  option1: "Design Option 1",
-  option2: "Design Option 2",
-  option3: "Previous Scheme",
+  option1: "Neon Studio",
+  option2: "Sunset Arcade",
+  option3: "Classic Night",
 } as const;
 
 export type AppThemeKey = keyof typeof appThemes;
