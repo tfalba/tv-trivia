@@ -6,7 +6,6 @@ const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/game", label: "Game", end: false },
   { to: "/settings", label: "Settings", end: false },
-  { to: "/about", label: "About", end: false },
 ] as const;
 
 export function AppLayout() {

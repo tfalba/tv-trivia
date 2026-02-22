@@ -26,7 +26,7 @@ export function QuestionCard({
   onMarkWrong,
 }: QuestionCardProps) {
   return (
-    <article className="rounded-2xl border border-white/15 bg-black/25 p-5">
+    <article className="rounded-2xl border border-white/15 bg-[var(--color-surface-2)] p-5">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <h3 className="font-display text-2xl text-trivia-paper">{showTitle}</h3>
         <DifficultyBadge difficulty={difficulty} />
@@ -64,13 +64,15 @@ export function QuestionCard({
             Mark wrong
           </button>
         </div>
-        <button
-          type="button"
-          onClick={onSkip}
-          className="inline-flex items-center justify-center rounded-xl border border-red-400/70 bg-red-500/20 px-5 py-3 font-semibold text-white transition hover:bg-red-500/35"
-        >
-          Skip question
-        </button>
+        {!isRevealed ? (
+          <button
+            type="button"
+            onClick={onSkip}
+            className="inline-flex items-center justify-center rounded-xl border border-red-400/70 bg-red-500/20 px-5 py-3 font-semibold text-white transition hover:bg-red-500/35"
+          >
+            Skip question
+          </button>
+        ) : null}
       </div>
     </article>
   );

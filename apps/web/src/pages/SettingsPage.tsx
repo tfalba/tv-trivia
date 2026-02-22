@@ -329,6 +329,7 @@ export function SettingsPage() {
             </li>
           ))}
         </ul>
+        <div className="flex flex-wrap gap-4">
         <button type="button" onClick={addPlayer} className="btn-secondary mt-4">
           Add player
         </button>
@@ -340,6 +341,7 @@ export function SettingsPage() {
         >
           Clear round + start new round
         </button>
+        </div>
       </div>
     </section>
   );

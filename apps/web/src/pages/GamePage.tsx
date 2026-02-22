@@ -323,7 +323,7 @@ export function GamePage() {
             onClick={runShowSelectionAnimation}
             disabled={isSelectingShow}
           >
-            {isSelectingShow ? "Selecting..." : "Select show"}
+            {isSelectingShow ? "Selecting..." : "Select random show"}
           </button>
           <button
             type="button"
@@ -345,7 +345,7 @@ export function GamePage() {
       </div>
 
       {activeQuestion ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-md">
           <div className="w-full max-w-2xl bg-black/80 rounded-2xl">
             <QuestionCard
               showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
