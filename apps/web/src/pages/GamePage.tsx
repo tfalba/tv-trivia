@@ -345,8 +345,8 @@ export function GamePage() {
       </div>
 
       {activeQuestion ? (
-        <div className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4 backdrop-blur-md">
-          <div className="w-full max-w-2xl rounded-2xl bg-black/80">
+        <div className="fixed inset-0 z-50 grid place-items-center rounded-2xl bg-black/80 p-4 backdrop-blur-md shadow-glow">
+          <div className="w-full max-w-2xl rounded-2xl bg-black/10">
             <QuestionCard
               showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
               difficulty={activeQuestion.difficulty}
@@ -384,9 +384,9 @@ export function GamePage() {
       <div
         className="rounded-2xl p-5 space-y-4"
         style={{
-          border: "1px solid color-mix(in oklab, var(--color-success) 55%, black 15%)",
+          border: "1px solid color-mix(in oklab, var(--color-success) 95%, transparent 5%)",
           background:
-            "color-mix(in oklab, var(--color-success) 45%, var(--color-surface-2) 55%)",
+            "color-mix(in oklab, var(--color-success) 15%, transparent 85%)",
         }}
       >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">

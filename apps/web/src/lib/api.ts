@@ -1,4 +1,5 @@
 import type { Question } from "@tv-trivia/shared";
+import { getAccessToken } from "./supabaseAuth";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5174";
 
@@ -43,9 +44,13 @@ export async function seedQuestionBank(input: {
   questionsPerShow: number;
   seed: number;
 }): Promise<Question[]> {
+  const accessToken = getAccessToken();
   const response = await fetch(`${API_BASE_URL}/api/questions/seed`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+    },
     body: JSON.stringify({
       decade: input.decade,
       shows: input.shows,

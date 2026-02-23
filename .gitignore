@@ -6,6 +6,8 @@ node_modules/
 .env.*
 /api/.env
 /apps/api/.env
+/web/.env
+/web/.env.*
 !.env.example
 
 # Logs
