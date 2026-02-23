@@ -1,19 +1,31 @@
 import express from "express";
 import cors from "cors";
 import { readFileSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { Difficulty, Question, SeedQuestionBankRequest } from "@tv-trivia/shared";
+import {
+  optionalSupabaseAuth,
+  requireSupabaseAuth,
+  isSupabaseAuthEnabled,
+  type AuthenticatedRequest,
+} from "./lib/supabaseAuth";
+import {
+  areEquivalentShowSets,
+  getLatestQuestionBank,
+  saveQuestionBank,
+  setQuestionBankObjectKey,
+} from "./lib/questionBankRepository";
+import { uploadQuestionBankSnapshot } from "./lib/objectStore";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(optionalSupabaseAuth);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const DATA_DIR = join(__dirname, "data");
 const API_ENV_PATH = join(__dirname, "..", ".env");
 const DECADE_PATTERN = /^\d{4}s$/;
 
@@ -33,13 +45,6 @@ type DecadeShowsRequest = {
 type QuestionBankStatusRequest = {
   decade?: string;
   shows?: string[];
-};
-
-type StoredQuestionBank = {
-  decade: string;
-  shows: string[];
-  questions: Question[];
-  updatedAt: string;
 };
 
 function loadEnvFile(path: string): void {
@@ -70,6 +75,22 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
 });
 
+app.get("/api/auth/me", (req, res) => {
+  const authedReq = req as AuthenticatedRequest;
+  if (!isSupabaseAuthEnabled()) {
+    res.status(500).json({
+      ok: false,
+      error: "Supabase auth is not configured. Set SUPABASE_URL and SUPABASE_ANON_KEY.",
+    });
+    return;
+  }
+  if (!authedReq.authUser) {
+    res.status(401).json({ ok: false, error: "Unauthorized" });
+    return;
+  }
+  res.json({ ok: true, user: authedReq.authUser });
+});
+
 app.get("/api/questions", async (req, res) => {
   const decade = (req.query.decade as string | undefined)?.trim() ?? "";
   if (!DECADE_PATTERN.test(decade)) {
@@ -78,7 +99,7 @@ app.get("/api/questions", async (req, res) => {
   }
 
   try {
-    const bank = await readQuestionBankFromDisk(decade);
+    const bank = await getLatestQuestionBank(decade);
     res.json({
       ok: true,
       decade,
@@ -91,7 +112,7 @@ app.get("/api/questions", async (req, res) => {
   }
 });
 
-app.post("/api/questions/seed", async (req, res) => {
+app.post("/api/questions/seed", requireSupabaseAuth, async (req, res) => {
   const body = req.body as SeedQuestionBankRequest;
   const decade = (body?.decade ?? "").trim();
   const shows = Array.isArray(body?.shows) ? body.shows.filter(Boolean) : [];
@@ -125,13 +146,36 @@ app.post("/api/questions/seed", async (req, res) => {
       seed,
     });
     const questions = toQuestionRecords(generated);
-    await writeQuestionBankToDisk(decade, shows, questions);
+    const authedReq = req as AuthenticatedRequest;
+    const savedBank = await saveQuestionBank({
+      decade,
+      shows,
+      questions,
+      generatedByUser: authedReq.authUser?.id,
+    });
+
+    let objectKey: string | null = null;
+    try {
+      objectKey = await uploadQuestionBankSnapshot({
+        decade,
+        showSetHash: savedBank.showSetHash,
+        questions,
+        shows: savedBank.shows,
+      });
+      if (objectKey) {
+        await setQuestionBankObjectKey(savedBank.id, objectKey);
+      }
+    } catch (snapshotError) {
+      console.warn("Question bank DB save succeeded but object snapshot upload failed", snapshotError);
+    }
+
     res.json({
       ok: true,
       decade,
-      shows,
+      shows: savedBank.shows,
       seed,
       count: questions.length,
+      objectKey,
       questions,
     });
   } catch (error) {
@@ -177,7 +221,7 @@ app.post("/api/questions/status", async (req, res) => {
   }
 
   try {
-    const bank = await readQuestionBankFromDisk(decade);
+    const bank = await getLatestQuestionBank(decade);
     const hasBank = Boolean(bank && bank.questions.length > 0);
     const matchesSelectedShows =
       selectedShows.length === 0
@@ -197,66 +241,6 @@ app.post("/api/questions/status", async (req, res) => {
     res.status(500).json({ ok: false, error: "Failed to check question bank status" });
   }
 });
-
-function getQuestionBankPathForDecade(decade: string): string {
-  return join(DATA_DIR, `question-bank.${decade}.generated.json`);
-}
-
-function normalizeShows(shows: string[]): string[] {
-  return Array.from(
-    new Set(
-      shows
-        .map((show) => show.trim().toLowerCase())
-        .filter((show) => show.length > 0)
-    )
-  ).sort((a, b) => a.localeCompare(b));
-}
-
-function areEquivalentShowSets(left: string[], right: string[]): boolean {
-  const normalizedLeft = normalizeShows(left);
-  const normalizedRight = normalizeShows(right);
-  if (normalizedLeft.length !== normalizedRight.length) {
-    return false;
-  }
-  return normalizedLeft.every((show, index) => show === normalizedRight[index]);
-}
-
-async function readQuestionBankFromDisk(decade: string): Promise<StoredQuestionBank | null> {
-  try {
-    const raw = await readFile(getQuestionBankPathForDecade(decade), "utf8");
-    const parsed = JSON.parse(raw) as StoredQuestionBank;
-    if (
-      !parsed ||
-      !Array.isArray(parsed.shows) ||
-      !Array.isArray(parsed.questions) ||
-      typeof parsed.decade !== "string"
-    ) {
-      return null;
-    }
-    return parsed;
-  } catch {
-    return null;
-  }
-}
-
-async function writeQuestionBankToDisk(
-  decade: string,
-  shows: string[],
-  questions: Question[]
-): Promise<void> {
-  await mkdir(DATA_DIR, { recursive: true });
-  const payload: StoredQuestionBank = {
-    decade,
-    shows: Array.from(new Set(shows.map((show) => show.trim()).filter(Boolean))),
-    questions,
-    updatedAt: new Date().toISOString(),
-  };
-  await writeFile(
-    getQuestionBankPathForDecade(decade),
-    JSON.stringify(payload, null, 2),
-    "utf8"
-  );
-}
 
 function toQuestionRecords(generated: GeneratedQuestion[]): Question[] {
   return generated.map((question, index) => ({

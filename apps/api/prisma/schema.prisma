@@ -1,0 +1,97 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id          String   @id @default(cuid())
+  supabaseId  String   @unique
+  email       String?  @unique
+  displayName String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  gamesHosted Game[] @relation("HostedGames")
+}
+
+model Game {
+  id        String   @id @default(cuid())
+  hostId    String
+  decade    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  host    User      @relation("HostedGames", fields: [hostId], references: [id], onDelete: Cascade)
+  rounds  Round[]
+  players Player[]
+}
+
+model Round {
+  id         String   @id @default(cuid())
+  gameId     String
+  roundIndex Int
+  winnerId   String?
+  startedAt  DateTime @default(now())
+  endedAt    DateTime?
+
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  winner Player? @relation("RoundWinner", fields: [winnerId], references: [id], onDelete: SetNull)
+}
+
+model Player {
+  id        String   @id @default(cuid())
+  gameId    String
+  name      String
+  score     Int      @default(0)
+  sortOrder Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  game         Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  winningRound Round[] @relation("RoundWinner")
+}
+
+model DecadeShowSet {
+  id          String   @id @default(cuid())
+  decade      String
+  showSetHash String
+  shows       Json
+  createdAt   DateTime @default(now())
+
+  questionBanks QuestionBank[]
+
+  @@unique([decade, showSetHash])
+}
+
+model QuestionBank {
+  id              String   @id @default(cuid())
+  decade          String
+  showSetHash     String
+  questionCount   Int
+  generatedByUser String?
+  objectKey       String?
+  createdAt       DateTime @default(now())
+
+  showSet   DecadeShowSet @relation(fields: [decade, showSetHash], references: [decade, showSetHash], onDelete: Cascade)
+  questions Question[]
+}
+
+model Question {
+  id             String   @id @default(cuid())
+  questionBankId String
+  externalId     String
+  showId         String
+  showTitle      String
+  difficulty     String
+  prompt         String
+  answer         String
+  createdAt      DateTime @default(now())
+
+  questionBank QuestionBank @relation(fields: [questionBankId], references: [id], onDelete: Cascade)
+
+  @@unique([questionBankId, externalId])
+}
