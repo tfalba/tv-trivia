@@ -193,12 +193,20 @@ export function HomePage() {
 
   return (
     <section className="space-y-8">
-      <About />
+      {/* <About /> */}
       <div className="space-y-3"></div>
-        <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
-          Choose your decade and favorite shows.
-        </h2>
-      <div className="grid gap-4 md:grid-cols-3">
+      <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
+        Choose your decade and favorite shows
+      </h2>
+      <div className="flex flex-wrap gap-4">
+        <p>Pick 5 of your favorite shows and generate questions from easy to hard.</p>
+        <div className="flex flex-wrap gap-2">
+          <DifficultyBadge difficulty="easy" />
+          <DifficultyBadge difficulty="medium" />
+          <DifficultyBadge difficulty="hard" />
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-4">
         {decades.map((decade) => (
           <button
             key={decade}
@@ -214,7 +222,8 @@ export function HomePage() {
             >
               <CategoryCard
                 title={decade}
-                subtitle="Pick 5 popular TV shows."
+                subtitle=""
+                // subtitle="Pick 5 popular TV shows."
               />
             </div>
           </button>
@@ -287,12 +296,6 @@ export function HomePage() {
             ))}
           </div>
         ) : null}
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        <DifficultyBadge difficulty="easy" />
-        <DifficultyBadge difficulty="medium" />
-        <DifficultyBadge difficulty="hard" />
       </div>
 
       <div className="flex flex-wrap gap-3">
