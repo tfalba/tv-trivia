@@ -93,7 +93,8 @@ export async function startGoogleSignIn(): Promise<void> {
   const codeChallenge = await sha256Base64Url(codeVerifier);
   window.sessionStorage.setItem(pkceVerifierKey, codeVerifier);
 
-  const redirectTo = `${window.location.origin}${window.location.pathname}`;
+  // Always return to root so Supabase redirect URL config only needs one entry.
+  const redirectTo = `${window.location.origin}/`;
   const authUrl = new URL(`${url}/auth/v1/authorize`);
   authUrl.searchParams.set("provider", "google");
   authUrl.searchParams.set("redirect_to", redirectTo);
