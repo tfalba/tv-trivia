@@ -8,12 +8,12 @@
   :root {
     --shadow-panel: 0 16px 32px rgba(0, 0, 0, 0.16);
     --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    --shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.42);
+    --shadow-focus: 0 0 0 3px rgb(161, 182, 216);
     --shadow-glow: 0 0 24px rgba(43, 112, 228, 0.24);
 
     --color-bg: #0f172a;
     --color-surface: rgba(255, 255, 255, 0.1);
-    --color-surface-2: rgba(0, 0, 0, 0.25);
+    --color-surface-2: rgba(0, 0, 0, 0.55);
     --color-border: rgba(255, 255, 255, 0.2);
     --color-text: #ffffff;
     --color-muted: rgba(255, 255, 255, 0.85);
@@ -42,7 +42,7 @@
   [data-theme="option2"] {
     --shadow-panel: 0 12px 30px rgba(0, 0, 0, 0.45);
     --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    --shadow-focus: 0 0 0 3px rgba(226, 62, 54, 0.52);
+    --shadow-focus: 0 0 0 3px rgba(220, 150, 146, 0.901);
     --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
     --color-bg: #6b002a;
     --color-surface: rgba(89, 13, 13, 0.55);
@@ -65,14 +65,14 @@
       rgba(240, 106, 79, 0.42),
       rgba(240, 106, 79, 0)
     );
-    background-image: url("./assets/krystianwin-flower-3746754_1280.jpg");
+    background-image: url("./assets/hans-starry-sky-1655503_1280.jpg");
     background-size: cover;
   }
 
   [data-theme="option3"] {
     --shadow-panel: 0 10px 26px rgba(7, 11, 22, 0.44);
     --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    --shadow-focus: 0 0 0 3px rgba(36, 82, 162, 0.5);
+    --shadow-focus: 0 0 0 3px rgba(164, 181, 209, 0.937);
     --shadow-glow: 0 0 22px rgba(36, 82, 162, 0.28);
     --color-bg: #0b1426;
     --color-surface: rgba(18, 31, 55, 0.3);
@@ -174,5 +174,94 @@
       var(--color-surface-2) 10%,
       var(--color-surface) 90%
     );
+  }
+
+  .entry-title-panel {
+    @apply rounded-2xl border p-5 sm:p-6;
+    border-color: color-mix(in oklab, var(--color-accent) 50%, transparent);
+    background: color-mix(in oklab, var(--color-accent) 14%, transparent);
+  }
+
+  .page-enter-title {
+    animation: pageTitlePhaseDown 780ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+    animation-delay: 280ms;
+    will-change: opacity, transform, background-color;
+  }
+
+  .page-enter-up {
+    animation: pageFadeRise 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(280ms + var(--enter-delay, 0ms));
+    will-change: opacity, transform;
+  }
+
+  .glass-panel-enter {
+    animation: glassPanelShiftUp 340ms cubic-bezier(0.2, 0.85, 0.2, 1) both;
+    will-change: opacity, transform;
+  }
+
+  .entry-delay-1 {
+    --enter-delay: 110ms;
+  }
+
+  .entry-delay-2 {
+    --enter-delay: 190ms;
+  }
+
+  .entry-delay-3 {
+    --enter-delay: 270ms;
+  }
+
+  .entry-delay-4 {
+    --enter-delay: 350ms;
+  }
+}
+
+@keyframes pageTitlePhaseDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -22vh, 0);
+    background: color-mix(in oklab, var(--color-accent) 0%, transparent);
+  }
+  62% {
+    opacity: 1;
+    transform: translate3d(0, 10px, 0);
+    background: color-mix(in oklab, var(--color-accent) 32%, transparent);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    background: color-mix(in oklab, var(--color-accent) 14%, transparent);
+  }
+}
+
+@keyframes pageFadeRise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18vh, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes glassPanelShiftUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 36px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-panel-enter,
+  .page-enter-title,
+  .page-enter-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

@@ -73,7 +73,7 @@ export function AppLayout() {
 
   return (
     <div className="app-shell">
-      <header className="glass-panel mb-6 flex flex-col gap-4 px-5 py-5 sm:px-6">
+      <header className="glass-panel glass-panel-enter mb-6 flex flex-col gap-4 px-5 py-5 sm:px-6">
         <div className="flex justify-between items-center flex-wrap">
           <div>
             <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-trivia-gold">
@@ -139,7 +139,7 @@ export function AppLayout() {
           <p className="text-sm text-white/80">{authMessage}</p>
         ) : null}
       </header>
-      <main className="glass-panel px-5 py-6 sm:px-8 sm:py-7">
+      <main className="glass-panel glass-panel-enter px-5 py-6 sm:px-8 sm:py-7">
         <Outlet />
       </main>
     </div>

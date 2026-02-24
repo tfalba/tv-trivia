@@ -196,7 +196,7 @@ export function SettingsPage() {
 
   return (
     <section className="space-y-8">
-      <div className="space-y-3">
+      <div className="entry-title-panel page-enter-title space-y-3">
         <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
           Settings
         </h2>
@@ -205,7 +205,7 @@ export function SettingsPage() {
         </p>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="page-enter-up entry-delay-1 rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           App Theme
         </p>
@@ -274,7 +274,7 @@ export function SettingsPage() {
         </button>
       </div> */}
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="page-enter-up entry-delay-2 rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Manage Players
         </p>

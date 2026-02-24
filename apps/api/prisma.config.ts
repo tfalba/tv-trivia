@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 import { defineConfig, env } from "prisma/config";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";

@@ -26,7 +26,7 @@ export function QuestionCard({
   onMarkWrong,
 }: QuestionCardProps) {
   return (
-    <article className="rounded-2xl border border-white/15 bg-[var(--color-surface-2)] p-5">
+    <article className="rounded-2xl border bg-[var(--color-surface-2)] p-5 border-trivia-gold/70">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <h3 className="font-display text-2xl text-trivia-paper">{showTitle}</h3>
         <DifficultyBadge difficulty={difficulty} />

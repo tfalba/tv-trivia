@@ -194,19 +194,20 @@ export function HomePage() {
   return (
     <section className="space-y-8">
       {/* <About /> */}
-      <div className="space-y-3"></div>
-      <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
-        Choose your decade and favorite shows
-      </h2>
-      <div className="flex flex-wrap gap-4">
-        <p>Pick 5 of your favorite shows and generate questions from easy to hard.</p>
+      <div className="entry-title-panel page-enter-title space-y-3">
+        <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
+          Choose your decade and favorite shows
+        </h2>
+        <p className="text-white/90">
+          Pick 5 of your favorite shows and generate questions from easy to hard.
+        </p>
         <div className="flex flex-wrap gap-2">
           <DifficultyBadge difficulty="easy" />
           <DifficultyBadge difficulty="medium" />
           <DifficultyBadge difficulty="hard" />
         </div>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="page-enter-up entry-delay-1 flex flex-wrap gap-4">
         {decades.map((decade) => (
           <button
             key={decade}
@@ -230,7 +231,7 @@ export function HomePage() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="page-enter-up entry-delay-2 rounded-2xl border border-white/15 bg-black/25 p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
             {selectedDecade} Show Picker ({selectedShows.length}/
@@ -298,7 +299,7 @@ export function HomePage() {
         ) : null}
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="page-enter-up entry-delay-3 flex flex-wrap gap-3">
         <Link to="/game" className="btn-primary">
           Start game board
         </Link>

@@ -260,7 +260,7 @@ export function GamePage() {
 
   return (
     <section className="space-y-8">
-      <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="entry-title-panel page-enter-title flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-trivia-gold">
             Round {roundNumber}
@@ -277,7 +277,7 @@ export function GamePage() {
         </span>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="page-enter-up entry-delay-1 rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           TV Show Panels
         </p>
@@ -311,7 +311,7 @@ export function GamePage() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-white/15 bg-black/25 p-5">
+      <div className="page-enter-up entry-delay-2 rounded-2xl border border-white/15 bg-black/25 p-5">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Select + Draw Flow
         </p>
@@ -345,7 +345,7 @@ export function GamePage() {
       </div>
 
       {activeQuestion ? (
-        <div className="fixed inset-0 z-50 grid place-items-center rounded-2xl bg-black/80 p-4 backdrop-blur-md shadow-glow">
+        <div className="fixed inset-0 z-50 grid place-items-center rounded-2xl p-4 backdrop-blur-md">
           <div className="w-full max-w-2xl rounded-2xl bg-black/10">
             <QuestionCard
               showTitle={activeQuestion.showTitle ?? activeQuestion.showId}
@@ -382,7 +382,7 @@ export function GamePage() {
       ) : null}
 
       <div
-        className="rounded-2xl p-5 space-y-4"
+        className="page-enter-up entry-delay-3 rounded-2xl p-5 space-y-4"
         style={{
           border: "1px solid color-mix(in oklab, var(--color-success) 95%, transparent 5%)",
           background:
@@ -408,7 +408,7 @@ export function GamePage() {
         </div>
       </div>
 
-      <Link to="/" className="btn-secondary">
+      <Link to="/" className="page-enter-up entry-delay-4 btn-secondary">
         Back to home
       </Link>
     </section>

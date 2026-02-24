@@ -116,8 +116,8 @@ app.post("/api/questions/seed", requireSupabaseAuth, async (req, res) => {
   const body = req.body as SeedQuestionBankRequest;
   const decade = (body?.decade ?? "").trim();
   const shows = Array.isArray(body?.shows) ? body.shows.filter(Boolean) : [];
-  const questionsPerShow = body?.questionsPerShow ?? 18;
-  const difficultyMix = body?.difficultyMix ?? { easy: 6, medium: 6, hard: 6 };
+  const questionsPerShow = body?.questionsPerShow ?? 30;
+  const difficultyMix = body?.difficultyMix ?? { easy: 10, medium: 10, hard: 10 };
   const seed = body?.seed ?? Date.now();
 
   if (!DECADE_PATTERN.test(decade)) {
@@ -332,7 +332,7 @@ async function generatePopularShowsForDecade(decade: string): Promise<string[]> 
     `Generate the 20 most popular scripted TV shows first released in the ${decade}.`,
     "Prioritize US mainstream audience familiarity for trivia game play.",
     "Do not include duplicates, reality shows, or non-TV media.",
-    'Return JSON: {"shows":["Show 1","Show 2",...]} with exactly 20 unique show titles.',
+    'Return JSON: {"shows":["Show 1","Show 2",...]} with exactly 20 unique show titles and list fewer if 20 were not provided.',
   ].join("\n");
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
