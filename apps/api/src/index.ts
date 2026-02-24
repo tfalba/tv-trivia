@@ -32,10 +32,18 @@ const DECADE_PATTERN = /^\d{4}s$/;
 loadEnvFile(API_ENV_PATH);
 
 type GeneratedQuestion = {
-  showTitle: string;
+  show: string;
+  question: string;
+  answer_type: "exact" | "fuzzy" | "contains" | "multi-part" | "numeric";
+  accepted_answers: string[];
   difficulty: Difficulty;
-  prompt: string;
-  answer: string;
+  season: string;
+  episode_number: string;
+  episode_title: string;
+  evidence_summary: string;
+  internal_reasoning_check: string;
+  factual_confidence: number;
+  ambiguity_risk: "low" | "medium" | "high";
 };
 
 type DecadeShowsRequest = {
@@ -244,12 +252,21 @@ app.post("/api/questions/status", async (req, res) => {
 
 function toQuestionRecords(generated: GeneratedQuestion[]): Question[] {
   return generated.map((question, index) => ({
-    id: `${sanitizeForId(question.showTitle)}-${index + 1}`,
-    showId: sanitizeForId(question.showTitle),
-    showTitle: question.showTitle,
+    id: `${sanitizeForId(question.show)}-${index + 1}`,
+    showId: sanitizeForId(question.show),
+    showTitle: question.show,
     difficulty: question.difficulty,
-    prompt: question.prompt,
-    answer: question.answer,
+    prompt: question.question,
+    answer: question.accepted_answers[0] ?? "",
+    explanation: [
+      `Answer type: ${question.answer_type}`,
+      `Accepted answers: ${question.accepted_answers.join(" | ")}`,
+      `S${question.season}E${question.episode_number} - ${question.episode_title}`,
+      `Evidence: ${question.evidence_summary}`,
+      `Confidence: ${question.factual_confidence}/10`,
+      `Ambiguity risk: ${question.ambiguity_risk}`,
+      `Reasoning check: ${question.internal_reasoning_check}`,
+    ].join("\n"),
   }));
 }
 
@@ -267,16 +284,71 @@ async function generateQuestionBankWithOpenAI(input: {
   const { shows, questionsPerShow, difficultyMix, seed } = input;
 
   const systemPrompt =
-    "You generate TV trivia questions. Return valid JSON only, no markdown, no commentary.";
+    "You are an expert TV canon researcher and trivia editor. Accuracy is more important than creativity. Return valid JSON only, no markdown.";
+
   const userPrompt = [
-    `Create a question bank for these shows: ${shows.join(", ")}.`,
-    `Generate exactly ${questionsPerShow} questions per show.`,
+    `Generate a strict trivia object for each question requested across these shows: ${shows.join(", ")} (${seed}).`,
+    `Generate exactly ${questionsPerShow} questions per show and keep difficulty per show to easy=${difficultyMix.easy}, medium=${difficultyMix.medium}, hard=${difficultyMix.hard}.`,
+    `For each question object, use this exact requirement block:`,
+    `Generate ONE open-answer trivia question about the TV show "{{SHOW_NAME}}" ({{DECADE}}).
+
+REQUIREMENTS:
+
+1. The question must:
+   - Have a single clearly correct answer.
+   - Be unambiguous.
+   - Be verifiable from a specific episode.
+   - Not rely on vague interpretation.
+   - Not require subjective judgment.
+
+2. The answer must:
+   - Be a short open-answer response (not multiple choice).
+   - Be specific enough for grading.
+   - Not require listing more than 3 items.
+
+3. Include canonical metadata:
+   - Season number
+   - Episode number
+   - Episode title
+   - 1–2 sentence evidence summary describing the exact scene
+
+4. Provide grading support:
+   - Provide an array of acceptable answer variants.
+   - Indicate grading type (exact, fuzzy, contains, multi-part, numeric).
+
+5. Provide:
+   - Difficulty level (easy, medium, hard)
+   - factual_confidence score (1–10)
+   - ambiguity_risk (low, medium, high)
+
+6. Perform internal verification:
+   - Briefly explain why the answer is correct.
+   - If uncertain about any detail, state "UNCERTAIN" and stop.`,
+    `Return strict JSON in this shape (and include "show" for each object):`,
+    `{
+  "questions": [
+    {
+      "show": "",
+      "question": "",
+      "answer_type": "",
+      "accepted_answers": [],
+      "difficulty": "",
+      "season": "",
+      "episode_number": "",
+      "episode_title": "",
+      "evidence_summary": "",
+      "internal_reasoning_check": "",
+      "factual_confidence": 0,
+      "ambiguity_risk": ""
+    }
+  ]
+}`,
+    "Do not include uncertain items. If any item is uncertain, omit it and continue.",
     `Difficulty per show must follow easy=${difficultyMix.easy}, medium=${difficultyMix.medium}, hard=${difficultyMix.hard}.`,
-    "Each question must include showTitle, difficulty, prompt, and answer.",
-    "Prompts should be concise and factual. Answers must be short and unambiguous.",
     `Use this seed for deterministic variety: ${seed}.`,
-    'Return JSON in this shape: {"questions":[{"showTitle":"...","difficulty":"easy|medium|hard","prompt":"...","answer":"..."}]}',
   ].join("\n");
+
+
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -315,12 +387,30 @@ async function generateQuestionBankWithOpenAI(input: {
 
   return parsed.questions.filter(
     (question) =>
-      typeof question.showTitle === "string" &&
+      typeof question.show === "string" &&
+      typeof question.question === "string" &&
+      (question.answer_type === "exact" ||
+        question.answer_type === "fuzzy" ||
+        question.answer_type === "contains" ||
+        question.answer_type === "multi-part" ||
+        question.answer_type === "numeric") &&
+      Array.isArray(question.accepted_answers) &&
+      question.accepted_answers.some((answer) => typeof answer === "string" && answer.trim()) &&
       (question.difficulty === "easy" ||
         question.difficulty === "medium" ||
         question.difficulty === "hard") &&
-      typeof question.prompt === "string" &&
-      typeof question.answer === "string"
+      typeof question.season === "string" &&
+      typeof question.episode_number === "string" &&
+      typeof question.episode_title === "string" &&
+      typeof question.evidence_summary === "string" &&
+      typeof question.internal_reasoning_check === "string" &&
+      !question.internal_reasoning_check.toUpperCase().includes("UNCERTAIN") &&
+      Number.isFinite(question.factual_confidence) &&
+      question.factual_confidence >= 1 &&
+      question.factual_confidence <= 10 &&
+      (question.ambiguity_risk === "low" ||
+        question.ambiguity_risk === "medium" ||
+        question.ambiguity_risk === "high")
   );
 }
 
@@ -334,6 +424,8 @@ async function generatePopularShowsForDecade(decade: string): Promise<string[]> 
     "Do not include duplicates, reality shows, or non-TV media.",
     'Return JSON: {"shows":["Show 1","Show 2",...]} with exactly 20 unique show titles and list fewer if 20 were not provided.',
   ].join("\n");
+
+
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
