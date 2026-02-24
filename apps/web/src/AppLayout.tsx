@@ -103,8 +103,6 @@ export function AppLayout() {
               </NavLink>
             ))}
           </nav>
-        {/* </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"> */}
           <div className="flex flex-wrap items-center gap-2">
             {!isSupabaseConfigured() ? (
               <span className="rounded-md border border-white/20 bg-black/20 px-3 py-2 text-xs text-white/75">
@@ -136,7 +134,7 @@ export function AppLayout() {
             )}
           </div>
         </div>
-        {authMessage && !completed ? (
+        {authMessage ? (
           <p className="text-sm text-white/80">{authMessage}</p>
         ) : null}
       </header>
