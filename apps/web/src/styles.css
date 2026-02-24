@@ -45,15 +45,18 @@
     --shadow-focus: 0 0 0 3px rgba(220, 150, 146, 0.901);
     --shadow-glow: 0 0 24px rgba(245, 87, 64, 0.26);
     --color-bg: #6b002a;
-    --color-surface: rgba(89, 13, 13, 0.55);
-    --color-surface-2: rgb(101, 1, 45, 0.39);
+    --color-surface: rgba(41, 5, 5, 0.15);
+    --color-surface-2: rgba(137, 4, 19, 0.89);
     --color-border: #4d2424;
     --color-text: #fff3f1;
     --color-muted: #e4bbb5;
     --color-primary: rgb(183, 3, 51, 0.65);
-    --color-accent: rgba(246, 235, 90, 0.95);
+    /* --color-accent: rgba(246, 235, 90, 0.95); */
+    /* --color-accent: #d10430; */
+        --color-accent: #a83281;
+
     --color-violet: #a83281;
-    --color-success: #c374b5;
+    --color-success: #d10430;
     --color-warning: #f0a05e;
     --hero-radial-1: radial-gradient(
       900px 620px at 12% -8%,
@@ -144,11 +147,15 @@
   .chip {
     @apply rounded-full px-3 py-1 text-sm font-semibold;
     border: 1px solid color-mix(in oklab, var(--color-text) 22%, transparent);
-    background: color-mix(in oklab, var(--color-surface-2) 82%, transparent);
+    background: color-mix(in oklab, var(--color-surface-2) 22%, transparent);
   }
 
   [data-theme="option2"] .text-trivia-gold {
     color: var(--color-accent) !important;
+  }
+
+  [data-theme="option2"] .bg-trivia-gold {
+    background-color: var(--color-accent) !important;
   }
 
   [data-theme="option2"] .bg-trivia-green {

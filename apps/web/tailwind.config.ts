@@ -10,7 +10,7 @@ const config: Config = {
           green: "#209d5c",
           blue: "#2b70e4",
           gold: "#ffd034",
-          paper: "#ffffff",
+          paper: "#ebe8e8df",
           slate: "#0f172a",
         },
       },

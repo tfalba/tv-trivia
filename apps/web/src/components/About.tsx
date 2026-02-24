@@ -4,7 +4,7 @@ export function About() {
   return (
     <aside className="space-y-8">
       <div className="space-y-3">
-        <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
+        <h2 className="font-display text-2xl text-trivia-paper sm:text-4xl">
           Spin. Guess. Score.
         </h2>
         <p className="max-w-2xl text-base text-white/85 sm:text-lg">

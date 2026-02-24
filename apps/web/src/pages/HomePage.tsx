@@ -17,7 +17,6 @@ import {
 } from "../lib/decades";
 import { hasRoundWinner, startNextRound } from "../lib/gameState";
 import { getSavedPlayers, savePlayers } from "../lib/players";
-import { About } from "../components/About";
 
 const decades: DecadeKey[] = ["1970s", "1980s", "1990s", "2000s", "2010s"];
 const maxSelectedShows = 5;
@@ -193,9 +192,8 @@ export function HomePage() {
 
   return (
     <section className="space-y-8">
-      {/* <About /> */}
       <div className="entry-title-panel page-enter-title space-y-3">
-        <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
+        <h2 className="font-display text-2xl text-trivia-paper sm:text-4xl">
           Choose your decade and favorite shows
         </h2>
         <p className="text-white/90">
@@ -223,8 +221,6 @@ export function HomePage() {
             >
               <CategoryCard
                 title={decade}
-                subtitle=""
-                // subtitle="Pick 5 popular TV shows."
               />
             </div>
           </button>
@@ -233,7 +229,7 @@ export function HomePage() {
 
       <div className="page-enter-up entry-delay-2 rounded-2xl border border-white/15 bg-black/25 p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+          <p className="text-sm font-semibold tracking-[0.12em] text-trivia-gold">
             {selectedDecade} Show Picker ({selectedShows.length}/
             {maxSelectedShows})
           </p>

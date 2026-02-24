@@ -262,15 +262,15 @@ export function GamePage() {
     <section className="space-y-8">
       <div className="entry-title-panel page-enter-title flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-trivia-gold">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-trivia-gold">
             Round {roundNumber}
           </p>
-          <h2 className="font-display text-3xl text-trivia-paper sm:text-4xl">
+          <h2 className="font-display text-2xl text-trivia-paper sm:text-4xl">
             Game Board
           </h2>
         </div>
         <span
-          className="rounded-xl px-4 py-2 text-sm font-bold text-white"
+          className="rounded-xl px-4 py-2 text-lg font-bold text-white"
           style={{ backgroundColor: "var(--color-success)" }}
         >
           {currentPlayer?.name ?? "No Player"}'s Turn
@@ -278,7 +278,7 @@ export function GamePage() {
       </div>
 
       <div className="page-enter-up entry-delay-1 rounded-2xl border border-white/15 bg-black/25 p-5">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+        <p className="mb-3 text-lg font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           TV Show Panels
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -301,9 +301,9 @@ export function GamePage() {
                     : "border-white/15 bg-black/25 hover:bg-white/10",
                 ].join(" ")}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+                {/* <p className="text-xs font-semibold uppercase tracking-[0.12em] text-trivia-gold">
                   Show
-                </p>
+                </p> */}
                 <p className="mt-1 font-display text-lg text-trivia-paper">{show}</p>
               </button>
             );
@@ -312,7 +312,7 @@ export function GamePage() {
       </div>
 
       <div className="page-enter-up entry-delay-2 rounded-2xl border border-white/15 bg-black/25 p-5">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+        <p className="mb-3 text-lg font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Select + Draw Flow
         </p>
         <p className="mb-4 text-white/85">{statusMessage}</p>
@@ -389,7 +389,7 @@ export function GamePage() {
             "color-mix(in oklab, var(--color-success) 15%, transparent 85%)",
         }}
       >
-        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-trivia-gold">
+        <p className="mb-2 text-lg font-semibold uppercase tracking-[0.12em] text-trivia-gold">
           Scoreboard
         </p>
         <div className="flex flex-wrap gap-4">

@@ -39,7 +39,8 @@ export function AppLayout() {
     try {
       const completed = await completeAuthFromUrl();
       if (completed) {
-        setAuthMessage("Signed in with Google.");
+        // setAuthMessage("Signed in with Google.");
+        setAuthMessage("");
       }
     } catch (error) {
       console.error(error);
@@ -74,16 +75,16 @@ export function AppLayout() {
   return (
     <div className="app-shell">
       <header className="glass-panel glass-panel-enter mb-6 flex flex-col gap-4 px-5 py-5 sm:px-6">
-        <div className="flex justify-between items-center flex-wrap">
+        <div className="flex gap-4 justify-between items-center flex-wrap">
           <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-trivia-gold">
+            <p className="mb-1 text-sm font-semibold uppercase tracking-[0.2em] text-trivia-gold">
               Trivia Night
             </p>
             <h1 className="font-display text-3xl leading-none text-trivia-paper sm:text-4xl">
               TV Trivia
             </h1>
           </div>
-          <nav className="flex flex-wrap gap-2">
+          <nav className="flex flex-col md:flex-row flex-wrap gap-2">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
@@ -135,7 +136,7 @@ export function AppLayout() {
             )}
           </div>
         </div>
-        {authMessage ? (
+        {authMessage && !completed ? (
           <p className="text-sm text-white/80">{authMessage}</p>
         ) : null}
       </header>
